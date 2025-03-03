@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Objective 4 - [SUPPLEMENTAL] Write Actions and Action Creators to Describe State Changes</title>
+<meta name="identifier" content="g34115c3bcaea10db0a472155901b85d8"/>
+<meta name="editing_roles" content="teachers"/>
+<meta name="workflow_state" content="active"/>
+    <style>
+        :root {
+            --primary-color: #93005a;
+            --secondary-color: #00808c;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #fff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --code-bg: #f8f9fa;
+            --code-color: #24292e;
+            --code-block-bg: #f6f8fa;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .content-section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px var(--shadow-color);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        h2, h3, h4 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        code {
+            background-color: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+            color: var(--code-color);
+        }
+
+        pre {
+            background-color: var(--code-block-bg);
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            margin: 1rem 0;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            font-size: 0.9em;
+            color: var(--code-color);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .challenge-section {
+            background-color: var(--code-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .challenge-section h2 {
+            color: var(--primary-color);
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            pre {
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html">← Back to Sprint Content</a>
+        <a href="../unit-videos.html">Unit Videos</a>
+    </nav>
+
+    <div class="content-section">
+        <div class="page-header">
+            <h1>Writing Actions and Action Creators</h1>
+        </div>
+
+        <div class="video-container">
+            <iframe class="wistia_embed" title="Redux Actions Video" src="https://fast.wistia.net/embed/iframe/qm6y7cobfk" allow="autoplay; fullscreen" loading="lazy"></iframe>
+        </div>
+
+<h2 id="overview">Overview</h2>
+<p>In the world of Redux there's a whole new set of programmer jargon. The first we'll talk about here is <code>actions</code>.</p>
+
+<h3 id="actions">Actions</h3>
+        <p>Actions in Redux are packets of information that contain an action type and associated data.</p>
+        <p>In code, an action is simply an object with up to two properties - a <code>type</code> property and an optional <code>payload</code> property. Each action MUST have a <code>type</code> property. The <code>type</code> property is a string that explains what interaction just happened. By convention, we use all caps and underscores for types - ie <code>'LOGIN_USER'</code> or <code>'TOGGLE_TODO'</code>. The <code>payload</code> property is data that goes along with that interaction.</p>
+        <p>Actions are "dispatched" to our reducer - aka, passed into the reducer function as an argument. When our reducer receives an action, it will update the state according to the type and payload on the action.</p>
+
+        <p>Let's say we have a toggle handler function that switches a boolean field called 'show,' which is set on our state in our Redux store. An action for such an event would look like this:</p>
+
+        <pre><code>{ type: "TOGGLE_SHOW", show: !state.show };</code></pre>
+
+        <p>This allows us to keep things as simple as possible when responding to events and interactions!</p>
+
+        <p>Importantly in Redux, reducers are the only place we can update our state. Actions tell our reducers "how" to update the state, and perhaps with what data it should be updated, only a reducer can update the state. <em>More to come on reducers later.</em></p>
+
+        <p>From what we've learned so far, we can start to see the flow of data in a React/Redux application:</p>
+
+        <pre><code>Store sets the state ->
+Event or user interaction happens ->
+An action describing the event and possible changes is dispatched to reducer ->
+The reducer handles the action and replaces the store accordingly.</code></pre>
+
+<h3 id="action-creators">Action creators</h3>
+<p>Actions should not be confused with <code>action creators</code> (though admittedly, it's very easy to confuse them). An action creator is a function that <em>creates</em> an action. Or in other words, an action creator is a function that returns an action object.</p>
+
+        <p>Action creators are a middle step between events and interactions and the dispatch process. They make it possible to write reusable functions that can create actions on the fly, rather than hard-coding actions into our components. With action creators in mind, here is an updated look at our data flow:</p>
+
+        <pre><code>Store sets the state ->
+Event or user interaction happens ->
+An action creator is called and dispatches an action ->
+Actions tell us about the changes from the event ->
+Reducers handle those actions and replace the store accordingly.</code></pre>
+
+<p>This flow is one of the reasons that Redux is so powerful. The two major principles here are <code>Functional Programming</code> and <code>Immutability</code>. Dispatched actions are the trigger for reducers, and reducers are pure functions that never produce any side-effects. Everything you do in Redux is functional.</p>
+
+<h3 id="action-types">Action types</h3>
+        <p>The final term we want to cover here is <code>action types</code>. We've talked about, and even demonstrated the <code>type</code> property of an action. We want to change that up right now, ever-so-slightly… Instead of passing a string to <code>action.type</code> we create a variable with the name of the string, and assign it the string we would have passed to an action. Then we give <code>action.type</code> the variable as its value.</p>
+
+        <p>We do this because we deal with strings as we deal with <code>types</code>. Strings are used in multiple places like you'll see in reducers very soon, misspellings occur, and are very hard to debug. For example, if we misspell our action type in our reducer, our state won't be updated correctly, and we'll be left wondering what went wrong.</p>
+
+        <p>Instead, we'll create an action type and import it wherever we need it. That way, with a linter (a tool used to check the syntax of your code) IntelliSense in our code editor, we can spot errors a lot quicker. This is what action types look like:</p>
+
+        <pre><code>export const TOGGLE_SHOW = 'TOGGLE_SHOW';
+
+// then in our action:
+{ type: TOGGLE_SHOW, payload: !state.show }</code></pre>
+
+<h2 id="follow-along">Follow Along</h2>
+        <p>Let's build our first action creator. We'll assume that we have a Redux store connected to our app and a component connected to the store. On the state object, we have a <code>title</code> property brought into the component via the <code>mapStateToProps</code> function. Our component has an input field and an "update title" button. When we type into the input and click the button, we want to update our state object with our new title. (You can start with <a href="https://replit.com/@bloomtech/Actions-Practice-Start#src/index.jsx" target="_blank">this Repl</a>)</p>
+
+        <p>First, we need to create a new folder in the src folder called <code>actions</code>. Inside that folder, create an <code>actions.js</code> file. Inside that file, create a variable called <code>UPDATE_TITLE</code> with the value <code>'UPDATE_TITLE'</code>. The variable is an action type. Next, let's create a function called <code>updateTitle</code> that takes in a new title. This will be our action creator, and it will simply return an action with the type <code>UPDATE_TITLE</code> and a payload of the new title we passed into it. Don't forget to export both the action type and the action creator function.</p>
+
+        <pre><code>export const UPDATE_TITLE = 'UPDATE_TITLE';
+
+export function updateTitle(newTitle) {
+  return {
+    type: UPDATE_TITLE,
+    payload: newTitle
+  }
+}</code></pre>
+
+<p>Now when the "Update title" button is pushed, invoke a function on the class that invokes <code>this.props.updateTitle</code> that gets <code>this.state.newTitleText</code> passed into it.</p>
+
+        <pre><code>updateTitle = (e) => {
+  e.preventDefault();
+  this.props.updateTitle(this.state.newTitleText)
+}
+
+...
+
+<button onClick={this.updateTitle}>Update title</button></code></pre>
+
+<p>Yes, names will be the same all over the place with this stuff. Just note that <code>props.updateTitle</code> is the action creator.</p>
+
+        <p>Let's add a console.log in the action creator and log out the newTitle that is passed into it to ensure it is working. Since we don't have a reducer to handle this action yet, we won't see the state or title updated yet. So this is the best way we can make sure it's working.</p>
+
+        <pre><code>export function updateTitle(newTitle) {
+  console.log(newTitle);
+  return {
+    type: UPDATE_TITLE,
+    payload: newTitle
+  }
+}</code></pre>
+
+        <p>Here's what our <a href="https://replit.com/@bloomtech/Actions-Practice-End#src/index.jsx" target="_blank">Repl</a> should look like now.</p>
+
+        <div class="challenge-section">
+<h2 id="challenge">Challenge</h2>
+            <p>In the application you created earlier, look at the state you are displaying. Find something easy, like a string or a number, to update. (Add a string to your state if you only have arrays or objects. This will keep things simple today while we learn this brand new state management flow). Next, build an action creator, pass it into your component, and call that action creator (from props) after some interaction like a button click. Make sure you have a console.log in the action creator, so you will know if it's working.</p>
+        </div>
+    </div>
+</body>
+</html>

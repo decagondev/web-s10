@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
+  <assessment ident="gbab026d966da26bb7f9b4b50286854d5" title="The Reducer Pattern Check For Understanding">
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>cc_maxattempts</fieldlabel>
+        <fieldentry>unlimited</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    <section ident="root_section">
+      <item ident="ga72c0d5c36119214309ab34d8c68a720" title="20b70c54-9351-11eb-a8b3-0242ac130003">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>multiple_choice_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>5776,2248,7503,229</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>gf47b767d37e06559ff801f2d253307ba</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;Why is it good to avoid mutating variables and objects?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="5776">
+                <material>
+                  <mattext texttype="text/plain">Programs are more predictable if variables stay the same.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="2248">
+                <material>
+                  <mattext texttype="text/html">Programs don't have as much work, so we save memory.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="7503">
+                <material>
+                  <mattext texttype="text/plain">Variables are then free to be reused.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="229">
+                <material>
+                  <mattext texttype="text/plain">It increases chances of bugs. Job security!</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">5776</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+      </item>
+      <item ident="gbc2ec2400d0c54830c362315a55929c6" title="22d83bfc-9351-11eb-a8b3-0242ac130003">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>multiple_choice_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>3879,7158,8971,4725</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>gf47b767d37e06559ff801f2d253307ba</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;In general, what does a reducer function do?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="3879">
+                <material>
+                  <mattext texttype="text/plain">takes in two arguments and returns an new, immutable item</mattext>
+                </material>
+              </response_label>
+              <response_label ident="7158">
+                <material>
+                  <mattext texttype="text/plain">Reduce sauce for your steak dinner</mattext>
+                </material>
+              </response_label>
+              <response_label ident="8971">
+                <material>
+                  <mattext texttype="text/plain">Takes in one argument and returns two separate items</mattext>
+                </material>
+              </response_label>
+              <response_label ident="4725">
+                <material>
+                  <mattext texttype="text/plain">aggregates values based on app settings</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">7158</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="7158_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">8971</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="8971_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">4725</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="4725_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">3879</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">In our case, the item a reducer returns is an updated state value.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="7158_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">A tasty option, but not a correct one.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="8971_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">reducers should always return a single item. Often that item is an object to allow multiple "slices" to be returned.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="4725_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">This is a specific application of using reducers, but not a general description of what reducers do.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="g9baf9c4a43a62b6951966be5ba2948a8" title="27baf56a-9351-11eb-a8b3-0242ac130003">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>multiple_choice_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>8253,1021,8632,1993</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>gf47b767d37e06559ff801f2d253307ba</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;When you call &lt;code&gt;useReducer&lt;/code&gt; and pass in a reducer and an initial state object, what does it return?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="8253">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;[state, dispatch]&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="1021">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;[state, action]&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="8632">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;[props, action]&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="1993">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;[action, dispatch]&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">1021</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="1021_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">8632</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="8632_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">1993</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="1993_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">8253</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">The state holds the current values of the state. Dispatch allows for actions to be called to routed to the reducer.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="1021_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Not this time! The action object is passed into the reducer, not out this particular hook.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="8632_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Props are used to pass values into components. Nothing to do with reducers I'm afraid…</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="1993_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Not this time! The action object is passed into the reducer, not out this particular hook.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="gf21138878008409449b26b9bd2269da2" title="30043d8a-9351-11eb-a8b3-0242ac130003">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>multiple_choice_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>9426,2220,9869,3640</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>gf47b767d37e06559ff801f2d253307ba</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;What is the required property in action objects?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="9426">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;type&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="2220">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;payload&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="9869">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;data&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="3640">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;dataType&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">2220</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="2220_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">9869</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="9869_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">3640</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="3640_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">9426</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">As a matter of convention, type is most often used to identify the what action case we are triggering.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="2220_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Nope. This is what is passed through the action object.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="9869_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">It is not typical convention in Redux construction to use the word data in action creators.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="3640_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">We don't typically use dataType to in reducer construction.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="g5f05994231b963ae3719e66268e9c060" title="3269b348-9351-11eb-a8b3-0242ac130003">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>multiple_choice_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>9058,6320,8360,1230</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>gf47b767d37e06559ff801f2d253307ba</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;&lt;p&gt;What &lt;code&gt;case&lt;/code&gt; statement should be added to your reducer for adding a hobby with the following state and action objects?&lt;/p&gt;
+&lt;pre&gt;&lt;code class="js language-js"&gt;const initialState = {
+  user: {},
+  friends: [],
+  hobbies: []
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;{ type: "ADD_HOBBY", payload: newHobby }&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="9058">
+                <material>
+                  <mattext texttype="text/html">&lt;pre&gt;&lt;code class="js language-js"&gt;case "ADD_HOBBY":
+  return {
+    ...state,
+    hobbies: [...state.hobbies, action.payload]
+  }&lt;/code&gt;&lt;/pre&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="6320">
+                <material>
+                  <mattext texttype="text/html">&lt;pre&gt;&lt;code class="js language-js"&gt;case "HOBBY_UPDATER":
+  return {
+    ...state,
+    hobbies: [...state.hobbies, action.payload]
+  }&lt;/code&gt;&lt;/pre&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="8360">
+                <material>
+                  <mattext texttype="text/html">&lt;pre&gt;&lt;code class="js language-js"&gt;case "ADD_HOBBY":
+  return {
+    hobbies: [...state.hobbies, action.payload]
+  }&lt;/code&gt;&lt;/pre&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="1230">
+                <material>
+                  <mattext texttype="text/html">&lt;pre&gt;&lt;code class="js language-js"&gt;case "ADD_HOBBY":
+  return {
+    ...state,
+    addHobby: [...state.hobbies, action.payload]
+  }&lt;/code&gt;&lt;/pre&gt;</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">6320</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="6320_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">8360</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="8360_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">1230</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="1230_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">9058</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">One way to go about adding a value to a list state object is through spreading another array within it and adding a new value at the end.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="6320_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">It's important to make sure that your case statement matches the action.type value. In this case, HOBBY_UPDATER is not the correct value.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="8360_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Always spread state when returning a state object to insure you don't accidentally delete unmodified slices of state!</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="1230_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Make sure that you use the same key of the modified state as in your initialState definition. In this case, addHobby should be the name of your state slice: hobbies.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
+  <objectbank ident="ge1fb23a3291a3b181760511d60a1513d">
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>bank_title</fieldlabel>
+        <fieldentry>Web Sprint 10 Assessment Bank</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>bank_context_uuid</fieldlabel>
+        <fieldentry>JnGCrA9aE59ACyj3nS0KChH1g00ZZDi7AUAqu6G1</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    <item ident="ge12503150f3451913513a8deacb1c7b3" title="31ee229d-b1c0-4b0c-8cd3-a634beca44a4">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>9422,6232,3466,4954</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;The main purpose of a reducer function is to &lt;strong&gt;&lt;em&gt;&lt;strong&gt;&lt;em&gt;___&lt;/em&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="9422">
+              <material>
+                <mattext texttype="text/plain">Specify how the state changes in response to actions</mattext>
+              </material>
+            </response_label>
+            <response_label ident="6232">
+              <material>
+                <mattext texttype="text/plain">Describes what changes were made in the UI using action types</mattext>
+              </material>
+            </response_label>
+            <response_label ident="3466">
+              <material>
+                <mattext texttype="text/plain">Fetch data from an API</mattext>
+              </material>
+            </response_label>
+            <response_label ident="4954">
+              <material>
+                <mattext texttype="text/plain">Allow developers to mutate the state directly</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">9422</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="gc2fd5de516e47f44a810db056baa76b0" title="449c1e4f-3323-4c16-83d8-fcbf7884e683">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>6150,3770,6667,9693</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;Where can state be updated in Redux?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="6150">
+              <material>
+                <mattext texttype="text/plain">Reducer</mattext>
+              </material>
+            </response_label>
+            <response_label ident="3770">
+              <material>
+                <mattext texttype="text/plain">Action Creator</mattext>
+              </material>
+            </response_label>
+            <response_label ident="6667">
+              <material>
+                <mattext texttype="text/plain">Thunk</mattext>
+              </material>
+            </response_label>
+            <response_label ident="9693">
+              <material>
+                <mattext texttype="text/plain">All of the above</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">6150</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="g5478b98d3e5e8c87f681615198d13a05" title="87e9c357-9edc-4f38-89b0-8b6552431cdf">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>4625,874,3010,7865</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;&lt;p&gt;Add the missing code (&lt;code&gt;_____&lt;/code&gt;) to update state if the reducer received an action.&lt;/p&gt;
+&lt;pre style="background: none 0% 0% / auto repeat scroll padding-box border-box #ffffff; border: 0.625px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font: 12px / 14.4px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none solid #24292e; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px;" data-hljs-language="javascript"&gt;&lt;code style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px none #24292e; font: 16px / 19.2px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px;"&gt;&lt;span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;"&gt;const&lt;/span&gt; initialState = {&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;span style="border: 0px none #005cc5; color: #005cc5; text-decoration: none solid #005cc5;"&gt;count&lt;/span&gt;: &lt;span style="border: 0px none #005cc5; color: #005cc5; text-decoration: none solid #005cc5;"&gt;0&lt;/span&gt;&lt;br&gt;}&lt;br&gt;&lt;br&gt;&lt;span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;"&gt;const&lt;/span&gt; &lt;span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;"&gt;reducer&lt;/span&gt; = (&lt;span&gt;state = initialState, action&lt;/span&gt;) =&amp;gt; {&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;"&gt;switch&lt;/span&gt; (_____) {&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;"&gt;case&lt;/span&gt; &lt;span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;"&gt;'INCREASE'&lt;/span&gt;:&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;"&gt;return&lt;/span&gt; {&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;...state,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="border: 0px none #005cc5; color: #005cc5; text-decoration: none solid #005cc5;"&gt;count&lt;/span&gt;: state.&lt;span&gt;count&lt;/span&gt; + &lt;span style="border: 0px none #005cc5; color: #005cc5; text-decoration: none solid #005cc5;"&gt;1&lt;/span&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;}&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="border: 0px none #005cc5; color: #005cc5; text-decoration: none solid #005cc5;"&gt;default&lt;/span&gt;:&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;"&gt;return&lt;/span&gt; state&lt;br&gt;&amp;nbsp;&amp;nbsp;}&lt;br&gt;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="4625">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;action.type&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+            <response_label ident="874">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;action&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+            <response_label ident="3010">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;state&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+            <response_label ident="7865">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;state.count&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">4625</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="g34f3599274a7ca716c4afb3b40da8af6" title="Can you use multiple">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>true_false_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>81282,22184</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;Can you use multiple Context Providers in an application?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="81282">
+              <material>
+                <mattext texttype="text/plain">True</mattext>
+              </material>
+            </response_label>
+            <response_label ident="22184">
+              <material>
+                <mattext texttype="text/plain">False</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">81282</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="gdbdb245f59484353e40bdcc66861b03b" title="Question">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>7839,1053,5104,3958</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;In Redux, what is an action?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="7839">
+              <material>
+                <mattext texttype="text/plain">A JavaScript object that describes a change in the application's state.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="1053">
+              <material>
+                <mattext texttype="text/plain">A function that returns the new state directly.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="5104">
+              <material>
+                <mattext texttype="text/plain">A piece of middleware that processes before reaching the reducer.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="3958">
+              <material>
+                <mattext texttype="text/plain">A component that triggers state updates.</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">7839</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="gc5c3a933178fbe000ba696b6ce577871" title="What 2 data types ar">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>28181,94896,98874,63694</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What 2 data types are mutable in Javascript?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="28181">
+              <material>
+                <mattext texttype="text/plain">Objects and Arrays</mattext>
+              </material>
+            </response_label>
+            <response_label ident="94896">
+              <material>
+                <mattext texttype="text/plain">Strings and Numbers</mattext>
+              </material>
+            </response_label>
+            <response_label ident="98874">
+              <material>
+                <mattext texttype="text/plain">Classes and Functions</mattext>
+              </material>
+            </response_label>
+            <response_label ident="63694">
+              <material>
+                <mattext texttype="text/plain">State and Props</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">28181</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="gb105a676be6f6d2b874762f07c14205f" title="What are the 2 main">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>84778,4033,80074,41180</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What are the 2 main parameters of the “connect” method?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="84778">
+              <material>
+                <mattext texttype="text/plain">(function that returns a state object, object containing our actions)</mattext>
+              </material>
+            </response_label>
+            <response_label ident="4033">
+              <material>
+                <mattext texttype="text/plain">(an object containing state, an object containing actions)</mattext>
+              </material>
+            </response_label>
+            <response_label ident="80074">
+              <material>
+                <mattext texttype="text/plain">(function that returns a state object, function that returns actions)</mattext>
+              </material>
+            </response_label>
+            <response_label ident="41180">
+              <material>
+                <mattext texttype="text/plain">(initialState, actions)</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">84778</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_incorrect_fb"/>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_incorrect_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">Module 2 - Redux</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="gedeef57e290b45b9599afae915031db3" title="What are the standar">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>26643,77870,80243,35841</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;Which of the following best describes the concept of "store" in Redux?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="26643">
+              <material>
+                <mattext texttype="text/plain">An object that holds the application's state tree.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="77870">
+              <material>
+                <mattext texttype="text/plain">A library used to manage asynchronous actions.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="80243">
+              <material>
+                <mattext texttype="text/plain">A function that allows components to subscribe to changes in the data layer.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="35841">
+              <material>
+                <mattext texttype="text/plain">A method for combining multiple reducers into a single state object.</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">26643</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="g7124200f986622f41f852f86597a8cef" title="What is Middleware?">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>1407,94966,20687,37714</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What is Middleware?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="1407">
+              <material>
+                <mattext texttype="text/plain">A function that runs at the interception point, then continues or stops a process.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="94966">
+              <material>
+                <mattext texttype="text/plain">A function that logs our state to the console.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="20687">
+              <material>
+                <mattext texttype="text/plain">A function connects the provider to the store.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="37714">
+              <material>
+                <mattext texttype="text/plain">A function the returns the store</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">1407</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_incorrect_fb"/>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_incorrect_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">Module 3 - Async Redux</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="gfb7529512dda6f20c4aff2f4eedafaef" title="What is the Redux Pr">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>30963,64070,50293,36326</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What is the Redux Provider component?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="30963">
+              <material>
+                <mattext texttype="text/plain">A React Redux component that gives our application access to the store</mattext>
+              </material>
+            </response_label>
+            <response_label ident="64070">
+              <material>
+                <mattext texttype="text/plain">A React Redux component that controls our routes</mattext>
+              </material>
+            </response_label>
+            <response_label ident="50293">
+              <material>
+                <mattext texttype="text/plain">The component where we pass our middleWare as a prop</mattext>
+              </material>
+            </response_label>
+            <response_label ident="36326">
+              <material>
+                <mattext texttype="text/plain">The component where we pass our reducer as a props</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">30963</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_incorrect_fb"/>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_incorrect_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">Module 2 - Redux</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="g40e5051a4b277d6f09f24c485117775a" title="What is the Redux St">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>37819,33714,43441,3247</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;In the context of Redux, what role do asynchronous operations play?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="37819">
+              <material>
+                <mattext texttype="text/plain">They enable the application to fetch or update data from external sources without blocking the UI.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="33714">
+              <material>
+                <mattext texttype="text/plain">They are used to delay the rendering of components until user input is received.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="43441">
+              <material>
+                <mattext texttype="text/plain">Asynchronous operations are avoided in Redux to simplify state management.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="3247">
+              <material>
+                <mattext texttype="text/plain">They replace the need for actions and reducers in Redux.</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">37819</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="g1b844067c7e10af10352b7b874511b43" title="What problem does th">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>35492,50839,54097,63544</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What problem does the Context API solve?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="35492">
+              <material>
+                <mattext texttype="text/plain">Prop drilling through multiple components that share the same data.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="50839">
+              <material>
+                <mattext texttype="text/plain">Using excessive useState hooks.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="54097">
+              <material>
+                <mattext texttype="text/plain">Makes adding state to the Redux Store easier.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="63544">
+              <material>
+                <mattext texttype="text/plain">Makes useReducer more like Redux.</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">35492</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="gacb8c1020918473a276d74865985adca" title="Which of the followi">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>72600,26823,65086,76425</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;Which of the following is a way to make a copy of an object in Javascript?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="72600">
+              <material>
+                <mattext texttype="text/plain">All of the above</mattext>
+              </material>
+            </response_label>
+            <response_label ident="26823">
+              <material>
+                <mattext texttype="text/plain">const newObject = Object.assign({}, originalObject)</mattext>
+              </material>
+            </response_label>
+            <response_label ident="65086">
+              <material>
+                <mattext texttype="text/plain">const newObject = {...originalObject}</mattext>
+              </material>
+            </response_label>
+            <response_label ident="76425">
+              <material>
+                <mattext texttype="text/plain">const newObject = structuredClone(originalObject)</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">72600</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_incorrect_fb"/>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_incorrect_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">Module 1 - The Reducer Pattern</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="g62545b148ff75c6137da0f50b7fbf294" title="Which one of the fol">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>43738,15230,74748,47571</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;Which one of the following is an example of an Action object&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="43738">
+              <material>
+                <mattext texttype="text/plain">{type: ‘UPDATE’, payload: data}</mattext>
+              </material>
+            </response_label>
+            <response_label ident="15230">
+              <material>
+                <mattext texttype="text/plain">{data: res, action: ‘UPDATE’}</mattext>
+              </material>
+            </response_label>
+            <response_label ident="74748">
+              <material>
+                <mattext texttype="text/plain">{...state, action.payload}</mattext>
+              </material>
+            </response_label>
+            <response_label ident="47571">
+              <material>
+                <mattext texttype="text/plain">{payload: data}</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">43738</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="g8f644111c5a4a90148002b41c5e898fb" title="ffa07c98-7a88-404f-923c-bb1e8edefffc">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>151,9020,113,6207</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What best practice is recommended for handling network requests in Redux applications?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="151">
+              <material>
+                <mattext texttype="text/plain">Using middleware to encapsulate and manage network requests, allowing for a separation of concerns between the UI and data fetching logic.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="9020">
+              <material>
+                <mattext texttype="text/plain">Storing all external API responses directly in the Redux store without processing.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="113">
+              <material>
+                <mattext texttype="text/plain">Making network requests directly inside component render methods.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="6207">
+              <material>
+                <mattext texttype="text/plain">Avoiding the use of middleware by placing all network logic in reducers.</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">151</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+  </objectbank>
+</questestinterop>

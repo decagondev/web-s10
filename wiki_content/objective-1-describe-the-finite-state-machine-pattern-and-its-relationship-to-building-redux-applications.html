@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objective 1 - [SUPPLEMENTAL] The Finite State Machine Pattern and Its Relationship to Building Redux Applications</title>
+    <meta name="identifier" content="g27ad19f48367ad2c180ea1df68a68d58"/>
+    <meta name="editing_roles" content="teachers"/>
+    <meta name="workflow_state" content="active"/>
+    <style>
+        :root {
+            --primary-color: #93005a;
+            --secondary-color: #00808c;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #fff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --code-bg: #f8f9fa;
+            --table-header-bg: #f1f1f1;
+            --table-border: #e0e0e0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .content-section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px var(--shadow-color);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: var(--white);
+            box-shadow: 0 2px 5px var(--shadow-color);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background: var(--table-header-bg);
+            padding: 1rem;
+            text-align: left;
+            font-weight: bold;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--table-border);
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--table-border);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: var(--code-bg);
+        }
+
+        em {
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .challenge-section {
+            background: var(--code-bg);
+            border: 2px solid var(--secondary-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .challenge-section h2 {
+            color: var(--secondary-color);
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            td, th {
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html">← Back to Sprint Content</a>
+        <a href="../unit-videos.html">Unit Videos</a>
+    </nav>
+
+    <div class="content-section">
+        <div class="page-header">
+            <h1>The Finite State Machine Pattern and Redux Applications</h1>
+        </div>
+
+        <div class="video-container">
+            <iframe class="wistia_embed" title="Finite State Machines Video" src="https://fast.wistia.net/embed/iframe/udf12kns9h" allow="autoplay; fullscreen" loading="lazy"></iframe>
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p>A <em>state machine</em> is a mathematical model of computation.</p>
+        <p>A machine can have a finite number of states, but it can only operate in one state at a given time.</p>
+        <p>There are different types of state machines, but for building UIs (and understanding Redux), we'll concentrate on the type that has an initial state. Then, the next state is calculated based on input and the current state.</p>
+        <p>For our purposes, a state machine has:</p>
+        <ul>
+            <li>initial state (store)</li>
+            <li>current state (store)</li>
+            <li>inputs or actions (action creators) that trigger transitions (reducers) to the next state.</li>
+        </ul>
+        <p>It helps to think in terms of states instead of transitions.</p>
+        <p>Redux is <strong>NOT</strong> a finite state machine, but the thinking in states helps our understanding of how Redux works.</p>
+        <p>A simple example would be an application with two main parts: 1) a control dashboard and 2) a display. The application can be expressed in states and actions like so:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Current State</th>
+                    <th>Action (Input)</th>
+                    <th>New State</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>locked closed</td>
+                    <td style="text-align: center;">unlock</td>
+                    <td>unlocked closed</td>
+                </tr>
+                <tr>
+                    <td>unlocked closed</td>
+                    <td style="text-align: center;">lock</td>
+                    <td>locked closed</td>
+                </tr>
+                <tr>
+                    <td>unlocked closed</td>
+                    <td style="text-align: center;">open</td>
+                    <td>unlocked open</td>
+                </tr>
+                <tr>
+                    <td>unlocked open</td>
+                    <td style="text-align: center;">close</td>
+                    <td>locked closed</td>
+                </tr>
+                <tr>
+                    <td>unlocked open</td>
+                    <td style="text-align: center;">lock</td>
+                    <td>locked open</td>
+                </tr>
+                <tr>
+                    <td>locked open</td>
+                    <td style="text-align: center;">unlock</td>
+                    <td>unlocked open</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="follow-along">Follow Along</h2>
+        <p>We are going to exercise our brain power and <a href="http://krasimirtsonev.com/blog/article/managing-state-in-javascript-with-state-machines-stent" target="_blank">read an article about state machines</a> and how they may have some pertinence to UI and React state in particular.</p>
+
+        <div class="challenge-section">
+            <h2 id="challenge">Challenge</h2>
+            <p>Consider the following diagram:</p>
+            <p><code>graph LR A(isLoggedOut) -- HTTP Request Login --> B(pendingLoginState) B -- Success/Failure --> C(isLoggedIn) C -- HTTP Request Logout --> B B -- Success/Failure --> A</code></p>
+            <p>On your own: Write a paragraph that tells us what you know about the finite state machine pattern. It doesn't have to be long, just a few sentences on the subject.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objective 2 - [SUPPLEMENTAL] Create a Redux Store and Connect it to a React Application</title>
+    <meta name="identifier" content="g788b421d0fc3a5f2c395c8eb234f2d3a"/>
+    <meta name="editing_roles" content="teachers"/>
+    <meta name="workflow_state" content="active"/>
+    <style>
+        :root {
+            --primary-color: #93005a;
+            --secondary-color: #00808c;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #fff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --code-bg: #f8f9fa;
+            --code-color: #24292e;
+            --code-block-bg: #ffffff;
+            --code-block-border: #c7cdd1;
+            --blockquote-bg: #f8f9fa;
+            --blockquote-border: #e9ecef;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .content-section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px var(--shadow-color);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        code {
+            background: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+            color: var(--code-color);
+        }
+
+        pre {
+            background: var(--code-block-bg);
+            border: 1px solid var(--code-block-border);
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+            font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.9em;
+            color: var(--code-color);
+        }
+
+        blockquote {
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+            border-left: 4px solid var(--secondary-color);
+            background: var(--blockquote-bg);
+            border-radius: 0 5px 5px 0;
+        }
+
+        blockquote p {
+            margin: 0;
+            font-style: italic;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        strong {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            pre {
+                padding: 0.8rem;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html">← Back to Sprint Content</a>
+        <a href="../unit-videos.html">Unit Videos</a>
+    </nav>
+
+    <div class="content-section">
+        <div class="page-header">
+            <h1>Creating a Redux Store and Connecting it to React</h1>
+        </div>
+
+        <div class="video-container">
+            <iframe class="wistia_embed" title="Starting Out with Redux and React Video" src="https://fast.wistia.net/embed/iframe/xegtfn7013" allow="autoplay; fullscreen" loading="lazy"></iframe>
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p>In this section, we will learn how to create the Redux store and use a library called React-Redux to connect our React application to the store. Because Redux is a standalone library, meaning it can be used on its own or with another library or framework for state management and data flow. We have to use a second helper package that will enable us to string together Redux within a React application. That package is called <a href="https://github.com/reduxjs/react-redux">React-Redux</a>. Some more documentation and information lives <a href="http://redux.js.org/basics/usage-with-react">here</a>. The packages React and Redux are entirely separate, as quoted in the Redux documentation.</p>
+
+        <blockquote>
+            <p>From the very beginning, we need to stress that Redux has no relation to React. You can write Redux apps with React, Angular, Ember, jQuery, or vanilla JavaScript.</p>
+        </blockquote>
+
+        <h2 id="follow-along">Follow Along</h2>
+        <p>The first step we will take to enable Redux within a React application is to install it. This process assumes you've used Create React App to boilerplate out a React application.</p>
+
+        <pre><code>npm install react-redux redux</code></pre>
+
+        <p>Now that we have <code>redux</code> and <code>react-redux</code> installed, let's learn how to set it up within our application. We will use the <code>createStore</code> function from <code>redux</code>, so let's import that first.</p>
+
+        <pre><code>import { createStore } from 'redux';</code></pre>
+
+        <p><strong>*New Redux Version</strong></p>
+
+        <pre><code>import { legacy_createStore as createStore } from 'redux' }</code></pre>
+
+        <p>This is part of the Redux transition into using the Redux toolkit however, implementation will only be found in newer code bases and you will more than likely encounter older Redux principles on the job.</p>
+
+        <p><code>createStore</code> will take in a single reducer that represents the state (data) of our application globally. We need to create a <code>store</code> variable, and use <code>createStore</code> to create the Redux store.</p>
+
+        <pre><code>const store = createStore(reducer);</code></pre>
+
+        <p>You'll notice that we passed a reducer into <code>createStore</code>, but we don't have a reducer yet. We'll learn a lot more about reducers soon. For now, let's create a function called <code>reducer</code> that returns an object representing our state.</p>
+
+        <pre><code>function reducer() {
+  return {
+    title: 'Hello world! I\'m in the Redux store!',
+  }
+}
+
+const store = createStore(reducer);</code></pre>
+
+        <p>Now that we have a store, we want to make our application aware of it. The way this works is that react-redux gives us a <code>&lt;Provider&gt;&lt;/Provider&gt;</code> component that wraps around our entire application. We will pass our newly created store to that component as a prop.</p>
+
+        <p>Within our Root Component (usually <code>Index.js</code>), go ahead and import <code>Provider</code> from <code>react-redux</code>.</p>
+
+        <pre><code>import { Provider } from 'react-redux';</code></pre>
+
+        <p>Then, all we need to do is wrap our <code>&lt;App/&gt;</code> with the <code>&lt;Provider&gt;</code> component and pass a <code>store</code> we created. Then, finally, use the connect function to connect React components to the Redux store.</p>
+
+        <pre><code>&lt;Provider store={store}&gt;
+  &lt;App/&gt;
+&lt;/Provider&gt;</code></pre>
+
+        <h2 id="challenge">Challenge</h2>
+        <p>Let's go ahead and take a peek at our application using the React DevTools now that we've wrapped it up in a provider component.</p>
+        <p>Now, take the time to think about where and when you've done this before? Is there a package that we've used this same way? If so, which package is it? It is important to note that many packages that we use in React are implemented this way.</p>
+    </div>
+</body>
+</html>

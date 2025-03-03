@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engagement Expectations</title>
+    <style>
+        :root {
+            --primary-color: #93005a;
+            --secondary-color: #00808c;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #fff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .content-section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .info-box {
+            background: var(--white);
+            border: 2px solid var(--secondary-color);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1rem 0;
+        }
+
+        .info-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--background-color);
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-item.warning {
+            border-left-color: var(--primary-color);
+            background: #fff5f8;
+        }
+
+        .info-item h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-item p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary-color);
+            color: var(--white);
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .icon.warning {
+            background: var(--primary-color);
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 2rem 0;
+        }
+
+        strong {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .info-box {
+                padding: 1rem;
+            }
+
+            .info-item {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html">← Back to Sprint Content</a>
+        <a href="../unit-videos.html">Unit Videos</a>
+    </nav>
+
+    <div class="content-section">
+        <div class="page-header">
+            <h1>Engagement Expectations</h1>
+        </div>
+
+        <div class="info-box">
+            <div class="info-item">
+                <h3>
+                    <span class="icon">📊</span>
+                    Attendance and Participation
+                </h3>
+                <p>BloomTech measures engagement through multiple methods:</p>
+                <ul>
+                    <li>Taking <strong>attendance</strong> in live instruction experiences</li>
+                    <li>Verifying module & sprint <strong>project attempts</strong></li>
+                    <li>Confirming <strong>activity</strong> in BloomTech's Learning Management Systems</li>
+                </ul>
+            </div>
+
+            <div class="info-item">
+                <h3>
+                    <span class="icon">⏳</span>
+                    Activity Requirements
+                </h3>
+                <p>While learners may choose to attend live or view recorded sessions, attendance and engagement with the material are critical to success in the program. Learners who do not have activity on the Learning Management Systems <strong>for more than seven (7) days</strong> will be flagged as <strong>inactive</strong>, and BloomTech will reach out to verify enrollment.</p>
+            </div>
+
+            <div class="info-item warning">
+                <h3>
+                    <span class="icon warning">⚠️</span>
+                    Important Notice
+                </h3>
+                <p>BloomTech may withdraw inactive learners to protect them from unintentional further vesting of tuition.</p>
+            </div>
+
+            <div class="info-item">
+                <h3>
+                    <span class="icon">📅</span>
+                    Leave of Absence
+                </h3>
+                <p>Learners who are unable to engage with the curriculum and make satisfactory progress due to extenuating circumstances may need to take a leave of absence.</p>
+            </div>
+        </div>
+</div>
+</body>
+</html>

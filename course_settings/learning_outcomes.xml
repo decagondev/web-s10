@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<learningOutcomes xmlns="http://canvas.instructure.com/xsd/cccv1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://canvas.instructure.com/xsd/cccv1p0 https://canvas.instructure.com/xsd/cccv1p0.xsd">
+  <learningOutcome identifier="ga573ab6ba1f2dd6aa703f50fbb978c6c">
+    <title>Module 4 - Context API</title>
+    <calculation_method>decaying_average</calculation_method>
+    <calculation_int>60</calculation_int>
+    <copied_from_outcome_id>168550000000009846</copied_from_outcome_id>
+    <alignments>
+      <alignment>
+        <content_type>AssessmentQuestionBank</content_type>
+        <content_id>g60030f6f7900a05b8616f44820007118</content_id>
+        <mastery_type>explicit_mastery</mastery_type>
+        <mastery_score>0.6</mastery_score>
+        <position/>
+      </alignment>
+    </alignments>
+    <points_possible>3.0</points_possible>
+    <mastery_points>2.0</mastery_points>
+    <ratings>
+      <rating>
+        <description>Exceeds Expectations</description>
+        <points>3.0</points>
+      </rating>
+      <rating>
+        <description>Meets Expectations</description>
+        <points>2.0</points>
+      </rating>
+      <rating>
+        <description>Does Not Meet Expectations</description>
+        <points>1.0</points>
+      </rating>
+    </ratings>
+  </learningOutcome>
+  <learningOutcome identifier="gbfaa6406ddfafc8d1c86dedcd4639e25">
+    <title>Module 1 - The Reducer Pattern</title>
+    <calculation_method>decaying_average</calculation_method>
+    <calculation_int>60</calculation_int>
+    <copied_from_outcome_id>168550000000009839</copied_from_outcome_id>
+    <alignments>
+      <alignment>
+        <content_type>AssessmentQuestionBank</content_type>
+        <content_id>ga3ec66650843766301d6a78e32fda085</content_id>
+        <mastery_type>explicit_mastery</mastery_type>
+        <mastery_score>0.6</mastery_score>
+        <position/>
+      </alignment>
+    </alignments>
+    <points_possible>3.0</points_possible>
+    <mastery_points>2.0</mastery_points>
+    <ratings>
+      <rating>
+        <description>Exceeds Expectations</description>
+        <points>3.0</points>
+      </rating>
+      <rating>
+        <description>Meets Expectations</description>
+        <points>2.0</points>
+      </rating>
+      <rating>
+        <description>Does Not Meet Expectations</description>
+        <points>1.0</points>
+      </rating>
+    </ratings>
+  </learningOutcome>
+  <learningOutcome identifier="g39174ba55a54c96a7abd7c02629aeafb">
+    <title>Module 3 - Async Redux</title>
+    <calculation_method>decaying_average</calculation_method>
+    <calculation_int>60</calculation_int>
+    <copied_from_outcome_id>168550000000009843</copied_from_outcome_id>
+    <alignments>
+      <alignment>
+        <content_type>AssessmentQuestionBank</content_type>
+        <content_id>g756f3f3581456c25b8c5056c26ec0b40</content_id>
+        <mastery_type>explicit_mastery</mastery_type>
+        <mastery_score>0.6</mastery_score>
+        <position/>
+      </alignment>
+    </alignments>
+    <points_possible>3.0</points_possible>
+    <mastery_points>2.0</mastery_points>
+    <ratings>
+      <rating>
+        <description>Exceeds Expectations</description>
+        <points>3.0</points>
+      </rating>
+      <rating>
+        <description>Meets Expectations</description>
+        <points>2.0</points>
+      </rating>
+      <rating>
+        <description>Does Not Meet Expectations</description>
+        <points>1.0</points>
+      </rating>
+    </ratings>
+  </learningOutcome>
+  <learningOutcome identifier="g841d4533ee8f77b95360d721074d646e">
+    <title>Sprint -  3.2 - Advanced State Management</title>
+    <calculation_method>decaying_average</calculation_method>
+    <calculation_int>60</calculation_int>
+    <copied_from_outcome_id>168550000000009849</copied_from_outcome_id>
+    <alignments>
+      <alignment>
+        <content_type>AssessmentQuestionBank</content_type>
+        <content_id>g60030f6f7900a05b8616f44820007118</content_id>
+        <mastery_type>explicit_mastery</mastery_type>
+        <mastery_score>0.6</mastery_score>
+        <position/>
+      </alignment>
+      <alignment>
+        <content_type>AssessmentQuestionBank</content_type>
+        <content_id>ga3ec66650843766301d6a78e32fda085</content_id>
+        <mastery_type>explicit_mastery</mastery_type>
+        <mastery_score>0.6</mastery_score>
+        <position/>
+      </alignment>
+      <alignment>
+        <content_type>AssessmentQuestionBank</content_type>
+        <content_id>g6e6209b35c974dfcd96ce57c75b4dee7</content_id>
+        <mastery_type>explicit_mastery</mastery_type>
+        <mastery_score>0.6</mastery_score>
+        <position/>
+      </alignment>
+      <alignment>
+        <content_type>AssessmentQuestionBank</content_type>
+        <content_id>g756f3f3581456c25b8c5056c26ec0b40</content_id>
+        <mastery_type>explicit_mastery</mastery_type>
+        <mastery_score>0.6</mastery_score>
+        <position/>
+      </alignment>
+    </alignments>
+    <points_possible>3.0</points_possible>
+    <mastery_points>2.0</mastery_points>
+    <ratings>
+      <rating>
+        <description>Exceeds Expectations</description>
+        <points>3.0</points>
+      </rating>
+      <rating>
+        <description>Meets Expectations</description>
+        <points>2.0</points>
+      </rating>
+      <rating>
+        <description>Does Not Meet Expectations</description>
+        <points>1.0</points>
+      </rating>
+    </ratings>
+  </learningOutcome>
+  <learningOutcome identifier="g4568bc15d81819443e6417927505ec30">
+    <title>Module 2 - Redux</title>
+    <calculation_method>decaying_average</calculation_method>
+    <calculation_int>60</calculation_int>
+    <copied_from_outcome_id>168550000000009854</copied_from_outcome_id>
+    <alignments>
+      <alignment>
+        <content_type>AssessmentQuestionBank</content_type>
+        <content_id>g6e6209b35c974dfcd96ce57c75b4dee7</content_id>
+        <mastery_type>explicit_mastery</mastery_type>
+        <mastery_score>0.6</mastery_score>
+        <position/>
+      </alignment>
+    </alignments>
+    <points_possible>3.0</points_possible>
+    <mastery_points>2.0</mastery_points>
+    <ratings>
+      <rating>
+        <description>Exceeds Expectations</description>
+        <points>3.0</points>
+      </rating>
+      <rating>
+        <description>Meets Expectations</description>
+        <points>2.0</points>
+      </rating>
+      <rating>
+        <description>Does Not Meet Expectations</description>
+        <points>1.0</points>
+      </rating>
+    </ratings>
+  </learningOutcome>
+</learningOutcomes>

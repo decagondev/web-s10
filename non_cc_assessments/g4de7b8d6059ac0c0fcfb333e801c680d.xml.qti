@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
+  <assessment ident="g4de7b8d6059ac0c0fcfb333e801c680d" title="Context API Check For Understanding">
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>cc_maxattempts</fieldlabel>
+        <fieldentry>unlimited</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    <section ident="root_section">
+      <item ident="g5d598a27daf14693416124c4505d5e6a" title="3b5cd902-ab28-4090-8523-fbadff44bbf1">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>multiple_choice_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>5898,9906,9267,7773</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>gf47b767d37e06559ff801f2d253307ba</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;What is a benefit of using the Context API?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="5898">
+                <material>
+                  <mattext texttype="text/plain">Helps avoid prop drilling.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="9906">
+                <material>
+                  <mattext texttype="text/plain">Makes the bundle size smaller.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="9267">
+                <material>
+                  <mattext texttype="text/plain">Improves page-load speed.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="7773">
+                <material>
+                  <mattext texttype="text/plain">Makes components more testable.</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">5898</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">This happens because in order to reuse a component in a component tree outside of the context provider, you'd have to move your provider and the data to a higher component.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="ga55eb9ea69a139b3eccfabcb61a7e91a" title="3ec2288c-a0e9-4fc3-aade-8a3c32c321d3">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>multiple_choice_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>8749,1879,979,1863</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>gf47b767d37e06559ff801f2d253307ba</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;What is the syntax to create a context object?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="8749">
+                <material>
+                  <mattext texttype="text/html">&lt;pre style="background: none 0% 0% / auto repeat scroll padding-box border-box #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font: 12px / 14.4px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none solid #24292e; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px;" data-hljs-language="javascript"&gt;&lt;code style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px none #24292e; font: 16px / 19.2px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px;"&gt;&lt;span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;"&gt;const&lt;/span&gt; &lt;span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;"&gt;SampleContext&lt;/span&gt; = &lt;span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;"&gt;createContext&lt;/span&gt;()&lt;/code&gt;&lt;/pre&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="1879">
+                <material>
+                  <mattext texttype="text/html">&lt;pre style="background: none 0% 0% / auto repeat scroll padding-box border-box #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font: 12px / 14.4px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none solid #24292e; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px;" data-hljs-language="javascript"&gt;&lt;code style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px none #24292e; font: 16px / 19.2px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px;"&gt;&lt;span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;"&gt;const&lt;/span&gt; &lt;span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;"&gt;Context&lt;/span&gt; = &lt;span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;"&gt;useContext&lt;/span&gt;()&lt;/code&gt;&lt;/pre&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="979">
+                <material>
+                  <mattext texttype="text/html">&lt;pre style="background: none 0% 0% / auto repeat scroll padding-box border-box #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font: 12px / 14.4px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none solid #24292e; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px;" data-hljs-language="javascript"&gt;&lt;code style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px none #24292e; font: 16px / 19.2px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px;"&gt;&lt;span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;"&gt;useContext&lt;/span&gt;(&lt;span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;"&gt;const&lt;/span&gt; &lt;span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;"&gt;SampleContext&lt;/span&gt; = createContext)&lt;/code&gt;&lt;/pre&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="1863">
+                <material>
+                  <mattext texttype="text/html">&lt;pre style="background: none 0% 0% / auto repeat scroll padding-box border-box #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font: 12px / 14.4px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none solid #24292e; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px;" data-hljs-language="javascript"&gt;&lt;code style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px none #24292e; font: 16px / 19.2px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px;"&gt;&lt;span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;"&gt;const&lt;/span&gt; &lt;span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;"&gt;SampleContext&lt;/span&gt; = &lt;span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;"&gt;createContextObject&lt;/span&gt;()&lt;/code&gt;&lt;/pre&gt;</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">1879</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="1879_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">979</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="979_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">1863</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="1863_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">8749</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">The `createContext` is the React function that we call to create a context object.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="1879_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">&lt;code&gt;useContext&lt;/code&gt; allows us to read data from the context object, not create a context object</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="979_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">&lt;code&gt;useContext&lt;/code&gt; allows us to read data from the context object, not create a context object</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="1863_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">We want to call &lt;code&gt;createContext&lt;/code&gt;, not &lt;code&gt;createContextObject&lt;/code&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="g1e48f7919adc091dadd6a8e8b801bed4" title="bbc6c4a4-50bc-4980-a610-29c9030addf9">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>multiple_choice_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>1324,393,1983,2117</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>gf47b767d37e06559ff801f2d253307ba</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;To what prop on the Provider component do you pass your data?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="1324">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;value&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="393">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;action&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="1983">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;state&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="2117">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;data&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">393</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="393_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">1983</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="1983_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">2117</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="2117_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">1324</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">This is the prop we use to pass data to the Provider component so we can access that data in its children components</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="393_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">We actually want to use the &lt;code&gt;value&lt;/code&gt; prop.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="1983_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">We actually want to use the &lt;code&gt;value&lt;/code&gt; prop.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="2117_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">We actually want to use the &lt;code&gt;value&lt;/code&gt; prop.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="g3fa3a0746245cb42372979214499ccc0" title="441a8e96-e566-4f12-a47b-b923219ca23a">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>multiple_choice_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>9766,6675,1651,8869</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>gf47b767d37e06559ff801f2d253307ba</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;What do we wrap using a Context Provider?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="9766">
+                <material>
+                  <mattext texttype="text/plain">Any part of the component tree we wish.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="6675">
+                <material>
+                  <mattext texttype="text/plain">Always the top-level component.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="1651">
+                <material>
+                  <mattext texttype="text/plain">Always the most deeply nested component.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="8869">
+                <material>
+                  <mattext texttype="text/html">We don't use the Context Provider to wrap anything.</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">6675</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="6675_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">1651</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="1651_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">8869</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="8869_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">9766</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="6675_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">We can wrap any part of the component tree we wish, it needn't be the top-level component.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="1651_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">We can wrap any part of the component tree we wish.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="8869_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">We need to wrap part of the component tree, in order to consume data from context.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="g27f5a5a7eb163372996fabe67a425c43" title="2bca53da-2f4a-4931-9f62-dc619ad4e58a">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>multiple_choice_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>8732,3662,3928,7391</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>gf47b767d37e06559ff801f2d253307ba</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;What does the &lt;code&gt;useContext&lt;/code&gt; hook return when called?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="8732">
+                <material>
+                  <mattext texttype="text/plain">Whatever you passed into the Provider for that context object.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="3662">
+                <material>
+                  <mattext texttype="text/html">Any state that is managed by the Provider's component</mattext>
+                </material>
+              </response_label>
+              <response_label ident="3928">
+                <material>
+                  <mattext texttype="text/plain">A store that is separate from the component tree structure</mattext>
+                </material>
+              </response_label>
+              <response_label ident="7391">
+                <material>
+                  <mattext texttype="text/plain">A function to update data from a separate store.</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">3662</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="3662_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">3928</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="3928_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">7391</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="7391_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">8732</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">The data we pass to a provider can be a variable, object, array, or any JavaScript type. The useContext hook will return whatever is passed into the Provider.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="3662_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Almost, but only data passed into the Provider will be returned by useContext.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="3928_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">The data we pass into a context Provider is not a separate store. It's usually state that is managed by the component rendering the Provider, but could be props or other data passed to the component.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="7391_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">The context API does not use a separate store.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

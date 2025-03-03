@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="g75986ff2c3b234a05c4e640cf9fb4a2d" xmlns="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1" xmlns:lom="http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource" xmlns:lomimscc="http://ltsc.ieee.org/xsd/imsccv1p1/LOM/manifest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_imscp_v1p2_v1p0.xsd http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource http://www.imsglobal.org/profile/cc/ccv1p1/LOM/ccv1p1_lomresource_v1p0.xsd http://ltsc.ieee.org/xsd/imsccv1p1/LOM/manifest http://www.imsglobal.org/profile/cc/ccv1p1/LOM/ccv1p1_lommanifest_v1p0.xsd">
+  <metadata>
+    <schema>IMS Common Cartridge</schema>
+    <schemaversion>1.1.0</schemaversion>
+    <lomimscc:lom>
+      <lomimscc:general>
+        <lomimscc:title>
+          <lomimscc:string>Web Unit 3 Sprint 10</lomimscc:string>
+        </lomimscc:title>
+      </lomimscc:general>
+      <lomimscc:lifeCycle>
+        <lomimscc:contribute>
+          <lomimscc:date>
+            <lomimscc:dateTime>2025-02-26</lomimscc:dateTime>
+          </lomimscc:date>
+        </lomimscc:contribute>
+      </lomimscc:lifeCycle>
+      <lomimscc:rights>
+        <lomimscc:copyrightAndOtherRestrictions>
+          <lomimscc:value>yes</lomimscc:value>
+        </lomimscc:copyrightAndOtherRestrictions>
+        <lomimscc:description>
+          <lomimscc:string>Private (Copyrighted) - http://en.wikipedia.org/wiki/Copyright</lomimscc:string>
+        </lomimscc:description>
+      </lomimscc:rights>
+    </lomimscc:lom>
+  </metadata>
+  <organizations>
+    <organization identifier="org_1" structure="rooted-hierarchy">
+      <item identifier="LearningModules">
+        <item identifier="gd10c97dfa2561e6dc65642c607560509">
+          <title>Learning Resources</title>
+          <item identifier="g7041489579058b1e33a6523a99071a5b" identifierref="g1a71624bd8a05a4f5d9f4ae979bb62d2">
+            <title>Important Info</title>
+          </item>
+          <item identifier="gb65db1eeb804d6cc2b222fbcb7bdf547" identifierref="gabd3efea4bde22d2ed1b686f816bde79">
+            <title>Academic Support</title>
+          </item>
+          <item identifier="g73f9381273d0790275ebb1b33dfe677e" identifierref="gaf3a18d32abb085f214e76754f0eef0d">
+            <title>Sprint 10 Study Guide</title>
+          </item>
+          <item identifier="gc101a622bcd5ffa5d0f7991835ba5d2e" identifierref="g60114eb693efba6fce8a7212c2e47396">
+            <title>Live Class Offerings</title>
+          </item>
+        </item>
+        <item identifier="gb917ffe463ab79433070b94f77bcb9c7">
+          <title>Module 1 - The Reducer Pattern</title>
+          <item identifier="g033a2abf358e2367195e874c212fdb4b">
+            <title>Guided Project</title>
+          </item>
+          <item identifier="g5e3a98115ffb7d8f6a72d9663fa60196" identifierref="gaa1fb52460467c33a09e0c5c05583c86">
+            <title>Module 1 Guided Project</title>
+          </item>
+          <item identifier="ga5ab3f27463e6bfbdbcd18accb654cd7">
+            <title>Core Competencies</title>
+          </item>
+          <item identifier="gc80ad4f0ba659c255dae137d85664f99" identifierref="g5c50d3b24fc1c430e06aa09433b46c80">
+            <title>Objective 1 - Understanding Immutability</title>
+          </item>
+          <item identifier="g1d1962558323cf25b0d74e8891151800" identifierref="g35afaede859a3605573369d853a23503">
+            <title>Objective 2 - Creating Reducers</title>
+          </item>
+          <item identifier="g531cbc327d6ffef21abdb8eb78b6dc6f" identifierref="g8285a27e6dc8509db0223dbe364ca484">
+            <title>Objective 3 - Using the Reducer Hook</title>
+          </item>
+          <item identifier="gd1dcda751bedad02f6df2492b959717d">
+            <title>Check for Understanding</title>
+          </item>
+          <item identifier="gee1e7fd203cf348a80c3d4a587fab9fc" identifierref="gbab026d966da26bb7f9b4b50286854d5">
+            <title>The Reducer Pattern Check For Understanding</title>
+          </item>
+          <item identifier="g3f8181c48bad44ce059bd137e2cdea71">
+            <title>Practice Activity</title>
+          </item>
+          <item identifier="g2ffe3a136eb6f1a044de975aecf53834" identifierref="g1ee9779fbce88da4e06880c6367c4e44">
+            <title>Module 1 Project</title>
+          </item>
+        </item>
+        <item identifier="g2d7e8c9b17dfe99ab1d0fd2a9f506153">
+          <title>Module 2 - The Context API</title>
+          <item identifier="g1f3e2d80079215c41fb5c5a50e9599b4">
+            <title>Guided Project</title>
+          </item>
+          <item identifier="ge10c6f0587f16b39687a1296f4e13636" identifierref="g26bd14a27adba6bf98da708d3abeaac1">
+            <title>Module 2 Guided Project</title>
+          </item>
+          <item identifier="g31a7a508ee07eb80db2d475c3b66d82c">
+            <title>Core Competencies</title>
+          </item>
+          <item identifier="gd532d97a4888c77f6d34f4d6694cb1ab" identifierref="g5aa9d6dbf82e2c5ea7f5387bb076defe">
+            <title>Objective 1 - Understanding the Context API</title>
+          </item>
+          <item identifier="gcee88e053c631bbcc88fc6556042f1ad" identifierref="g9902505d0f6f9892f41ec18c86063b2d">
+            <title>Objective 2 - Creating a Context Provider</title>
+          </item>
+          <item identifier="gf8fd1fa56d8616a161ac9cff025a1dd8" identifierref="g547c3c6914bef0f221c29fe6875d56f8">
+            <title>Objective 3 - Consuming Data From Context</title>
+          </item>
+          <item identifier="gde4abd5ff24d8ad2c5af65af268e3691">
+            <title>Check for Understanding</title>
+          </item>
+          <item identifier="g83fcb461376175460c7379327b713f71" identifierref="g4de7b8d6059ac0c0fcfb333e801c680d">
+            <title>Context API Check For Understanding</title>
+          </item>
+          <item identifier="g26c042457f73793faac26c2af536602f">
+            <title>Practice Activity</title>
+          </item>
+          <item identifier="g8043f7125ea5f0bea800e1d5ba1c3e5a" identifierref="ga15197716ba04b59bf4bc1d30c8c420e">
+            <title>Module 2 Project</title>
+          </item>
+        </item>
+        <item identifier="g60d8ba71ea3847e4c7a69fdd6be41734">
+          <title>Module 3 - Redux Toolkit</title>
+          <item identifier="g09baac6166ced123ea047e19594babf6">
+            <title>Guided Project</title>
+          </item>
+          <item identifier="ge42142114f2bc5dbcf8d4ca8286a6e2f" identifierref="g5ac1293b2695330060132368f5f4db54">
+            <title>Module 3 Guided Project</title>
+          </item>
+          <item identifier="g1008fb959b729ab3930ae7e37ca260fa">
+            <title>Core Competencies</title>
+          </item>
+          <item identifier="g868d227e9cf9606128f069d496bad022" identifierref="g3e46d2798a536be8abb17fd85b4e9f07">
+            <title>Objective 1 - Understanding Redux</title>
+          </item>
+          <item identifier="g92fe82c487451bea3e5befef74d95ae8" identifierref="gc97afdf495af161d98e94d1375a5ab04">
+            <title>Objective 2 - Creating a Redux App</title>
+          </item>
+          <item identifier="g92aaf88d5353313e7751b6929946a3a0" identifierref="gac7ae85b7fbbd46ad7291c349adaf313">
+            <title>Objective 3 - Working with Reducers and Actions</title>
+          </item>
+          <item identifier="g375c23450e1b257024677f0ebe574744" identifierref="g3024662530492b43eb049289606fa8da">
+            <title>Objective 4 - Dispatching Actions</title>
+          </item>
+          <item identifier="g440002e580190de7d27e1cfdb7f6af35" identifierref="g1669974c9a36b5fa3eda07aefe0f4340">
+            <title>Objective 5 - Managing Complex State</title>
+          </item>
+          <item identifier="ga3f0c53c46b6c84510fa1d4a653613df">
+            <title>Check for Understanding</title>
+          </item>
+          <item identifier="gf5c4b1ccfdd6e14c8282aa7a5f8173db" identifierref="g0f1cb5f8a1cc0f6573276c2ec6ba9ca4">
+            <title>Redux Toolkit Check For Understanding</title>
+          </item>
+          <item identifier="g1c1eb422b307159f9790830c4134f822">
+            <title>Practice Activity</title>
+          </item>
+          <item identifier="g08809f7f0bee00683fb3b9082ad6afda" identifierref="g0307b813096d9e9c52cba31e3fde272b">
+            <title>Module 3 Project</title>
+          </item>
+        </item>
+        <item identifier="g4913a708512c30efc76dbb929a41ff90">
+          <title>Module 4 - RTK Query</title>
+          <item identifier="gf3d1e02b0ba987d7faeac948d143f048">
+            <title>Guided Project</title>
+          </item>
+          <item identifier="gec8a09a793ca18dc1191dc67336428f6" identifierref="g626dc6be75dde7a0bdf549188dc34496">
+            <title>Module 4 Guided Project</title>
+          </item>
+          <item identifier="gb112fb4df1339ac8d50e1c40da01527a">
+            <title>Core Competencies</title>
+          </item>
+          <item identifier="g2ea772a10a06a030ca3432896c0317cc" identifierref="g3646507f36370bb8ef7b55c188003be7">
+            <title>Objective 1 - Understanding RTK Query</title>
+          </item>
+          <item identifier="gc26f95c523e08cd26b031089534afdd2" identifierref="g6f8929d71248d7dfc01f69a159ca3304">
+            <title>Objective 2 - Setting Up RTK Query</title>
+          </item>
+          <item identifier="gce11215e3b235d5224c4d25a9ab52719" identifierref="g34db03e4814fa0e25e5dde81325286e1">
+            <title>Objective 3 - Creating Queries</title>
+          </item>
+          <item identifier="gcc89883cd6e3ce872cc624968c6fca49" identifierref="ge69193b2cfde06f14f5c19335facb8fd">
+            <title>Objective 4 - Creating Mutations</title>
+          </item>
+          <item identifier="ga4380ed63cf97fa53376e41a31f43257" identifierref="g340d89e34d9b0943c2f6aa816bf82a81">
+            <title>Objective 5 - Using Tags</title>
+          </item>
+          <item identifier="g2bc4ea1de3c052b9c777a79fd11988b4" identifierref="g27c30be0af4e2d1c792736e61b6b445b">
+            <title>Objective 6 - Monitoring Requests</title>
+          </item>
+          <item identifier="g377fa3659c894b4e3a7ce6a3f9d40bdf">
+            <title>Check for Understanding</title>
+          </item>
+          <item identifier="g1f6b88ca9679b0f65f7c33ceb8086119" identifierref="g835c1e40d615216c72113eaf96f5a54c">
+            <title>RTK Query Check For Understanding</title>
+          </item>
+          <item identifier="g33a1f6c15472a25c84b1fb5af872c678">
+            <title>Practice Activity</title>
+          </item>
+          <item identifier="g4ba7ec4a6f11ffce6b82b7b190500e63" identifierref="gd96a4a26ead7d19c9a696ba6859ff0ef">
+            <title>Module 4 Project</title>
+          </item>
+        </item>
+        <item identifier="gec7a8149692525d45f232e4b0adb3214">
+          <title>Sprint Challenge</title>
+          <item identifier="gd54db3b316414e5c297393c49ca7ac2f" identifierref="g82caf469d22cab62f946dc734ba4eb41">
+            <title>Web Sprint Challenge Setup</title>
+          </item>
+          <item identifier="gee5d610b45488617a0335cdc227aa34f" identifierref="gadeb634849fc3d4e1a49ffd35f506453">
+            <title>Sprint Challenge Submission</title>
+          </item>
+          <item identifier="g2d4aab42e499f83cc74177cb7a0b7e08" identifierref="g07f2fda509262742613c3ab4edb68d8b">
+            <title>Sprint Assessment</title>
+          </item>
+          <item identifier="gdf12826d7de16c526436617d1547d62b" identifierref="gaf6f168cf6876dca202d6220fdd87943">
+            <title>Sprint Retrospective Survey</title>
+          </item>
+          <item identifier="g2f518fcd420a4d487f9fdac2e3e9a219" identifierref="ged172497920033f3cbb027faecee7e30">
+            <title>Next Step</title>
+          </item>
+        </item>
+        <item identifier="g6fa3fc98079a9a4b634b5da8a2cb289c">
+          <title>Attend Code-Along 1</title>
+          <item identifier="gf735d806cbe4333674e0c4d7488a1f2e" identifierref="gda953f98bd893c5fb62d75ef0ca253f7">
+            <title>Prepare for Code-Along 1: Redux</title>
+          </item>
+        </item>
+        <item identifier="gaddc7a50c16dd09a59f079b1fe6b9213">
+          <title>Attend Code-Along 2</title>
+          <item identifier="g9f21c8fcf1d120848e25f28944074570" identifierref="gc36d52052bcb19bdb17239da0fce196b">
+            <title>Prepare for Code-Along 2: Async Redux</title>
+          </item>
+        </item>
+        <item identifier="g0937cd8255a0346f2719c2296d6fa0cb">
+          <title>Supplemental Material</title>
+          <item identifier="g4473189b61164aa090f592e6ec4dd6a4">
+            <title>The content below might be out of date, and will be removed in the future</title>
+          </item>
+          <item identifier="g8cdeddf76b99c98145b1d7daa66c8ce7">
+            <title>Redux</title>
+          </item>
+          <item identifier="gb8d2e697def3311a61aebe4b6faa0cf1" identifierref="gb10df07792c91a592695b0f6c95e8535">
+            <title>Guided Project [SUPPLEMENTAL]</title>
+          </item>
+          <item identifier="g4caa05b0b78d1dd2d780226fb3d9cded" identifierref="ga18ba16d12e24d8a3f37e29f00879d90">
+            <title>Objective 1 - [SUPPLEMENTAL] Explain What Redux is and the Problem it Solves</title>
+          </item>
+          <item identifier="gec78c80e92043816423574e9774fe822" identifierref="g788b421d0fc3a5f2c395c8eb234f2d3a">
+            <title>Objective 2 - [SUPPLEMENTAL] Create a Redux Store and Connect it to a React Application</title>
+          </item>
+          <item identifier="g83dfc794ddb70391b44f0aa2edd660ba" identifierref="g52d3faa121e0b8480bd22bc77120996a">
+            <title>Objective 3 - [SUPPLEMENTAL] use the connect function to connect React components to the Redux store</title>
+          </item>
+          <item identifier="g62a34f664d6d90bfe1e74380ec2805f3" identifierref="g34115c3bcaea10db0a472155901b85d8">
+            <title>Objective 4 - [SUPPLEMENTAL] Write Actions and Action Creators to Describe State Changes</title>
+          </item>
+          <item identifier="gd8f7e87648ec0ff22f1622997c54c68f" identifierref="gf9b848434aa0c0ff876eeca7eb04f6c0">
+            <title>Objective 5 - [SUPPLEMENTAL] Write Reducers to Respond to Actions and Update State</title>
+          </item>
+          <item identifier="gd5e1cf4cdfea60237542e4e673400946" identifierref="g66998cdec5ef18d40a3a99e075640cd4">
+            <title>Module 2 Project [SUPPLEMENTAL]</title>
+          </item>
+          <item identifier="gdb471e89eee260bb8d6aeddb3a594383" identifierref="g0e558756e02a8d50d8d7218e72592611">
+            <title>Module 2 Project Solution Video [SUPPLEMENTAL]</title>
+          </item>
+          <item identifier="g6d40130fcf66730dc2f363748a4f11c0">
+            <title>Async Redux</title>
+          </item>
+          <item identifier="g98170dc63d1c4859ad24b37471c97657" identifierref="g5eab93e5113c0dced5a625f0a35d5d88">
+            <title>Guided Project [SUPPLEMENTAL]</title>
+          </item>
+          <item identifier="g357fe1dd25df37ef038f3b5214683395" identifierref="g27ad19f48367ad2c180ea1df68a68d58">
+            <title>Objective 1 - [SUPPLEMENTAL] The Finite State Machine Pattern and Its Relationship to Building Redux Applications</title>
+          </item>
+          <item identifier="g2f31cdc50d38a73e17e4156d998a01e1" identifierref="g82220b6fe9fd60a2790324c99cd0ecb6">
+            <title>Objective 2 - [SUPPLEMENTAL] Implement Redux Middleware Libraries Into a Redux Store Using ApplyMiddleware</title>
+          </item>
+          <item identifier="gecc98913add4f9098ec5c32964b1a770" identifierref="g8d3b2c4c14adcdb4027d7a234dfee14d">
+            <title>Objective 3 - [SUPPLEMENTAL] Use Redux-Thunk and Asynchronous Action Creators</title>
+          </item>
+          <item identifier="ga0d9254dea154657e5b69abf210dddec" identifierref="g01fff2bd5b707d61a7ebd0b42e986bf6">
+            <title>Module 3 Project [SUPPLEMENTAL]</title>
+          </item>
+          <item identifier="gddfa2d3ac19d9a9b46c1a531d1bff5aa" identifierref="ga061ed0e5b9c5def602420fea70b432d">
+            <title>Module 3 Project Solution Video  [SUPPLEMENTAL]</title>
+          </item>
+        </item>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="g486b91376bd67aff1da5b868cbb33a3a_syllabus" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="course_settings/syllabus.html" intendeduse="syllabus">
+      <file href="course_settings/syllabus.html"/>
+    </resource>
+    <resource identifier="g486b91376bd67aff1da5b868cbb33a3a" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="course_settings/canvas_export.txt">
+      <file href="course_settings/course_settings.xml"/>
+      <file href="course_settings/module_meta.xml"/>
+      <file href="course_settings/assignment_groups.xml"/>
+      <file href="course_settings/learning_outcomes.xml"/>
+      <file href="course_settings/files_meta.xml"/>
+      <file href="course_settings/late_policy.xml"/>
+      <file href="course_settings/context.xml"/>
+      <file href="course_settings/media_tracks.xml"/>
+      <file href="course_settings/canvas_export.txt"/>
+    </resource>
+    <resource identifier="g72048d58bc308039afe1ec7bbcd57982" type="webcontent" href="wiki_content/redux-solution.html">
+      <file href="wiki_content/redux-solution.html"/>
+    </resource>
+    <resource identifier="gabd3efea4bde22d2ed1b686f816bde79" type="webcontent" href="wiki_content/academic-support.html">
+      <file href="wiki_content/academic-support.html"/>
+    </resource>
+    <resource identifier="g63daf1771b1d237e0a5d1465499456ec" type="webcontent" href="wiki_content/context-api.html">
+      <file href="wiki_content/context-api.html"/>
+    </resource>
+    <resource identifier="gc537a5d4355a284646489600f002693e" type="webcontent" href="wiki_content/async-redux-solution.html">
+      <file href="wiki_content/async-redux-solution.html"/>
+    </resource>
+    <resource identifier="g29c5345aab35a31bb078fe3cdaa2417d" type="webcontent" href="wiki_content/home-page.html">
+      <file href="wiki_content/home-page.html"/>
+    </resource>
+    <resource identifier="g0009f139de5390728d04922790fcfe77" type="webcontent" href="wiki_content/career-coaching.html">
+      <file href="wiki_content/career-coaching.html"/>
+    </resource>
+    <resource identifier="gdb87d4f0db7d5e81cb7f027bf4d3f3d4" type="webcontent" href="wiki_content/how-to-use-codegrade.html">
+      <file href="wiki_content/how-to-use-codegrade.html"/>
+    </resource>
+    <resource identifier="g8d3b2c4c14adcdb4027d7a234dfee14d" type="webcontent" href="wiki_content/objective-3-effectively-use-redux-thunk-and-asynchronous-action-creators-to-consume-data-from-external-apis.html">
+      <file href="wiki_content/objective-3-effectively-use-redux-thunk-and-asynchronous-action-creators-to-consume-data-from-external-apis.html"/>
+    </resource>
+    <resource identifier="g5ac1293b2695330060132368f5f4db54" type="webcontent" href="wiki_content/module-2-guided-project-rtk.html">
+      <file href="wiki_content/module-2-guided-project-rtk.html"/>
+    </resource>
+    <resource identifier="g82caf469d22cab62f946dc734ba4eb41" type="webcontent" href="wiki_content/web-sprint-challenge-setup.html">
+      <file href="wiki_content/web-sprint-challenge-setup.html"/>
+    </resource>
+    <resource identifier="ga18ba16d12e24d8a3f37e29f00879d90" type="webcontent" href="wiki_content/objective-1-explain-what-redux-is-and-the-problem-it-solves.html">
+      <file href="wiki_content/objective-1-explain-what-redux-is-and-the-problem-it-solves.html"/>
+    </resource>
+    <resource identifier="g5eab93e5113c0dced5a625f0a35d5d88" type="webcontent" href="wiki_content/module-3-guided-project.html">
+      <file href="wiki_content/module-3-guided-project.html"/>
+    </resource>
+    <resource identifier="g82220b6fe9fd60a2790324c99cd0ecb6" type="webcontent" href="wiki_content/objective-2-implement-redux-middleware-libraries-into-a-redux-store-using-applymiddleware.html">
+      <file href="wiki_content/objective-2-implement-redux-middleware-libraries-into-a-redux-store-using-applymiddleware.html"/>
+    </resource>
+    <resource identifier="gaa1fb52460467c33a09e0c5c05583c86" type="webcontent" href="wiki_content/module-1-guided-project.html">
+      <file href="wiki_content/module-1-guided-project.html"/>
+    </resource>
+    <resource identifier="ged65c43b3ad38a84729962548e8fde7a" type="webcontent" href="wiki_content/objective-1-explain-what-immutability-is-in-programming-and-demonstrate-its-benefits.html">
+      <file href="wiki_content/objective-1-explain-what-immutability-is-in-programming-and-demonstrate-its-benefits.html"/>
+    </resource>
+    <resource identifier="g1a71624bd8a05a4f5d9f4ae979bb62d2" type="webcontent" href="wiki_content/important-info.html">
+      <file href="wiki_content/important-info.html"/>
+    </resource>
+    <resource identifier="gaf3a18d32abb085f214e76754f0eef0d" type="webcontent" href="wiki_content/sprint-10-study-guide.html">
+      <file href="wiki_content/sprint-10-study-guide.html"/>
+    </resource>
+    <resource identifier="g788b421d0fc3a5f2c395c8eb234f2d3a" type="webcontent" href="wiki_content/objective-2-create-a-redux-store-and-connect-it-to-a-react-application.html">
+      <file href="wiki_content/objective-2-create-a-redux-store-and-connect-it-to-a-react-application.html"/>
+    </resource>
+    <resource identifier="gf9b848434aa0c0ff876eeca7eb04f6c0" type="webcontent" href="wiki_content/objective-5-write-reducers-to-respond-to-actions-and-update-state.html">
+      <file href="wiki_content/objective-5-write-reducers-to-respond-to-actions-and-update-state.html"/>
+    </resource>
+    <resource identifier="g0e558756e02a8d50d8d7218e72592611" type="webcontent" href="wiki_content/module-2-project-solution-video.html">
+      <file href="wiki_content/module-2-project-solution-video.html"/>
+    </resource>
+    <resource identifier="g547c3c6914bef0f221c29fe6875d56f8" type="webcontent" href="wiki_content/objective-3-consume-data-from-a-context-object-in-nested-components.html">
+      <file href="wiki_content/objective-3-consume-data-from-a-context-object-in-nested-components.html"/>
+    </resource>
+    <resource identifier="g34115c3bcaea10db0a472155901b85d8" type="webcontent" href="wiki_content/objective-4-write-actions-and-action-creators-to-describe-state-changes.html">
+      <file href="wiki_content/objective-4-write-actions-and-action-creators-to-describe-state-changes.html"/>
+    </resource>
+    <resource identifier="g27ad19f48367ad2c180ea1df68a68d58" type="webcontent" href="wiki_content/objective-1-describe-the-finite-state-machine-pattern-and-its-relationship-to-building-redux-applications.html">
+      <file href="wiki_content/objective-1-describe-the-finite-state-machine-pattern-and-its-relationship-to-building-redux-applications.html"/>
+    </resource>
+    <resource identifier="g9902505d0f6f9892f41ec18c86063b2d" type="webcontent" href="wiki_content/objective-2-provide-data-to-the-component-tree-with-a-context-provider.html">
+      <file href="wiki_content/objective-2-provide-data-to-the-component-tree-with-a-context-provider.html"/>
+    </resource>
+    <resource identifier="gc6933cd070ddf5c44d1893679571e617" type="webcontent" href="wiki_content/module-4-project-solution-video.html">
+      <file href="wiki_content/module-4-project-solution-video.html"/>
+    </resource>
+    <resource identifier="g35afaede859a3605573369d853a23503" type="webcontent" href="wiki_content/objective-2-creating-reducers.html">
+      <file href="wiki_content/objective-2-creating-reducers.html"/>
+    </resource>
+    <resource identifier="g5c50d3b24fc1c430e06aa09433b46c80" type="webcontent" href="wiki_content/objective-1-understanding-immutability.html">
+      <file href="wiki_content/objective-1-understanding-immutability.html"/>
+    </resource>
+    <resource identifier="g11b27ff89a2036f8e5f9e0c98798286e" type="webcontent" href="wiki_content/module-1-project-solution-video.html">
+      <file href="wiki_content/module-1-project-solution-video.html"/>
+    </resource>
+    <resource identifier="g8285a27e6dc8509db0223dbe364ca484" type="webcontent" href="wiki_content/objective-3-using-the-reducer-hook.html">
+      <file href="wiki_content/objective-3-using-the-reducer-hook.html"/>
+    </resource>
+    <resource identifier="gac7ae85b7fbbd46ad7291c349adaf313" type="webcontent" href="wiki_content/objective-3-working-with-reducers-and-actions.html">
+      <file href="wiki_content/objective-3-working-with-reducers-and-actions.html"/>
+    </resource>
+    <resource identifier="g3024662530492b43eb049289606fa8da" type="webcontent" href="wiki_content/objective-4-dispatching-actions.html">
+      <file href="wiki_content/objective-4-dispatching-actions.html"/>
+    </resource>
+    <resource identifier="g1669974c9a36b5fa3eda07aefe0f4340" type="webcontent" href="wiki_content/objective-5-managing-complex-state.html">
+      <file href="wiki_content/objective-5-managing-complex-state.html"/>
+    </resource>
+    <resource identifier="g626dc6be75dde7a0bdf549188dc34496" type="webcontent" href="wiki_content/module-3-guided-project-rtk-query-2.html">
+      <file href="wiki_content/module-3-guided-project-rtk-query-2.html"/>
+    </resource>
+    <resource identifier="g75a97eddcd45d581d5767037130ec90b" type="webcontent" href="wiki_content/objective-2-describe-reducer-functions.html">
+      <file href="wiki_content/objective-2-describe-reducer-functions.html"/>
+    </resource>
+    <resource identifier="gc2e3c2c26a5d60e23f743acadcedfa47" type="webcontent" href="wiki_content/objective-3-employ-the-usereducer-hook-to-manage-state-in-a-component.html">
+      <file href="wiki_content/objective-3-employ-the-usereducer-hook-to-manage-state-in-a-component.html"/>
+    </resource>
+    <resource identifier="gb10df07792c91a592695b0f6c95e8535" type="webcontent" href="wiki_content/module-2-guided-project.html">
+      <file href="wiki_content/module-2-guided-project.html"/>
+    </resource>
+    <resource identifier="gda953f98bd893c5fb62d75ef0ca253f7" type="webcontent" href="wiki_content/prepare-for-code-along-1-redux.html">
+      <file href="wiki_content/prepare-for-code-along-1-redux.html"/>
+    </resource>
+    <resource identifier="ga061ed0e5b9c5def602420fea70b432d" type="webcontent" href="wiki_content/module-3-project-solution-video.html">
+      <file href="wiki_content/module-3-project-solution-video.html"/>
+    </resource>
+    <resource identifier="g5aa9d6dbf82e2c5ea7f5387bb076defe" type="webcontent" href="wiki_content/objective-1-describe-what-the-context-api-is-and-the-problem-it-solves.html">
+      <file href="wiki_content/objective-1-describe-what-the-context-api-is-and-the-problem-it-solves.html"/>
+    </resource>
+    <resource identifier="g26bd14a27adba6bf98da708d3abeaac1" type="webcontent" href="wiki_content/module-4-guided-project.html">
+      <file href="wiki_content/module-4-guided-project.html"/>
+    </resource>
+    <resource identifier="g3646507f36370bb8ef7b55c188003be7" type="webcontent" href="wiki_content/objective-1-understanding-rtk-query.html">
+      <file href="wiki_content/objective-1-understanding-rtk-query.html"/>
+    </resource>
+    <resource identifier="g34db03e4814fa0e25e5dde81325286e1" type="webcontent" href="wiki_content/objective-3-creating-queries.html">
+      <file href="wiki_content/objective-3-creating-queries.html"/>
+    </resource>
+    <resource identifier="g6f8929d71248d7dfc01f69a159ca3304" type="webcontent" href="wiki_content/objective-2-setting-up-rtk-query.html">
+      <file href="wiki_content/objective-2-setting-up-rtk-query.html"/>
+    </resource>
+    <resource identifier="gc97afdf495af161d98e94d1375a5ab04" type="webcontent" href="wiki_content/objective-2-creating-a-redux-app.html">
+      <file href="wiki_content/objective-2-creating-a-redux-app.html"/>
+    </resource>
+    <resource identifier="ge69193b2cfde06f14f5c19335facb8fd" type="webcontent" href="wiki_content/objective-4-creating-mutations.html">
+      <file href="wiki_content/objective-4-creating-mutations.html"/>
+    </resource>
+    <resource identifier="g3e46d2798a536be8abb17fd85b4e9f07" type="webcontent" href="wiki_content/objective-1-understanding-redux.html">
+      <file href="wiki_content/objective-1-understanding-redux.html"/>
+    </resource>
+    <resource identifier="g340d89e34d9b0943c2f6aa816bf82a81" type="webcontent" href="wiki_content/objective-5-using-tags.html">
+      <file href="wiki_content/objective-5-using-tags.html"/>
+    </resource>
+    <resource identifier="g27c30be0af4e2d1c792736e61b6b445b" type="webcontent" href="wiki_content/objective-6-monitoring-requests.html">
+      <file href="wiki_content/objective-6-monitoring-requests.html"/>
+    </resource>
+    <resource identifier="g4021adec0d347e5a5f7c6db8fd8b00c0" type="webcontent" href="wiki_content/objective-1-example.html">
+      <file href="wiki_content/objective-1-example.html"/>
+    </resource>
+    <resource identifier="gdd10c4b412a20bccc12192de708c003f" type="webcontent" href="wiki_content/tech-requirements.html">
+      <file href="wiki_content/tech-requirements.html"/>
+    </resource>
+    <resource identifier="gbc5cc6c443b7fed2682cc6470647d007" type="webcontent" href="wiki_content/unit-overview.html">
+      <file href="wiki_content/unit-overview.html"/>
+    </resource>
+    <resource identifier="g36f930accc1348b1921cf9b7c3879dc8" type="webcontent" href="wiki_content/how-to-pass-this-sprint.html">
+      <file href="wiki_content/how-to-pass-this-sprint.html"/>
+    </resource>
+    <resource identifier="g60114eb693efba6fce8a7212c2e47396" type="webcontent" href="wiki_content/live-class-offerings.html">
+      <file href="wiki_content/live-class-offerings.html"/>
+    </resource>
+    <resource identifier="gb1aeaf11abefe702149d62fddaa90d0d" type="webcontent" href="wiki_content/engagement-expectations.html">
+      <file href="wiki_content/engagement-expectations.html"/>
+    </resource>
+    <resource identifier="g52d3faa121e0b8480bd22bc77120996a" type="webcontent" href="wiki_content/objective-3-use-the-connect-function-to-connect-react-components-to-the-redux-store.html">
+      <file href="wiki_content/objective-3-use-the-connect-function-to-connect-react-components-to-the-redux-store.html"/>
+    </resource>
+    <resource identifier="ge0634d4c504109371404eebb67844f2a" type="webcontent" href="wiki_content/module-3-project-rtk-query.html">
+      <file href="wiki_content/module-3-project-rtk-query.html"/>
+    </resource>
+    <resource identifier="ged172497920033f3cbb027faecee7e30" type="webcontent" href="wiki_content/next-step.html">
+      <file href="wiki_content/next-step.html"/>
+    </resource>
+    <resource identifier="gc36d52052bcb19bdb17239da0fce196b" type="webcontent" href="wiki_content/prepare-for-code-along-2-async-redux.html">
+      <file href="wiki_content/prepare-for-code-along-2-async-redux.html"/>
+    </resource>
+    <resource identifier="gad10e22b73d697e14a738f37084d872e" type="webcontent" href="wiki_content/welcome.html">
+      <file href="wiki_content/welcome.html"/>
+    </resource>
+    <resource identifier="gadc6512e59004b05528d4802e858b341" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gadc6512e59004b05528d4802e858b341.xml"/>
+    </resource>
+    <resource identifier="g3c72262e66faf4d879365e3e34fd7367" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g3c72262e66faf4d879365e3e34fd7367.xml"/>
+    </resource>
+    <resource identifier="g31a23c47a8377068a86ef4dd6cb1084c" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g31a23c47a8377068a86ef4dd6cb1084c.xml"/>
+    </resource>
+    <resource identifier="g17e8843b3e214fb63b9f0238989f71cb" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g17e8843b3e214fb63b9f0238989f71cb.xml"/>
+    </resource>
+    <resource identifier="g1d82c2d8cf6d11aff7ec1c270ca2e5f4" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g1d82c2d8cf6d11aff7ec1c270ca2e5f4.xml"/>
+    </resource>
+    <resource identifier="ga8f070b8fc4360c7af8ec3d9e2439ec1" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/ga8f070b8fc4360c7af8ec3d9e2439ec1.xml"/>
+    </resource>
+    <resource identifier="g02dab4cfced09d88a21df266cf9661b4" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g02dab4cfced09d88a21df266cf9661b4.xml"/>
+    </resource>
+    <resource identifier="g02a1bfa1b5185025ebb86e3066b0027a" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g02a1bfa1b5185025ebb86e3066b0027a.xml"/>
+    </resource>
+    <resource identifier="gf469fcf1e9fc97254bc7ee01f7d38122" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gf469fcf1e9fc97254bc7ee01f7d38122.xml"/>
+    </resource>
+    <resource identifier="gafbeec13f43d30251b6b4996239bbe13" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gafbeec13f43d30251b6b4996239bbe13.xml"/>
+    </resource>
+    <resource identifier="g4e58e6813eb6582ff9dda9fcafe8f4ce" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g4e58e6813eb6582ff9dda9fcafe8f4ce.xml"/>
+    </resource>
+    <resource identifier="g67563682b9dff329fdc93cddbe92a06d" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g67563682b9dff329fdc93cddbe92a06d.xml"/>
+    </resource>
+    <resource identifier="g271d5a6b8d112f4af066a73971b512ee" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g271d5a6b8d112f4af066a73971b512ee.xml"/>
+    </resource>
+    <resource identifier="gccaa7e1260f2716e9b6cf178f79a7b21" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gccaa7e1260f2716e9b6cf178f79a7b21.xml"/>
+    </resource>
+    <resource identifier="g32bea6fa27e8e66faa22f53b52206a86" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g32bea6fa27e8e66faa22f53b52206a86.xml"/>
+    </resource>
+    <resource identifier="g720bf0d4ae42c3012de10100c0b15bc4" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g720bf0d4ae42c3012de10100c0b15bc4.xml"/>
+    </resource>
+    <resource identifier="g3a9c66ae99854d14f6523b9b116ccfd7" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g3a9c66ae99854d14f6523b9b116ccfd7.xml"/>
+    </resource>
+    <resource identifier="gbdd8ba5a77919b82374fcec54e2316bc" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gbdd8ba5a77919b82374fcec54e2316bc.xml"/>
+    </resource>
+    <resource identifier="gb70aa2be4ae1735d5fbfb4305711bd15" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gb70aa2be4ae1735d5fbfb4305711bd15.xml"/>
+    </resource>
+    <resource identifier="g40b1baa05e3e36c630b82ff9657d8491" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g40b1baa05e3e36c630b82ff9657d8491.xml"/>
+    </resource>
+    <resource identifier="g69edf2f69141e9da383bd43667efebd0" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g69edf2f69141e9da383bd43667efebd0.xml"/>
+    </resource>
+    <resource identifier="g6bed47f614971fe2ff23a272e7e5788d" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g6bed47f614971fe2ff23a272e7e5788d.xml"/>
+    </resource>
+    <resource identifier="gb11684f03b520edae8a088d964bcc8e9" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gb11684f03b520edae8a088d964bcc8e9.xml"/>
+    </resource>
+    <resource identifier="g29f03ab9f52ea01b0833fdea940f1291" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g29f03ab9f52ea01b0833fdea940f1291.xml"/>
+    </resource>
+    <resource identifier="gfb0ebea4cbc8ef3f4ca9012b8bc5ca8b" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gfb0ebea4cbc8ef3f4ca9012b8bc5ca8b.xml"/>
+    </resource>
+    <resource identifier="gf12ff7a0c2b2985f5246fa2553215598" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gf12ff7a0c2b2985f5246fa2553215598.xml"/>
+    </resource>
+    <resource identifier="g605ff43238a29b3be2631bbd80bb93c7" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g605ff43238a29b3be2631bbd80bb93c7.xml"/>
+    </resource>
+    <resource identifier="g0dbc9bf6dbd380d845f6c578a35b452c" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g0dbc9bf6dbd380d845f6c578a35b452c.xml"/>
+    </resource>
+    <resource identifier="g672907de5c50f2e579a78d916bf56ade" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g672907de5c50f2e579a78d916bf56ade.xml"/>
+    </resource>
+    <resource identifier="g7aa5d44524828b3f4ddcf7e3cc74f5db" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g7aa5d44524828b3f4ddcf7e3cc74f5db.xml"/>
+    </resource>
+    <resource identifier="g29d6f95b12f70c7296ab449c0ccbacfa" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g29d6f95b12f70c7296ab449c0ccbacfa.xml"/>
+    </resource>
+    <resource identifier="g314065f7679ecf79f380ebce68349635" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g314065f7679ecf79f380ebce68349635.xml"/>
+    </resource>
+    <resource identifier="gdfc288a871c913b344b1dac9aed13406" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gdfc288a871c913b344b1dac9aed13406.xml"/>
+    </resource>
+    <resource identifier="g0f4db0349837b39bb96ed57cb3837d57" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g0f4db0349837b39bb96ed57cb3837d57.xml"/>
+    </resource>
+    <resource identifier="gddba42e27892f467e37c112543ae29e5" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gddba42e27892f467e37c112543ae29e5.xml"/>
+    </resource>
+    <resource identifier="gddb772b8bdc71795211c99902cc9de12" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gddb772b8bdc71795211c99902cc9de12.xml"/>
+    </resource>
+    <resource identifier="ge1af6ae51801e87ee78c0301cefd3e45" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/ge1af6ae51801e87ee78c0301cefd3e45.xml"/>
+    </resource>
+    <resource identifier="g8a72f4c68b9d4e0f3f37cc8d049ebbe2" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g8a72f4c68b9d4e0f3f37cc8d049ebbe2.xml"/>
+    </resource>
+    <resource identifier="ge61aa788f4f3ceadad85df1750524e0a" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/ge61aa788f4f3ceadad85df1750524e0a.xml"/>
+    </resource>
+    <resource identifier="g8125bcfffb461b0274add002a91da7b3" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g8125bcfffb461b0274add002a91da7b3.xml"/>
+    </resource>
+    <resource identifier="g3c1daaf948b96aebeea7a8cfa95015d9" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g3c1daaf948b96aebeea7a8cfa95015d9.xml"/>
+    </resource>
+    <resource identifier="gd220572a361deb60c141742a1a32b4a1" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gd220572a361deb60c141742a1a32b4a1.xml"/>
+    </resource>
+    <resource identifier="gdbb38a9449a347d0b9edaf54c1ff0faa" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gdbb38a9449a347d0b9edaf54c1ff0faa.xml"/>
+    </resource>
+    <resource identifier="g47fd9c058ef19938a832b78b2f6c49bf" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g47fd9c058ef19938a832b78b2f6c49bf.xml"/>
+    </resource>
+    <resource identifier="g5a918c3cf4121924d211b413a4056380" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g5a918c3cf4121924d211b413a4056380.xml"/>
+    </resource>
+    <resource identifier="g91cbcb271b5cfc4076bb44f565306f85" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g91cbcb271b5cfc4076bb44f565306f85.xml"/>
+    </resource>
+    <resource identifier="gc7164b803ca4f36711f96bc2b5f5b2ac" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gc7164b803ca4f36711f96bc2b5f5b2ac.xml"/>
+    </resource>
+    <resource identifier="g728a7cd698c3d2b648bfb1dbb93b6092" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g728a7cd698c3d2b648bfb1dbb93b6092.xml"/>
+    </resource>
+    <resource identifier="gf0b449851decd85a6e25a4f5aebed913" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gf0b449851decd85a6e25a4f5aebed913.xml"/>
+    </resource>
+    <resource identifier="g5466a923e57394c50a6b535fe4554f56" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g5466a923e57394c50a6b535fe4554f56.xml"/>
+    </resource>
+    <resource identifier="g6c30981747e66b494f27be1f9c1780b7" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g6c30981747e66b494f27be1f9c1780b7.xml"/>
+    </resource>
+    <resource identifier="gb622290f6f97f991852386e2c8b3c1d3" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gb622290f6f97f991852386e2c8b3c1d3.xml"/>
+    </resource>
+    <resource identifier="g5802db1181fe023b1adcca75ce388d32" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g5802db1181fe023b1adcca75ce388d32.xml"/>
+    </resource>
+    <resource identifier="g7ab0334c8d94fc7dbc022cf044a74e6d" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g7ab0334c8d94fc7dbc022cf044a74e6d.xml"/>
+    </resource>
+    <resource identifier="g0763e763fb3ccde89b421ccae3ea4975" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g0763e763fb3ccde89b421ccae3ea4975.xml"/>
+    </resource>
+    <resource identifier="ge628ef246db22bffd3bcf0d733278dc9" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/ge628ef246db22bffd3bcf0d733278dc9.xml"/>
+    </resource>
+    <resource identifier="g59bce1b8884e7373b760b8d7a319ee4d" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g59bce1b8884e7373b760b8d7a319ee4d.xml"/>
+    </resource>
+    <resource identifier="gef35d7953ee8a0e31d3ff50d1c13b9e8" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gef35d7953ee8a0e31d3ff50d1c13b9e8.xml"/>
+    </resource>
+    <resource identifier="ga0185c1dffedac49f0493d57939d374c" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/ga0185c1dffedac49f0493d57939d374c.xml"/>
+    </resource>
+    <resource identifier="g9ef5bf870d0887280fa20440ab02d90d" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g9ef5bf870d0887280fa20440ab02d90d.xml"/>
+    </resource>
+    <resource identifier="g6ecc9bae70cdd68a9a34dbdc50ac4e15" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g6ecc9bae70cdd68a9a34dbdc50ac4e15.xml"/>
+    </resource>
+    <resource identifier="gf419f5c5c581f3c482c34aaaf98c1f0b" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gf419f5c5c581f3c482c34aaaf98c1f0b.xml"/>
+    </resource>
+    <resource identifier="g2214b2721c1aba54a1e7d6395668c05f" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g2214b2721c1aba54a1e7d6395668c05f.xml"/>
+    </resource>
+    <resource identifier="g1ee06c62d6f175e32423a15d5903dc1f" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g1ee06c62d6f175e32423a15d5903dc1f.xml"/>
+    </resource>
+    <resource identifier="gab8ceaf34c90534b38c934089f125671" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gab8ceaf34c90534b38c934089f125671.xml"/>
+    </resource>
+    <resource identifier="gf13a3873a5111eb4a81ba75631e101e1" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gf13a3873a5111eb4a81ba75631e101e1.xml"/>
+    </resource>
+    <resource identifier="g68c31ac21aae60797c7947091b2c673b" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g68c31ac21aae60797c7947091b2c673b.xml"/>
+    </resource>
+    <resource identifier="g4e177dd65772e34bc85b9a319a7d4db7" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g4e177dd65772e34bc85b9a319a7d4db7.xml"/>
+    </resource>
+    <resource identifier="g9639000351782fa016e966935514f5ca" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g9639000351782fa016e966935514f5ca.xml"/>
+    </resource>
+    <resource identifier="g1f5e4f00637b7f13516782e2b6cef86d" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g1f5e4f00637b7f13516782e2b6cef86d.xml"/>
+    </resource>
+    <resource identifier="g7a559dca1c6d9828c49249375a937aa6" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g7a559dca1c6d9828c49249375a937aa6.xml"/>
+    </resource>
+    <resource identifier="gd2a1bf19fd353dca0429525485c80ddf" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gd2a1bf19fd353dca0429525485c80ddf.xml"/>
+    </resource>
+    <resource identifier="gb76ebdb0d23aa64b7de8b9daf15860cd" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gb76ebdb0d23aa64b7de8b9daf15860cd.xml"/>
+    </resource>
+    <resource identifier="g934f14c51ac1484701fa231acb4793e0" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g934f14c51ac1484701fa231acb4793e0.xml"/>
+    </resource>
+    <resource identifier="g27670fa154b353e7e899681d1ab7dfc0" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g27670fa154b353e7e899681d1ab7dfc0.xml"/>
+    </resource>
+    <resource identifier="g4ed3ac3be2452f58de581c8bf7f099c0" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g4ed3ac3be2452f58de581c8bf7f099c0.xml"/>
+    </resource>
+    <resource identifier="ga18e549349ab9e3eb2efe4b2f197fe6c" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/ga18e549349ab9e3eb2efe4b2f197fe6c.xml"/>
+    </resource>
+    <resource identifier="g8ce2a7022737c488cb764ca370c62d5b" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g8ce2a7022737c488cb764ca370c62d5b.xml"/>
+    </resource>
+    <resource identifier="g78fdf4476a5daab0e03bb1f53f4decef" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g78fdf4476a5daab0e03bb1f53f4decef.xml"/>
+    </resource>
+    <resource identifier="gea41f4dbac25eec5613381f0e91ad847" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gea41f4dbac25eec5613381f0e91ad847.xml"/>
+    </resource>
+    <resource identifier="gd1334b38216a12d1d83f201a21f0d0a5" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gd1334b38216a12d1d83f201a21f0d0a5.xml"/>
+    </resource>
+    <resource identifier="g5ddba36615fb8478e36b8fed15fcd572" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g5ddba36615fb8478e36b8fed15fcd572.xml"/>
+    </resource>
+    <resource identifier="g7f217e62f25354e070537df313b31b60" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g7f217e62f25354e070537df313b31b60.xml"/>
+    </resource>
+    <resource identifier="g3baa754a716a95228c5f54cc745cc4cc" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g3baa754a716a95228c5f54cc745cc4cc.xml"/>
+    </resource>
+    <resource identifier="g213b43ce0cec15e2713070ddca67f80a" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g213b43ce0cec15e2713070ddca67f80a.xml"/>
+    </resource>
+    <resource identifier="g654604a66a71eca41c8135b1af8ecbce" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g654604a66a71eca41c8135b1af8ecbce.xml"/>
+    </resource>
+    <resource identifier="g4b5cdfffe95d9acce924ada5cbc3a15f" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g4b5cdfffe95d9acce924ada5cbc3a15f.xml"/>
+    </resource>
+    <resource identifier="gec583c4b82f6713826019df33ab19b3d" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gec583c4b82f6713826019df33ab19b3d.xml"/>
+    </resource>
+    <resource identifier="gf78937feae57ffde2a2795039085939d" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gf78937feae57ffde2a2795039085939d.xml"/>
+    </resource>
+    <resource identifier="g3baf7bf104279578c29a76d11083fad1" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g3baf7bf104279578c29a76d11083fad1.xml"/>
+    </resource>
+    <resource identifier="g20c0f74251ee1a557695ec92c2827462" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g20c0f74251ee1a557695ec92c2827462.xml"/>
+    </resource>
+    <resource identifier="gbf4c5f25171ae55af27e63e8259b8679" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gbf4c5f25171ae55af27e63e8259b8679.xml"/>
+    </resource>
+    <resource identifier="g8be82c7fe83e3c3ed635026013b78763" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g8be82c7fe83e3c3ed635026013b78763.xml"/>
+    </resource>
+    <resource identifier="g2e4434a2115e8763cef1abdb0bf9ced3" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g2e4434a2115e8763cef1abdb0bf9ced3.xml"/>
+    </resource>
+    <resource identifier="g1956bceea539d7f7e8a708f132bd443b" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g1956bceea539d7f7e8a708f132bd443b.xml"/>
+    </resource>
+    <resource identifier="g42e2fc63858c4bf0fed45875e863845e" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g42e2fc63858c4bf0fed45875e863845e.xml"/>
+    </resource>
+    <resource identifier="g15cb1476c08849abad1a0b72a597a54b" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g15cb1476c08849abad1a0b72a597a54b.xml"/>
+    </resource>
+    <resource identifier="g2c66b7ad9246c6498e8c9ebf3e00b8f8" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g2c66b7ad9246c6498e8c9ebf3e00b8f8.xml"/>
+    </resource>
+    <resource identifier="gff67de7a9a74397bb19d7d881f4ce4cb" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gff67de7a9a74397bb19d7d881f4ce4cb.xml"/>
+    </resource>
+    <resource identifier="g03a78f08f70cea7ba2611619f7deac70" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g03a78f08f70cea7ba2611619f7deac70.xml"/>
+    </resource>
+    <resource identifier="g907b3a9642f24d02591c638ae3b0e2ff" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g907b3a9642f24d02591c638ae3b0e2ff.xml"/>
+    </resource>
+    <resource identifier="g2436aea37b7da8904afa3a7c02144ad1" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g2436aea37b7da8904afa3a7c02144ad1.xml"/>
+    </resource>
+    <resource identifier="g240ebdeea66e2829abb579977aa5ad22" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g240ebdeea66e2829abb579977aa5ad22.xml"/>
+    </resource>
+    <resource identifier="g87bd99192390c6f7e4b4eedc63ed3768" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g87bd99192390c6f7e4b4eedc63ed3768.xml"/>
+    </resource>
+    <resource identifier="g05d6cd0f9dc1f324c712af47eb495f79" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g05d6cd0f9dc1f324c712af47eb495f79.xml"/>
+    </resource>
+    <resource identifier="ga91bf4dabf79aa7dc6f61471b8dd7983" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/ga91bf4dabf79aa7dc6f61471b8dd7983.xml"/>
+    </resource>
+    <resource identifier="g233f16d7ce731baf0d0d1f8aa275409f" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g233f16d7ce731baf0d0d1f8aa275409f.xml"/>
+    </resource>
+    <resource identifier="g99f3d1c8a55171a59dee722aa36bc2f3" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g99f3d1c8a55171a59dee722aa36bc2f3.xml"/>
+    </resource>
+    <resource identifier="gd103c2e7a6262902afd81f0504a49026" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gd103c2e7a6262902afd81f0504a49026.xml"/>
+    </resource>
+    <resource identifier="g00335e3e89317bdf7d71dde3410d17e0" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g00335e3e89317bdf7d71dde3410d17e0.xml"/>
+    </resource>
+    <resource identifier="gf952e66f02eae50fdf38cc1871f663d9" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gf952e66f02eae50fdf38cc1871f663d9.xml"/>
+    </resource>
+    <resource identifier="g1c0ab67877a955b564e55dc4f44846df" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g1c0ab67877a955b564e55dc4f44846df.xml"/>
+    </resource>
+    <resource identifier="g723e1d45fdc518240a34ef310df8d9f4" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g723e1d45fdc518240a34ef310df8d9f4.xml"/>
+    </resource>
+    <resource identifier="g45331dbeea1840382aceff212dd74e1e" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g45331dbeea1840382aceff212dd74e1e.xml"/>
+    </resource>
+    <resource identifier="g4ddcf4f13c098a5ab821ce624e11eb4b" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g4ddcf4f13c098a5ab821ce624e11eb4b.xml"/>
+    </resource>
+    <resource identifier="g3dfd6a7e9aabb0a199356f8c9bba8729" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g3dfd6a7e9aabb0a199356f8c9bba8729.xml"/>
+    </resource>
+    <resource identifier="g010a223894b3dbe26eaa2e46f2517daf" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g010a223894b3dbe26eaa2e46f2517daf.xml"/>
+    </resource>
+    <resource identifier="gb477e4d6153abb5b24cac1af69606498" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gb477e4d6153abb5b24cac1af69606498.xml"/>
+    </resource>
+    <resource identifier="g9c53bf937f35ee92d6db62aca81f41a4" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g9c53bf937f35ee92d6db62aca81f41a4.xml"/>
+    </resource>
+    <resource identifier="gc349c8a0ea68e8f8aeebb802abd43697" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gc349c8a0ea68e8f8aeebb802abd43697.xml"/>
+    </resource>
+    <resource identifier="g520bf6e0001ad33d521c77da29975043" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g520bf6e0001ad33d521c77da29975043.xml"/>
+    </resource>
+    <resource identifier="gdf099bf42b519af6ee90593820dc6c2a" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/gdf099bf42b519af6ee90593820dc6c2a.xml"/>
+    </resource>
+    <resource identifier="g1b989c7e4e5b288b696a83ff65ca96d8" type="imsbasiclti_xmlv1p3">
+      <file href="lti_resource_links/g1b989c7e4e5b288b696a83ff65ca96d8.xml"/>
+    </resource>
+    <resource identifier="g1ee9779fbce88da4e06880c6367c4e44" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g1ee9779fbce88da4e06880c6367c4e44/module-1-project.html">
+      <file href="g1ee9779fbce88da4e06880c6367c4e44/module-1-project.html"/>
+      <file href="g1ee9779fbce88da4e06880c6367c4e44/assignment_settings.xml"/>
+    </resource>
+    <resource identifier="ga15197716ba04b59bf4bc1d30c8c420e" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="ga15197716ba04b59bf4bc1d30c8c420e/module-2-project.html">
+      <file href="ga15197716ba04b59bf4bc1d30c8c420e/module-2-project.html"/>
+      <file href="ga15197716ba04b59bf4bc1d30c8c420e/assignment_settings.xml"/>
+    </resource>
+    <resource identifier="g66998cdec5ef18d40a3a99e075640cd4" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g66998cdec5ef18d40a3a99e075640cd4/module-2-project-supplemental.html">
+      <file href="g66998cdec5ef18d40a3a99e075640cd4/module-2-project-supplemental.html"/>
+      <file href="g66998cdec5ef18d40a3a99e075640cd4/assignment_settings.xml"/>
+    </resource>
+    <resource identifier="g0307b813096d9e9c52cba31e3fde272b" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g0307b813096d9e9c52cba31e3fde272b/module-3-project.html">
+      <file href="g0307b813096d9e9c52cba31e3fde272b/module-3-project.html"/>
+      <file href="g0307b813096d9e9c52cba31e3fde272b/assignment_settings.xml"/>
+    </resource>
+    <resource identifier="g01fff2bd5b707d61a7ebd0b42e986bf6" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g01fff2bd5b707d61a7ebd0b42e986bf6/module-3-project-supplemental.html">
+      <file href="g01fff2bd5b707d61a7ebd0b42e986bf6/module-3-project-supplemental.html"/>
+      <file href="g01fff2bd5b707d61a7ebd0b42e986bf6/assignment_settings.xml"/>
+    </resource>
+    <resource identifier="gd96a4a26ead7d19c9a696ba6859ff0ef" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="gd96a4a26ead7d19c9a696ba6859ff0ef/module-4-project.html">
+      <file href="gd96a4a26ead7d19c9a696ba6859ff0ef/module-4-project.html"/>
+      <file href="gd96a4a26ead7d19c9a696ba6859ff0ef/assignment_settings.xml"/>
+    </resource>
+    <resource identifier="gadeb634849fc3d4e1a49ffd35f506453" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="gadeb634849fc3d4e1a49ffd35f506453/sprint-challenge-submission.html">
+      <file href="gadeb634849fc3d4e1a49ffd35f506453/sprint-challenge-submission.html"/>
+      <file href="gadeb634849fc3d4e1a49ffd35f506453/assignment_settings.xml"/>
+    </resource>
+    <resource identifier="g4de7b8d6059ac0c0fcfb333e801c680d" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="g4de7b8d6059ac0c0fcfb333e801c680d/assessment_qti.xml"/>
+      <dependency identifierref="g9c0982b51da424ed78e1dfa2e6f2279d"/>
+    </resource>
+    <resource identifier="g9c0982b51da424ed78e1dfa2e6f2279d" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g4de7b8d6059ac0c0fcfb333e801c680d/assessment_meta.xml">
+      <file href="g4de7b8d6059ac0c0fcfb333e801c680d/assessment_meta.xml"/>
+      <file href="non_cc_assessments/g4de7b8d6059ac0c0fcfb333e801c680d.xml.qti"/>
+    </resource>
+    <resource identifier="g835c1e40d615216c72113eaf96f5a54c" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="g835c1e40d615216c72113eaf96f5a54c/assessment_qti.xml"/>
+      <dependency identifierref="g12d9832ca0f461d348211b19957494af"/>
+    </resource>
+    <resource identifier="g12d9832ca0f461d348211b19957494af" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g835c1e40d615216c72113eaf96f5a54c/assessment_meta.xml">
+      <file href="g835c1e40d615216c72113eaf96f5a54c/assessment_meta.xml"/>
+      <file href="non_cc_assessments/g835c1e40d615216c72113eaf96f5a54c.xml.qti"/>
+    </resource>
+    <resource identifier="g0f1cb5f8a1cc0f6573276c2ec6ba9ca4" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="g0f1cb5f8a1cc0f6573276c2ec6ba9ca4/assessment_qti.xml"/>
+      <dependency identifierref="g359a40ef49cb90d4a66e06334d0d104b"/>
+    </resource>
+    <resource identifier="g359a40ef49cb90d4a66e06334d0d104b" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g0f1cb5f8a1cc0f6573276c2ec6ba9ca4/assessment_meta.xml">
+      <file href="g0f1cb5f8a1cc0f6573276c2ec6ba9ca4/assessment_meta.xml"/>
+      <file href="non_cc_assessments/g0f1cb5f8a1cc0f6573276c2ec6ba9ca4.xml.qti"/>
+    </resource>
+    <resource identifier="g07f2fda509262742613c3ab4edb68d8b" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="g07f2fda509262742613c3ab4edb68d8b/assessment_qti.xml"/>
+      <dependency identifierref="gcfa1547a536deb4594713408f40dd26e"/>
+    </resource>
+    <resource identifier="gcfa1547a536deb4594713408f40dd26e" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="g07f2fda509262742613c3ab4edb68d8b/assessment_meta.xml">
+      <file href="g07f2fda509262742613c3ab4edb68d8b/assessment_meta.xml"/>
+      <file href="non_cc_assessments/g07f2fda509262742613c3ab4edb68d8b.xml.qti"/>
+    </resource>
+    <resource identifier="gaf6f168cf6876dca202d6220fdd87943" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="gaf6f168cf6876dca202d6220fdd87943/assessment_qti.xml"/>
+      <dependency identifierref="g3291c9427112f07db990902f238414c3"/>
+    </resource>
+    <resource identifier="g3291c9427112f07db990902f238414c3" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="gaf6f168cf6876dca202d6220fdd87943/assessment_meta.xml">
+      <file href="gaf6f168cf6876dca202d6220fdd87943/assessment_meta.xml"/>
+      <file href="non_cc_assessments/gaf6f168cf6876dca202d6220fdd87943.xml.qti"/>
+    </resource>
+    <resource identifier="gbab026d966da26bb7f9b4b50286854d5" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="gbab026d966da26bb7f9b4b50286854d5/assessment_qti.xml"/>
+      <dependency identifierref="g66874d2e020592d0c46cf3054165a937"/>
+    </resource>
+    <resource identifier="g66874d2e020592d0c46cf3054165a937" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="gbab026d966da26bb7f9b4b50286854d5/assessment_meta.xml">
+      <file href="gbab026d966da26bb7f9b4b50286854d5/assessment_meta.xml"/>
+      <file href="non_cc_assessments/gbab026d966da26bb7f9b4b50286854d5.xml.qti"/>
+    </resource>
+    <resource identifier="g60030f6f7900a05b8616f44820007118" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="non_cc_assessments/g60030f6f7900a05b8616f44820007118.xml.qti">
+      <file href="non_cc_assessments/g60030f6f7900a05b8616f44820007118.xml.qti"/>
+    </resource>
+    <resource identifier="ga3ec66650843766301d6a78e32fda085" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="non_cc_assessments/ga3ec66650843766301d6a78e32fda085.xml.qti">
+      <file href="non_cc_assessments/ga3ec66650843766301d6a78e32fda085.xml.qti"/>
+    </resource>
+    <resource identifier="gfe0a4f183285feec2cf38db9a02eb6cf" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="non_cc_assessments/gfe0a4f183285feec2cf38db9a02eb6cf.xml.qti">
+      <file href="non_cc_assessments/gfe0a4f183285feec2cf38db9a02eb6cf.xml.qti"/>
+    </resource>
+    <resource identifier="g756f3f3581456c25b8c5056c26ec0b40" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="non_cc_assessments/g756f3f3581456c25b8c5056c26ec0b40.xml.qti">
+      <file href="non_cc_assessments/g756f3f3581456c25b8c5056c26ec0b40.xml.qti"/>
+    </resource>
+    <resource identifier="g6e6209b35c974dfcd96ce57c75b4dee7" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="non_cc_assessments/g6e6209b35c974dfcd96ce57c75b4dee7.xml.qti">
+      <file href="non_cc_assessments/g6e6209b35c974dfcd96ce57c75b4dee7.xml.qti"/>
+    </resource>
+    <resource identifier="ge1fb23a3291a3b181760511d60a1513d" type="associatedcontent/imscc_xmlv1p1/learning-application-resource" href="non_cc_assessments/ge1fb23a3291a3b181760511d60a1513d.xml.qti">
+      <file href="non_cc_assessments/ge1fb23a3291a3b181760511d60a1513d.xml.qti"/>
+    </resource>
+    <resource type="webcontent" identifier="gbe5607fa4d1743d9325222ec8e8f148b" href="web_resources/Uploaded Media/redux-devtools.png">
+      <file href="web_resources/Uploaded Media/redux-devtools.png"/>
+    </resource>
+    <resource type="webcontent" identifier="g0ad615917f6a97b282ce6d66763dd61d" href="web_resources/Uploaded Media/reducers-and-actions.png">
+      <file href="web_resources/Uploaded Media/reducers-and-actions.png"/>
+    </resource>
+    <resource type="webcontent" identifier="g189ec569acb6ef5660ad8fe2926ea262" href="web_resources/Uploaded Media/reducers-actions.png">
+      <file href="web_resources/Uploaded Media/reducers-actions.png"/>
+    </resource>
+    <resource type="webcontent" identifier="g24418986376160e6daa7d2609e183ec3" href="web_resources/Uploaded Media/reducers-actions-1.png">
+      <file href="web_resources/Uploaded Media/reducers-actions-1.png"/>
+    </resource>
+    <resource type="webcontent" identifier="g43b1fefb5921aa5107ffd26d4dd7cd57" href="web_resources/Uploaded Media/dispatching.png">
+      <file href="web_resources/Uploaded Media/dispatching.png"/>
+    </resource>
+    <resource type="webcontent" identifier="g55a8fb1eac84a8acb4968fef82981cdf" href="web_resources/Uploaded Media/dispatching-actions.png">
+      <file href="web_resources/Uploaded Media/dispatching-actions.png"/>
+    </resource>
+    <resource type="webcontent" identifier="g69d4ff19acbf671fea5ec35a968398ff" href="web_resources/Uploaded Media/app.png">
+      <file href="web_resources/Uploaded Media/app.png"/>
+    </resource>
+    <resource type="webcontent" identifier="g112d62aa1e8339e1f37f99681b91b863" href="web_resources/Uploaded Media/app-1.png">
+      <file href="web_resources/Uploaded Media/app-1.png"/>
+    </resource>
+    <resource type="webcontent" identifier="g804fc80985fee81a6be3d10d8201b32a" href="web_resources/Uploaded Media/finished.png">
+      <file href="web_resources/Uploaded Media/finished.png"/>
+    </resource>
+    <resource identifier="g209718d0b0de26b9bd3a23eb8148b67a" type="imsbasiclti_xmlv1p0">
+      <file href="g209718d0b0de26b9bd3a23eb8148b67a.xml"/>
+    </resource>
+    <resource identifier="g2e98a4d0e42141daab4d8ac46c183000" type="imsbasiclti_xmlv1p0">
+      <file href="g2e98a4d0e42141daab4d8ac46c183000.xml"/>
+    </resource>
+    <resource identifier="g14b00d9fd2c1b45b9c1fec3e88d8154e" type="imsbasiclti_xmlv1p0">
+      <file href="g14b00d9fd2c1b45b9c1fec3e88d8154e.xml"/>
+    </resource>
+  </resources>
+</manifest>

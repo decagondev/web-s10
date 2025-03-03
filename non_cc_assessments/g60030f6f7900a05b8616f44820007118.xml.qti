@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
+  <objectbank ident="g60030f6f7900a05b8616f44820007118">
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>bank_title</fieldlabel>
+        <fieldentry>Module 4 - Context API</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>bank_context_uuid</fieldlabel>
+        <fieldentry>JnGCrA9aE59ACyj3nS0KChH1g00ZZDi7AUAqu6G1</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    <item ident="ga0adfc22dafcc733c3e4d7847a97a3b3" title="2bca53da-2f4a-4931-9f62-dc619ad4e58a">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>2005,9316,2490,3704</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What does the &lt;code&gt;useContext&lt;/code&gt; hook return when called?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="2005">
+              <material>
+                <mattext texttype="text/plain">Whatever you passed into the Provider for that context object.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="9316">
+              <material>
+                <mattext texttype="text/html">Any state that is managed by the Provider's component</mattext>
+              </material>
+            </response_label>
+            <response_label ident="2490">
+              <material>
+                <mattext texttype="text/plain">A store that is seperate from the component tree structure</mattext>
+              </material>
+            </response_label>
+            <response_label ident="3704">
+              <material>
+                <mattext texttype="text/plain">a function to update data from a seperate store.</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">9316</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="9316_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">2490</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="2490_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">3704</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="3704_fb"/>
+        </respcondition>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">2005</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">The data we pass to a provider can be a variable, object, array, or any JavaScript type. The useContext hook will return whatever is passed into the Provider.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="9316_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">Almost, but only data passed into the Provider will be returned by useContext.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="2490_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">The data we pass into a context Provider is not a seperate store. It's usually state that is managed by the component rendering the Provider, but could be props or other data passed to the component.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="3704_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">the context API does not use a seperate store.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="gda6a86418dff7f9c15b9e5b28bd8b06b" title="3b5cd902-ab28-4090-8523-fbadff44bbf1">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>6436,1856,4472,7435</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What caution does the React docs give when using the context API?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="6436">
+              <material>
+                <mattext texttype="text/plain">Using the context API makes component reuse harder</mattext>
+              </material>
+            </response_label>
+            <response_label ident="1856">
+              <material>
+                <mattext texttype="text/plain">Context API causes you to use prop drilling</mattext>
+              </material>
+            </response_label>
+            <response_label ident="4472">
+              <material>
+                <mattext texttype="text/plain">Using the context API makes passing data to children components harder</mattext>
+              </material>
+            </response_label>
+            <response_label ident="7435">
+              <material>
+                <mattext texttype="text/plain">Context API adds too many layers of components in the browser</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">1856</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="1856_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">4472</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="4472_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">7435</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="7435_fb"/>
+        </respcondition>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">6436</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">This happens because in order to reuse a component in a component tree outside of the context provider, you'd have to move your provider and the data to a higher component.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="1856_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">This is a benefit of context, not something we are warned against.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="4472_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">Context actually makes this much easier</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="7435_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">While context does add extra components, this is part of the system, and not something we're warned against.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="g21c40c5034e75519c0ab8b1efe764afc" title="3ec2288c-a0e9-4fc3-aade-8a3c32c321d3">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>4553,2582,6213,1619</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What is the syntax to create a context object?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="4553">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;const SampleContext = createContext();&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+            <response_label ident="2582">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;const Context = useContext();&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+            <response_label ident="6213">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;useContext(const SampleContext = createContext)&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+            <response_label ident="1619">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;const SampleContext = createContextObject()&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">2582</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="2582_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">6213</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="6213_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">1619</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="1619_fb"/>
+        </respcondition>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">4553</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">The `createContext` is the React function that we call to create a context object.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="2582_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">useContext allows us to read data from the context object, not create a context object</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="6213_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">useContext allows us to read data from the context object, not create a context object</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="1619_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/html">We want to call &lt;code&gt;createContext&lt;/code&gt;, not &lt;code&gt;createContextObject&lt;/code&gt;</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="gcf56fd12dc9090bc93ae408c96887286" title="441a8e96-e566-4f12-a47b-b923219ca23a">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>9827,4338,5496,5914</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What is the pattern called that we use to cosume context data with the Consumer component?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="9827">
+              <material>
+                <mattext texttype="text/plain">render props</mattext>
+              </material>
+            </response_label>
+            <response_label ident="4338">
+              <material>
+                <mattext texttype="text/plain">custom hooks</mattext>
+              </material>
+            </response_label>
+            <response_label ident="5496">
+              <material>
+                <mattext texttype="text/plain">context hook</mattext>
+              </material>
+            </response_label>
+            <response_label ident="5914">
+              <material>
+                <mattext texttype="text/plain">Context Consumer pattern</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">4338</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="4338_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">5496</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="5496_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">5914</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="5914_fb"/>
+        </respcondition>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">9827</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">This is an old pattern that solved a problem in React that is now solved by hooks. While you won't see it often, it's good to know what it is for the times you may see it in a React app.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="4338_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">The hook pattern is the other pattern. This pattern is the render prop pattern.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="5496_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">The hook pattern is the other pattern. This pattern is the render prop pattern.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="5914_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">This is not a pattern in React. The pattern we're looking for is the render props pattern.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="g8579fadd60d98873b9150c1ae62fb3ff" title="Module 4 - Context API - rubric question 1">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>9982,8757,1351</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;Based on your sprint challenge, choose the description that most closely aligns with how well you can explain at a basic level different state management systems&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="9982">
+              <material>
+                <mattext texttype="text/plain">I may be able to name different state management systems but I don't clearly understand why one might be better than another.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="8757">
+              <material>
+                <mattext texttype="text/plain">I can explain some similarities and differences of different state management systems. I can give one or two examples of when a certain system would be better over another.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="1351">
+              <material>
+                <mattext texttype="text/plain">I can explain in more detail all the state management systems covered in this sprint (useReducers, redux, and context). I can clearly explain when to use each, and when to not use certain ones.</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">8757</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="g0c85ac1f6d099d1183be8b0b6b78eb50" title="ac562437-9993-4942-bb75-ad150c3ab77b">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>9655,2652,4601</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;&lt;span&gt;Based on your project today, how confident are you that you could &lt;/span&gt;&lt;em&gt;&lt;span&gt;&lt;span style="color: #e03e2d;"&gt;provide data to the component tree with a context provider&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;&lt;span&gt; in a project or interview tomorrow? &lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Answer on a scale of 1 to 3 where 1 = not yet, 2 = confident, and 3 = I could go above and beyond.&lt;/span&gt;&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="9655">
+              <material>
+                <mattext texttype="text/plain">1</mattext>
+              </material>
+            </response_label>
+            <response_label ident="2652">
+              <material>
+                <mattext texttype="text/plain">2</mattext>
+              </material>
+            </response_label>
+            <response_label ident="4601">
+              <material>
+                <mattext texttype="text/plain">3</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">2652</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="g6b5c867ad8c6c9ca2b5caedbdbbe0474" title="bbc6c4a4-50bc-4980-a610-29c9030addf9">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>9883,2339,3043,1738</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;To what prop on the Provider component do you pass your data?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="9883">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;value&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+            <response_label ident="2339">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;action&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+            <response_label ident="3043">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;state&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+            <response_label ident="1738">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;data&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">2339</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="2339_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">3043</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="3043_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">1738</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="1738_fb"/>
+        </respcondition>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">9883</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">This is the prop we use to pass data to the Provider component so we can access that data in its children components</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="2339_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/html">We actually want to use the &lt;code&gt;value&lt;/code&gt; prop.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="3043_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/html">We actually want to use the &lt;code&gt;value&lt;/code&gt; prop.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="1738_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/html">We actually want to use the &lt;code&gt;value&lt;/code&gt; prop.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="g01dbabf3ed5eaa9095be1f31954f8272" title="c7ed50db-a717-43fc-8db8-3f4c407dfd80">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>1806,6942,3511</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;&lt;span&gt;Based on your project today, how confident are you that you could &lt;/span&gt;&lt;em&gt;&lt;span&gt;&lt;span style="color: #e03e2d;"&gt;consume data from a context object in nested components&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;&lt;span&gt; in a project or interview tomorrow? &lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Answer on a scale of 1 to 3 where 1 = not yet, 2 = confident, and 3 = I could go above and beyond.&lt;/span&gt;&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="1806">
+              <material>
+                <mattext texttype="text/plain">1</mattext>
+              </material>
+            </response_label>
+            <response_label ident="6942">
+              <material>
+                <mattext texttype="text/plain">2</mattext>
+              </material>
+            </response_label>
+            <response_label ident="3511">
+              <material>
+                <mattext texttype="text/plain">3</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">6942</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="g10dc1b38487698a48799950fada19950" title="ef2625bb-f03f-410a-9829-03e0e1658e89">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>2058,263,7441</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;&lt;span&gt;Based on your project today, how confident are you that you could &lt;/span&gt;&lt;em&gt;&lt;span&gt;&lt;span style="color: #e03e2d;"&gt;describe what the Context API is and the problem is solves&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;&lt;span&gt; in a project or interview tomorrow? &lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Answer on a scale of 1 to 3 where 1 = not yet, 2 = confident, and 3 = I could go above and beyond.&lt;/span&gt;&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="2058">
+              <material>
+                <mattext texttype="text/plain">1</mattext>
+              </material>
+            </response_label>
+            <response_label ident="263">
+              <material>
+                <mattext texttype="text/plain">2</mattext>
+              </material>
+            </response_label>
+            <response_label ident="7441">
+              <material>
+                <mattext texttype="text/plain">3</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">263</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+  </objectbank>
+</questestinterop>

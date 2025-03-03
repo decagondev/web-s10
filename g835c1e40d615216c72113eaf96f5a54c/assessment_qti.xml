@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
+  <assessment ident="g835c1e40d615216c72113eaf96f5a54c" title="RTK Query Check For Understanding">
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>cc_profile</fieldlabel>
+        <fieldentry>cc.exam.v0p1</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_assessmenttype</fieldlabel>
+        <fieldentry>Examination</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_scoretype</fieldlabel>
+        <fieldentry>Percentage</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>cc_maxattempts</fieldlabel>
+        <fieldentry>unlimited</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    <section ident="root_section">
+      <item ident="gf47b767d37e06559ff801f2d253307ba" title="3c399f7d-d10f-467b-a55e-3c66b3210e61">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;What is the primary reason for using middleware like Redux Thunk or RTK Query in Redux applications?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="2164">
+                <material>
+                  <mattext texttype="text/html">To enable asynchronous interactions with external APIs or resources.&amp;nbsp;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="7249">
+                <material>
+                  <mattext texttype="text/plain">To enhance component styling and presentation.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="9132">
+                <material>
+                  <mattext texttype="text/plain">To manage synchronous updates to the Redux store.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="8432">
+                <material>
+                  <mattext texttype="text/plain">To automatically generate user interfaces based on state changes.</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">7249</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="7249_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">9132</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="9132_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">8432</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="8432_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">2164</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Middleware extends Redux with the capability to handle asynchronous operations, such as API calls.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="7249_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because middleware is used for logic and behavior, not UI styling.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="9132_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect as the Redux store can manage synchronous updates without middleware.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="8432_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because middleware handles logic and data fetching, not UI generation.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="gf47b767d37e06559ff801f2d253307ba" title="93d1148f-03f4-4d85-b224-cc043ad2dbf9">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;In the context of Redux, what role do asynchronous operations play?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="6854">
+                <material>
+                  <mattext texttype="text/html">They enable the application to fetch or update data from external sources without blocking the UI.&amp;nbsp;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="5557">
+                <material>
+                  <mattext texttype="text/plain">They are used to delay the rendering of components until user input is received.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="8265">
+                <material>
+                  <mattext texttype="text/plain">Asynchronous operations are avoided in Redux to simplify state management.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="2630">
+                <material>
+                  <mattext texttype="text/plain">They replace the need for actions and reducers in Redux.</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">5557</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="5557_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">8265</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="8265_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">2630</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="2630_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">6854</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Asynchronous operations allow Redux applications to interact with APIs or databases while maintaining a responsive UI.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="5557_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because asynchronous operations are primarily for data fetching or effects, not delaying UI rendering based on user input.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="8265_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect as Redux supports and often relies on asynchronous operations for dynamic data interactions.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="2630_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because asynchronous operations complement the use of actions and reducers; they do not replace them.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="gf47b767d37e06559ff801f2d253307ba" title="f5680f9c-1e8e-44a0-830b-dfd7fe183a48">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;How does Redux handle asynchronous logic in its ecosystem?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="6881">
+                <material>
+                  <mattext texttype="text/html">Utilizing middleware to intercept and perform asynchronous operations before updating the state.&amp;nbsp;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="7773">
+                <material>
+                  <mattext texttype="text/html">By using the Redux store's built-in asynchronous methods.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="8954">
+                <material>
+                  <mattext texttype="text/plain">Through direct API calls within reducers.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="8600">
+                <material>
+                  <mattext texttype="text/plain">By locking the UI until data fetching operations are complete.</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">7773</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="7773_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">8954</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="8954_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">8600</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="8600_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">6881</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Middleware like Redux Thunk or RTK Query enables Redux to handle asynchronous operations by dispatching actions that lead to API calls, then dispatching further actions based on the API response.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="7773_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because the Redux store itself does not have built-in methods for handling asynchronous operations; middleware is used for this purpose.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="8954_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect as reducers are pure functions meant for synchronous state updates; they should not contain asynchronous logic.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="8600_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because one of the benefits of using middleware for asynchronous operations is to avoid UI blocking, maintaining responsiveness.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="gf47b767d37e06559ff801f2d253307ba" title="aa668bf8-2e8c-4a4d-abae-9ecc5a2dc1ba">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;Why is it important to carefully manage side effects (like data fetching) in Redux applications?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="85">
+                <material>
+                  <mattext texttype="text/plain">Proper management ensures that asynchronous actions like data fetching do not lead to unpredictable state updates.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="8729">
+                <material>
+                  <mattext texttype="text/plain">Side effects are undesirable and should be eliminated.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="4705">
+                <material>
+                  <mattext texttype="text/plain">To increase the performance of reducers by offloading work.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="4407">
+                <material>
+                  <mattext texttype="text/plain">Because Redux inherently supports side effects without the need for additional libraries or middleware.</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">8729</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="8729_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">4705</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="4705_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">4407</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="4407_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">85</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Careful management of side effects is crucial for maintaining predictability in state updates, especially when dealing with asynchronous operations.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="8729_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because side effects, such as data fetching, are necessary but need to be managed within the framework's constraints.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="4705_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect as the purpose of managing side effects is not directly about offloading work from reducers but about ensuring predictable and manageable state changes.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="4407_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because Redux requires middleware to handle side effects like asynchronous data fetching properly.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="gf47b767d37e06559ff801f2d253307ba" title="3dec7198-9a01-4dc4-a4d9-5d704d97dcfd">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;What best practice is recommended for handling network requests in Redux applications?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="4350">
+                <material>
+                  <mattext texttype="text/plain">Using middleware to encapsulate and manage network requests, allowing for a separation of concerns between the UI and data fetching logic.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="1634">
+                <material>
+                  <mattext texttype="text/plain">Storing all external API responses directly in the Redux store without processing.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="7929">
+                <material>
+                  <mattext texttype="text/plain">Making network requests directly inside component render methods.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="4630">
+                <material>
+                  <mattext texttype="text/plain">Avoiding the use of middleware by placing all network logic in reducers.</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">1634</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="1634_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">7929</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="7929_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">4630</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="4630_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">4350</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">This approach maintains a clean separation between UI components and data logic, ensuring that network requests are managed efficiently and Redux's state updates are predictable.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="1634_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because it's recommended to process and normalize data before storing it in the Redux store to maintain a predictable state structure.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="7929_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect as this approach can lead to performance issues and violates the separation of concerns; network requests should be handled via actions and middleware.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="4630_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because reducers should remain pure functions without side effects; middleware is the appropriate place for handling network logic.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

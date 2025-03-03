@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
+  <assessment ident="g0f1cb5f8a1cc0f6573276c2ec6ba9ca4" title="Redux Toolkit Check For Understanding">
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>cc_profile</fieldlabel>
+        <fieldentry>cc.exam.v0p1</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_assessmenttype</fieldlabel>
+        <fieldentry>Examination</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_scoretype</fieldlabel>
+        <fieldentry>Percentage</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>cc_maxattempts</fieldlabel>
+        <fieldentry>unlimited</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    <section ident="root_section">
+      <item ident="gf47b767d37e06559ff801f2d253307ba" title="eece6664-9351-11eb-a8b3-0242ac130003">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;What problems does Redux NOT address?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="2776">
+                <material>
+                  <mattext texttype="text/plain">Making two separate global states for different component hierarchies.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="3120">
+                <material>
+                  <mattext texttype="text/plain">Predictable state management</mattext>
+                </material>
+              </response_label>
+              <response_label ident="8503">
+                <material>
+                  <mattext texttype="text/plain">Centralized store for state management</mattext>
+                </material>
+              </response_label>
+              <response_label ident="8380">
+                <material>
+                  <mattext texttype="text/plain">Helps manage large amounts of state in complex apps</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">3120</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="3120_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">8503</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="8503_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">8380</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="8380_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">2776</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Redux is designed to provide predictable, scalable state management for apps with one global state attached to it.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="3120_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Redux uses the reducer pattern and so strives for immutable, predictable state management.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="8503_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Redux is great at providing one place to see state and what kinds of modifications are done to state.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="8380_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Redux's ability to connect to any component helps it scale very well.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="gf47b767d37e06559ff801f2d253307ba" title="f9a2b9d2-9351-11eb-a8b3-0242ac130003">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;When you wrap your app in Redux's &lt;code&gt;&amp;lt;Provider&amp;gt;&lt;/code&gt; component, what prop do you pass in to it?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="9192">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;store&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="3662">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;switch&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="3027">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;action&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="6757">
+                <material>
+                  <mattext texttype="text/html">&lt;code&gt;reducer&lt;/code&gt;</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">3662</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="3662_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">3027</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="3027_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">6757</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="6757_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">9192</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">You need a store to connect your components to for Redux to function.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="3662_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Not so much! Switch statements are used in the reducer function (an many other places) as a way to choose between different options easily.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="3027_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Nope! An action objects are created in action creators and passed into the reducer.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="6757_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Not this time. Reducers are made to create a redux store.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="gf47b767d37e06559ff801f2d253307ba" title="0181c9e0-9352-11eb-a8b3-0242ac130003">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;In Redux, what is an action?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="6361">
+                <material>
+                  <mattext texttype="text/html">A JavaScript object that describes a change in the application's state.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="1766">
+                <material>
+                  <mattext texttype="text/plain">A function that returns the new state directly.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="5741">
+                <material>
+                  <mattext texttype="text/plain">A piece of middleware that processes before reaching the reducer.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="6235">
+                <material>
+                  <mattext texttype="text/plain">A component that triggers state updates.</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">1766</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="1766_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">5741</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="5741_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">6235</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="6235_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">6361</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Actions are plain objects with a type property, and optionally additional data, that represent an intention to change the state.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="1766_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because actions are objects, not functions; reducers use actions to determine how to calculate the new state.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="5741_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because an action is a plain object describing what happened, not middleware.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="6235_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect as components may dispatch actions, but actions themselves are not components; they are objects sent to the store to trigger state updates.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="gf47b767d37e06559ff801f2d253307ba" title="0435dc94-9352-11eb-a8b3-0242ac130003">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;What does an action creator return?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="1707">
+                <material>
+                  <mattext texttype="text/plain">an action object</mattext>
+                </material>
+              </response_label>
+              <response_label ident="2853">
+                <material>
+                  <mattext texttype="text/plain">a reducer function</mattext>
+                </material>
+              </response_label>
+              <response_label ident="3706">
+                <material>
+                  <mattext texttype="text/plain">switch statement</mattext>
+                </material>
+              </response_label>
+              <response_label ident="1216">
+                <material>
+                  <mattext texttype="text/plain">redux store</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">2853</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="2853_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">3706</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="3706_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">1216</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="1216_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">1707</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Action creators are just clean ways of creating action objects and passing them into the reducer.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="2853_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Nope. Reducer functions are what action creators pass their objects into.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="3706_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Not so much! Switch statements are used in the reducer function (an many other places) as a way to choose between different options easily.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="1216_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Nope. The Redux store is created to connect your reducer to your application.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="gf47b767d37e06559ff801f2d253307ba" title="0867e1d6-9352-11eb-a8b3-0242ac130003">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;Which of the following best describes the concept of "store" in Redux?&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Single">
+            <render_choice>
+              <response_label ident="2045">
+                <material>
+                  <mattext texttype="text/html">An object that holds the application's state tree.&amp;nbsp;</mattext>
+                </material>
+              </response_label>
+              <response_label ident="9003">
+                <material>
+                  <mattext texttype="text/plain">A library used to manage asynchronous actions.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="8605">
+                <material>
+                  <mattext texttype="text/plain">A function that allows components to subscribe to changes in the data layer.</mattext>
+                </material>
+              </response_label>
+              <response_label ident="1944">
+                <material>
+                  <mattext texttype="text/plain">A method for combining multiple reducers into a single state object.</mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">9003</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="9003_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">8605</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="8605_fb"/>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <varequal respident="response1">1944</varequal>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="1944_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="response1">2045</varequal>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">The store is a single object that holds the entire state of the application in one place.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="9003_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because the store is the central object that holds the application's state, not a library for managing asynchronous actions (middleware handles async actions).</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="8605_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect as the store itself is not a function, but it provides methods like subscribe to listen to state changes.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="1944_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/plain">Incorrect because this describes the role of combineReducers, a utility function for turning multiple reducers into a single reducing function, not the store itself.</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

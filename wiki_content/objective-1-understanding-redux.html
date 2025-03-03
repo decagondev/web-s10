@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Objective 1 - Understanding Redux</title>
+<meta name="identifier" content="g3e46d2798a536be8abb17fd85b4e9f07"/>
+<meta name="editing_roles" content="teachers"/>
+<meta name="workflow_state" content="active"/>
+</head>
+<body>
+<div class=" border border-trbl" style="background-color: #00808c; color: #ffffff; padding: 2px 10px; border: 1px solid black;">
+<h3><strong>Overview</strong></h3>
+</div>
+<div class="content-box pad-box-mini border border-rbl">
+<p><span>In a web application, 'state' refers to the dynamic elements such as the URL, user inputs, and interactive features. This is akin to the changing conditions of a car, like speed or fuel level. In Redux, state is treated as a single source of truth, representing the entire state of the application at any given moment.</span></p>
+<p><span>Front-end developers often grapple with how to manage state effectively. Choices include storing state within the DOM, building a singular large object for the entire application's state, or allowing the URL to influence state. These decisions impact how easily state can be tracked, manipulated, and maintained.</span></p>
+<p><span>In response to these challenges, the front-end community has created numerous libraries and frameworks. Each offers different approaches to state management, addressing various needs and complexities of web applications. <strong>Redux</strong> emerged as a popular choice due to its simplicity and predictability.</span></p>
+</div>
+<div class="border border-trbl" style="background-color: #00808c; color: #ffffff; padding: 2px 10px; border: 1px solid black;">
+<h3><strong>How to Build It</strong></h3>
+</div>
+<div class="content-box pad-box-mini border border-rbl">
+<p><span><a class="inline_disabled" href="https://redux.js.org/" target="_blank">Redux</a> is a library that centralizes the application's state, making it more predictable and easier to manage. It's commonly used in complex applications for consistent state management, but it's flexible enough to manage only parts of the state, as needed.</span></p>
+<p><span>Redux's centralized approach provides a clear overview of the application's state at any point in time. It offers powerful development tools, like state time-travel, and ensures a clean separation between state management logic and UI components. <a class="inline_disabled" href="https://redux-toolkit.js.org/" target="_blank">Redux Toolkit</a>, an official Redux package, further simplifies Redux development by providing useful utilities.</span></p>
+<p><span>Redux's widespread adoption is evidenced by its <a class="inline_disabled" href="https://www.npmjs.com/package/redux" target="_blank">massive download numbers</a> and active community. Its ongoing maintenance by <a class="inline_disabled" href="https://www.youtube.com/watch?v=TROygqXGa10" target="_blank">passionate developers</a> ensures that it stays relevant and efficient in managing modern web application states.</span></p>
+<p><span>Redux's architecture revolves around <strong>a single, immutable state object</strong>. The state is never mutated directly; instead, actions are dispatched to signify state changes. Reducers, which are pure functions, then take the current state and an action to calculate a new state. This approach guarantees predictability and ease of debugging.</span></p>
+<p><span>Actions in Redux are plain JavaScript objects describing what happened, and reducers are functions that determine how the state changes in response to these actions. This pattern makes it straightforward to trace, test, and maintain state changes across the application.</span></p>
+<p><span>Redux encourages a design where components are 'dumb' regarding state management. They dispatch actions and may read state but are not involved in state mutation. This separation of concerns leads to more maintainable and scalable codebases.</span></p>
+<p><span>Redux is a robust framework for state management, building on the reducer pattern to ensure a predictable application state. Redux Toolkit further enhances Redux by offering utilities like <code>createSlice</code> and <code>createAsyncThunk</code>, which simplify common Redux patterns and reduce boilerplate. Overall, Redux and Redux Toolkit provide a structured approach to managing state in complex web applications.</span></p>
+</div>
+<div class="border border-trbl" style="background-color: #00808c; color: #ffffff; padding: 2px 10px; border: 1px solid black;">
+<h3><strong>Video Walkthrough</strong></h3>
+</div>
+<div class="content-box pad-box-mini border border-rbl">
+<p><iframe class="wistia_embed" title="Understanding Redux" src="https://fast.wistia.net/embed/iframe/tqeqfc4luj?seo=false&amp;videoFoam=false" width="640" height="360" name="wistia_embed" allow="autoplay; fullscreen" loading="lazy"></iframe></p>
+</div>
+</body>
+</html>

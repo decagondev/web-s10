@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Redux-Thunk and Asynchronous Action Creators</title>
+    <style>
+        :root {
+            --primary-color: #93005a;
+            --secondary-color: #00808c;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #fff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --code-bg: #f8f9fa;
+            --code-color: #24292e;
+            --code-font: Monaco, Menlo, Consolas, 'Courier New', monospace;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .content-section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px var(--shadow-color);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        h4 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        pre {
+            background: var(--code-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        code {
+            font-family: var(--code-font);
+            font-size: 0.9em;
+            color: var(--code-color);
+        }
+
+        .inline-code {
+            background: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: var(--code-font);
+            font-size: 0.9em;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .challenge-section {
+            background: var(--code-bg);
+            border: 2px solid var(--secondary-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .challenge-section h2 {
+            color: var(--secondary-color);
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            pre {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html">← Back to Sprint Content</a>
+        <a href="../unit-videos.html">Unit Videos</a>
+    </nav>
+
+    <div class="content-section">
+        <div class="page-header">
+            <h1>Using Redux-Thunk and Asynchronous Action Creators</h1>
+        </div>
+
+        <div class="video-container">
+            <iframe class="wistia_embed" title="Redux thunk Video" src="https://fast.wistia.net/embed/iframe/ll63mu07sv" allow="autoplay; fullscreen" loading="lazy"></iframe>
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p>Redux Thunk is a separate node package called <code>redux-thunk</code>. Since the Redux action -&gt; reducer flow is synchronous, we will use Redux Thunk to make the flow asynchronous and make API calls from our action creators.</p>
+        <p><span>Yep. You read that correctly. We are changing up the action creators to perform asynchronous API calls. We can do this because Redux Middleware intercepts the normal Redux flow and can make a call before actions make it to the reducer. To make this work, we need to</span> understand <code>thunks</code>.</p>
+        <p><code>thunk</code>&nbsp;<span>is another word for a function. But it's not just any old function. It's a special (and uncommon) name for a function that's returned by another function. Like this:</span></p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">function</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">not_a_thunk</span>() {<br>&nbsp;&nbsp;<span style="border: 0px none #6a737d; color: #6a737d;">// this one is a "thunk" because it defers work for later:</span><br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> <span style="border: 0px none #d73a49; color: #d73a49;">function</span>() {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">console</span>.<span style="border: 0px none #6f42c1; color: #6f42c1;">log</span>(<span style="border: 0px none #032f62; color: #032f62;">'do stuff now'</span>);<br>&nbsp;&nbsp;};<br>}<br></code></pre>
+        <p>So how does this apply to Redux? Well, when we start using the <code>redux-thunk</code> middleware, it does an interesting thing with our redux flow. When an action creator is called <code>redux-thunk</code> intercepts and acts on returned data. If the thing returned is an action, it forwards the action through to the reducer. But, if the thing returned is a function, aka a thunk (a function returned from a function), then it invokes the thunk and passes the <code>dispatch</code> function as an argument to it.</p>
+        <p>This is where <code>redux-thunk</code> becomes very powerful. The action-creator returned thunk has access to the dispatch function. So we can run an async function, like an API call, and inside the <code>.then()</code> we can dispatch an action!</p>
+        <p><span>Let's look at a simple example of an action creator that does this when a user logs in:</span></p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">function</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">logInUser</span>(<span>creds</span>) {<br>&nbsp;&nbsp;<span style="border: 0px none #6a737d; color: #6a737d;">// this returned function is the thunk, and gets dispatch passed in</span><br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> <span style="border: 0px none #d73a49; color: #d73a49;">function</span>(<span>dispatch</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> axios.<span style="border: 0px none #6f42c1; color: #6f42c1;">post</span>(<span style="border: 0px none #032f62; color: #032f62;">'/login'</span>, creds).<span style="border: 0px none #6f42c1; color: #6f42c1;">then</span>(<span><span>res</span> =&gt;</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">const</span> loggedInAction = { <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #005cc5; color: #005cc5;">USER_LOGGED_IN</span>, <span style="border: 0px none #005cc5; color: #005cc5;">payload</span>: res.<span>data</span>.<span>user</span> }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #6f42c1; color: #6f42c1;">dispatch</span>(loggedInAction);<br>&nbsp;&nbsp;&nbsp;&nbsp;});<br>&nbsp;&nbsp;};<br>}</code></pre>
+        <p><span>Really cool, right? The thunk has access to dispatch, and can dispatch a new action based on the result of the API call! Let's clean this up a little with arrow function syntax. The following code snippet is essentially the exact same as the above snippet:</span></p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">logInUser</span> = creds =&gt; <span><span>dispatch</span> =&gt;</span> {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> axios.<span style="border: 0px none #6f42c1; color: #6f42c1;">post</span>(<span style="border: 0px none #032f62; color: #032f62;">'/login'</span>, creds).<span style="border: 0px none #6f42c1; color: #6f42c1;">then</span>(<span><span>res</span> =&gt;</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">const</span> loggedInAction = { <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #005cc5; color: #005cc5;">USER_LOGGED_IN</span>, <span style="border: 0px none #005cc5; color: #005cc5;">payload</span>: res.<span>data</span>.<span>user</span> }<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #6f42c1; color: #6f42c1;">dispatch</span>(loggedInAction);<br>&nbsp;&nbsp;});<br>}<br></code></pre>
+        <p>Much better! Let's go try it out!</p>
+        <h2 id="follow-along">Follow Along</h2>
+        <p><span>We have an app </span><a href="https://replit.com/@bloomtech/Thunk-Practice-Start#src/index.jsx"><span>here (Links to an external site)</span></a><span> ready to make an API call to the Pokemon API. The first step to accomplishing this is to add <code>redux-thunk</code> as a dependency, then go to the main <code>index.jsx</code> page and import it like this:</span></p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">import</span> thunk <span style="border: 0px none #d73a49; color: #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62;">'redux-thunk'</span>;</code></pre>
+        <p>Next, we need to tell the <code>applyMiddleware</code> function about this piece of middleware.</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">const</span> store = <span style="border: 0px none #6f42c1; color: #6f42c1;">createStore</span>(<br>&nbsp;&nbsp;rootReducer,<br>&nbsp;&nbsp;<span style="border: 0px none #6f42c1; color: #6f42c1;">applyMiddleware</span>(thunk)<br>);</code></pre>
+        <p>Now we're ready to make our action creators asynchronous!</p>
+        <p>Go into the <code>action/index.js</code> file. You should see an action creator that is returning an action. That action adds an error to state. If you push the "Fetch Pokémon" button, you will see the error rendered on the screen right after it is added to state.</p>
+        <p><span>Now, go ahead and remove the entire return statement from the action creator. Then let's build the thunk function.</span></p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">getPokemon</span> = () =&gt; <span><span>dispatch</span> =&gt;</span> {<br><br>};</code></pre>
+        <p><span>Now, inside the action creator, we have access to dispatch. So, what is this action creator going to do? It is going to fetch Pokemon data from the API. So, before we fetch data, let's remember the finite state machine and dispatch an action that can tell the reducer that we are starting the fetch. (And let's change the action type to 'FETCH_POKEMON_START').</span></p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_START</span> = <span style="border: 0px none #032f62; color: #032f62;">'FETCH_POKEMON_START'</span>;<br><br><span style="border: 0px none #d73a49; color: #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">getPokemon</span> = () =&gt; <span><span>dispatch</span> =&gt;</span> {<br>&nbsp;&nbsp;<span style="border: 0px none #6f42c1; color: #6f42c1;">dispatch</span>({ <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_START</span> });<br>};</code></pre>
+        <p>Now we'll go to the reducer and build a case for that action. Import the correct action type, and add an <code>isFetching</code> property to the <code>initialState</code> object. In this case, we will set <code>isFetching</code> to true, and reset the <code>error</code> back to an empty string, just in case it has an error in it.</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">import</span> { <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_START</span> } <span style="border: 0px none #d73a49; color: #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62;">'../actions'</span>;<br><br><span style="border: 0px none #d73a49; color: #d73a49;">const</span> initialState = {<br>&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">pokemon</span>: [],<br>&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">error</span>: <span style="border: 0px none #032f62; color: #032f62;">''</span>,<br>&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">isFetching</span>: <span style="border: 0px none #005cc5; color: #005cc5;">false</span><br>};<br><br><span style="border: 0px none #d73a49; color: #d73a49;">function</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(<span>state = initialState, action</span>) {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">console</span>.<span style="border: 0px none #6f42c1; color: #6f42c1;">log</span>(<span style="border: 0px none #032f62; color: #032f62;">'reducer'</span>, action);<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">switch</span> (action.<span>type</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">case</span> <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_START</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...state,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">isFetching</span>: <span style="border: 0px none #005cc5; color: #005cc5;">true</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">error</span>: <span style="border: 0px none #032f62; color: #032f62;">''</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">default</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> state;<br>&nbsp;&nbsp;}<br>}<br><br><span style="border: 0px none #d73a49; color: #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49;">default</span> reducer;</code></pre>
+        <p>Now, back to the action creator to make our API call. To continue, we need to add <code>axios</code> as a dependency and import it into the action creator file. Then, make a <code>GET</code> request to 'https://pokeapi.co/api/v2/pokemon/'.</p>
+        <p>In the <code>.then()</code> and <code>.catch()</code>, we need to dispatch more actions. Inside the <code>.then()</code>, we will dispatch the <code>FETCH_POKEMON_SUCCESS</code> action, and pass with it the data we get back from the API. If there is an error, we need to dispatch the <code>FETCH_POKEMON_FAIL</code> action and pass with it the error. Make two new action types for both cases, then build out the <code>.then()</code> and <code>.catch()</code>.</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">import</span> axios <span style="border: 0px none #d73a49; color: #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62;">'axios'</span>;<br><br><span style="border: 0px none #d73a49; color: #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_START</span> = <span style="border: 0px none #032f62; color: #032f62;">'FETCH_POKEMON_START'</span>;<br><span style="border: 0px none #d73a49; color: #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_SUCCESS</span> = <span style="border: 0px none #032f62; color: #032f62;">'FETCH_POKEMON_SUCCESS'</span>;<br><span style="border: 0px none #d73a49; color: #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_FAIL</span> = <span style="border: 0px none #032f62; color: #032f62;">'FETCH_POKEMON_FAIL'</span>;<br><br><span style="border: 0px none #d73a49; color: #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">getPokemon</span> = () =&gt; <span><span>dispatch</span> =&gt;</span> {<br>&nbsp;&nbsp;<span style="border: 0px none #6f42c1; color: #6f42c1;">dispatch</span>({ <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_START</span> });<br>&nbsp;&nbsp;axios<br>&nbsp;&nbsp;&nbsp;&nbsp;.<span style="border: 0px none #6f42c1; color: #6f42c1;">get</span>(<span style="border: 0px none #032f62; color: #032f62;">'https://pokeapi.co/api/v2/pokemon/'</span>)<br>&nbsp;&nbsp;&nbsp;&nbsp;.<span style="border: 0px none #6f42c1; color: #6f42c1;">then</span>(<span><span>res</span> =&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #6f42c1; color: #6f42c1;">dispatch</span>({ <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_SUCCESS</span>, <span style="border: 0px none #005cc5; color: #005cc5;">payload</span>: res.<span>data</span>.<span>results</span> })<br>&nbsp;&nbsp;&nbsp;&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;.<span style="border: 0px none #6f42c1; color: #6f42c1;">catch</span>(<span><span>err</span> =&gt;</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">dispatch</span>({ <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_FAIL</span>, <span style="border: 0px none #005cc5; color: #005cc5;">payload</span>: err }));<br>};</code></pre>
+        <p><span>Finally, we will build the cases for our two new actions. In the reducer file, import our new action types. Then build a case for each inside the reducer function. Before looking at the code below, think through what change each action represents on the state tree. Think about finite state machines. Now go ahead and build both cases, then compare how you did with the code below.</span></p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">import</span> {<br>&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_START</span>,<br>&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_SUCCESS</span>,<br>&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_FAIL</span><br>} <span style="border: 0px none #d73a49; color: #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62;">'../actions'</span>;<br><br><span style="border: 0px none #d73a49; color: #d73a49;">const</span> initialState = {<br>&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">pokemon</span>: [],<br>&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">error</span>: <span style="border: 0px none #032f62; color: #032f62;">''</span>,<br>&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">isFetching</span>: <span style="border: 0px none #005cc5; color: #005cc5;">false</span><br>};<br><br><span style="border: 0px none #d73a49; color: #d73a49;">function</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(<span>state = initialState, action</span>) {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">console</span>.<span style="border: 0px none #6f42c1; color: #6f42c1;">log</span>(<span style="border: 0px none #032f62; color: #032f62;">'reducer'</span>, action);<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">switch</span> (action.<span>type</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">case</span> <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_START</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...state,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">isFetching</span>: <span style="border: 0px none #005cc5; color: #005cc5;">true</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">error</span>: <span style="border: 0px none #032f62; color: #032f62;">''</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">case</span> <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_SUCCESS</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...state,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">pokemon</span>: action.<span>payload</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">isFetching</span>: <span style="border: 0px none #005cc5; color: #005cc5;">false</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">error</span>: <span style="border: 0px none #032f62; color: #032f62;">''</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">case</span> <span style="border: 0px none #005cc5; color: #005cc5;">FETCH_POKEMON_FAIL</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...state,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">error</span>: action.<span>payload</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">default</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> state;<br>&nbsp;&nbsp;}<br>}<br><br><span style="border: 0px none #d73a49; color: #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49;">default</span> reducer;</code></pre>
+        <p><span>Now push the button again, and there are your Pokémon! Here is the final </span><a href="https://replit.com/@bloomtech/Thunk-Practice-End#src/reducers/index.js">Repl (Links to an external site)</a><span> for reference.</span></p>
+        <h2 id="challenge">Challenge</h2>
+        <p><span>Build out a simple React/Redux app that displays dog images from the dogs API.</span></p>
+    </div>
+</body>
+</html>

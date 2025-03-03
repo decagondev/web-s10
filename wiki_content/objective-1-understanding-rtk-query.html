@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Objective 1 - Understanding RTK Query</title>
+    <style>
+        :root {
+            --primary-color: #93005a;
+            --secondary-color: #00808c;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #fff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --code-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .content-section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .section-header {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 10px 10px 0 0;
+            margin: 2rem 0 0 0;
+        }
+
+        .section-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .section-content {
+            background: var(--white);
+            padding: 1.5rem;
+            border: 2px solid var(--secondary-color);
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            margin-bottom: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--code-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+
+        .feature-card h4 {
+            color: var(--primary-color);
+            margin: 0 0 1rem 0;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 1rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px var(--shadow-color);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        h4 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        strong {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            .section-header {
+                padding: 0.8rem 1rem;
+            }
+
+            .section-content {
+                padding: 1rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html">← Back to Sprint Content</a>
+        <a href="../unit-videos.html">Unit Videos</a>
+    </nav>
+
+    <div class="content-section">
+        <div class="page-header">
+            <h1>Understanding RTK Query</h1>
+        </div>
+
+        <div class="section-header">
+            <h3>Overview</h3>
+</div>
+        <div class="section-content">
+            <p>RTK Query is an essential tool in a developer's arsenal for efficient data management. Let's dive right in!</p>
+            
+            <h4>Why RTK Query?</h4>
+<p>RTK Query is a powerful data fetching and caching solution that is part of the Redux Toolkit. It provides a succinct API to simplify asynchronous data fetching, caching, and state management in React applications. Here's why it's becoming a go-to for many developers:</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+<h4>Simplified Data Fetching</h4>
+<p>Gone are the days of manually setting up actions, reducers, and middleware for each API request. RTK Query abstracts these complexities, allowing developers to declare what data they need, not how to fetch it.</p>
+                </div>
+
+                <div class="feature-card">
+<h4>Built-in Caching and Automatic Refetching</h4>
+<p>RTK Query automatically caches your data and provides intelligent re-fetching. It knows when to fetch new data and when to provide cached data, optimizing your application's performance and reducing unnecessary network requests.</p>
+                </div>
+
+                <div class="feature-card">
+<h4>Seamless Integration with Redux</h4>
+<p>As a part of Redux Toolkit, RTK Query integrates seamlessly with the Redux ecosystem, allowing for centralized state management and easy access to data throughout your application.</p>
+                </div>
+
+                <div class="feature-card">
+<h4>Streamlined State Management</h4>
+<p>RTK Query reduces the need for boilerplate code and streamlines state management. It manages loading states and error handling, freeing developers to focus on building features.</p>
+</div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h3>How to Build It</h3>
+</div>
+        <div class="section-content">
+            <h4>How Does RTK Query Fit In?</h4>
+            <p>Understanding where RTK Query fits in your application architecture is crucial. It acts as a middleware between your React application and your backend APIs. Instead of writing fetch calls and managing states manually, RTK Query provides hooks that handle the lifecycle of API calls, including caching, updating, and error handling.</p>
+
+            <h4>RTK Query in Action</h4>
+<p>Through this module, we'll see RTK Query in action, demonstrating how to set up queries to fetch data, how to use mutations to send data, and how tags can be used to manage automatic re-fetching of data. This practical approach ensures that by the end of this module, you'll have a solid understanding and hands-on experience with RTK Query.</p>
+
+<p>RTK Query is the gateway to adopting a more efficient and modern approach to handling data in React applications. It's designed to make server-state management more accessible and less error-prone, thereby increasing developer productivity and application reliability.</p>
+
+<p>In the upcoming objectives, we will dive deeper into each aspect of RTK Query, providing you with the knowledge and skills needed to leverage its full potential.</p>
+</div>
+
+        <div class="section-header">
+            <h3>Video Walkthrough</h3>
+        </div>
+        <div class="section-content">
+            <div class="video-container">
+                <iframe title="Understanding Redux" src="https://fast.wistia.net/embed/iframe/8p96nwphv3?seo=false&videoFoam=false" allow="autoplay; fullscreen" loading="lazy"></iframe>
+            </div>
+</div>
+</div>
+</body>
+</html>

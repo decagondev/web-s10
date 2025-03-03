@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objective 3 - Consuming Data From Context</title>
+    <style>
+        :root {
+            --primary-color: #93005a;
+            --secondary-color: #00808c;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #fff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --code-bg: #f8f9fa;
+            --code-color: #24292e;
+            --code-block-bg: #ffffff;
+            --code-block-border: #c7cdd1;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .content-section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .section-header {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 15px 20px;
+            margin: 2rem 0 1rem;
+            border-radius: 5px;
+        }
+
+        .section-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .section-content {
+            background: var(--white);
+            padding: 20px;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        pre {
+            background: var(--code-block-bg);
+            border: 1px solid var(--code-block-border);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        code {
+            background: var(--code-bg);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+            color: var(--code-color);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px var(--shadow-color);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            pre {
+                padding: 10px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html">← Back to Sprint Content</a>
+        <a href="../unit-videos.html">Unit Videos</a>
+    </nav>
+
+    <div class="content-section">
+        <div class="section-header">
+            <h3><strong>Overview</strong></h3>
+        </div>
+        <div class="section-content">
+            <p>Using the Context API is not hard, but it can feel a bit intimidating at first. In the last objective we learned how to <strong>make data available</strong> to any part of the component tree, using a context provider. In this objective we will look at <strong>consuming data</strong> from context, using the <a href="https://react.dev/reference/react/useContext" target="_blank">Context Hook</a>.</p>
+        </div>
+
+        <div class="section-header">
+            <h3><strong>How to Build It</strong></h3>
+        </div>
+        <div class="section-content">
+            <p>This is how we left things in the last objective. We have some music bands data we wish to make available, we have a context object and a context provider, and we have wrapped our entire component tree with the provider:</p>
+            <pre style="background: none 0% 0% / auto repeat scroll padding-box border-box #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font: 12px / 14.4px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none solid #24292e; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px;" data-hljs-language="javascript"><code style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px none #24292e; font: 16px / 19.2px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px;"><span style="border: 0px none #6a737d; color: #6a737d; text-decoration: none solid #6a737d;">// context/bands.js module</span><br><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">import</span> <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">React</span>, { createContext } <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">'react'</span><br><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">const</span> bands = {<br>&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5; text-decoration: none solid #005cc5;">metal</span>: [<span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">'Metallica'</span>, <span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">'Iron Maiden'</span>], <span style="border: 0px none #6a737d; color: #6a737d; text-decoration: none solid #6a737d;">// the DATA we are sharing</span><br>}<br><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">BandsContext</span> = <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">createContext</span>()<br><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">BandsProvider</span> = (<span>{ children }</span>) =&gt; (<br>&nbsp;&nbsp;<span><span>&lt;<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">BandsContext.Provider</span> <span style="border: 0px none #005cc5; color: #005cc5; text-decoration: none solid #005cc5;">value</span>=<span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">{bands}</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;{children}<br>&nbsp;&nbsp;<span>&lt;/<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">BandsContext.Provider</span>&gt;</span></span><br>)<br><br><span style="border: 0px none #6a737d; color: #6a737d; text-decoration: none solid #6a737d;">// index.js module</span><br><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">import</span> { <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">BandsProvider</span> } <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">'./context/bands'</span><br><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">const</span> root = <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">createRoot</span>(<span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">document</span>.<span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">getElementById</span>(<span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">'root'</span>))<br>root.<span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">render</span>(<br>&nbsp;&nbsp;<span><span>&lt;<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">BandsProvider</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span>&lt;<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">App</span> /&gt;</span><br>&nbsp;&nbsp;<span>&lt;/<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">BandsProvider</span>&gt;</span></span><br>)</code><code style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px none #24292e; font: 16px / 19.2px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px;"><br></code></pre>
+            <p>The first step in this objective is to find <strong>a component that is interested in the bands data</strong> made available through context:&nbsp;</p>
+            <pre style="background: none 0% 0% / auto repeat scroll padding-box border-box #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font: 12px / 14.4px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none solid #24292e; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px;" data-hljs-language="javascript"><code style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px none #24292e; font: 16px / 19.2px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px;"><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">import</span> <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">React</span> <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">'react'</span><br><br><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">default</span> <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">function</span> <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">DeeplyNestedComponent</span>() {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">return</span> (<br>&nbsp;&nbsp;&nbsp;&nbsp;<span><span>&lt;<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">div</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&lt;<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">h2</span>&gt;</span>Hello, World!<span>&lt;/<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">h2</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&lt;<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">p</span>&gt;</span>Fav band: {/* get Metallica from context */}<span>&lt;/<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">p</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&lt;<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">p</span>&gt;</span>Next fav band: {/* get Iron Maiden from context */}<span>&lt;/<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">p</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span>&lt;/<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">div</span>&gt;</span></span><br>&nbsp;&nbsp;)<br>}</code></pre>
+            <p>The component above is deeply nested in the component tree and we don't wish to prop-drill. Luckily, the data we are after is provided via a bands Context!</p>
+            <p>We will require <strong>two imports</strong>: the Context hook and the bands context we created in the previous objective:</p>
+            <pre style="background: none 0% 0% / auto repeat scroll padding-box border-box #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font: 12px / 14.4px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none solid #24292e; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px;" data-hljs-language="javascript"><code style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px none #24292e; font: 16px / 19.2px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px;"><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">import</span> <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">React</span>, { useContext } <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">'react'</span><br><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">import</span> { <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">BandsContext</span> } <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">'../context/bands'</span></code></pre>
+            <p>Next, we will <strong>use the Context hook</strong> at the top of our component, passing it the context object exported from <code>bands.js</code>:</p>
+            <pre style="background: none 0% 0% / auto repeat scroll padding-box border-box #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font: 12px / 14.4px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none solid #24292e; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px;" data-hljs-language="javascript"><code style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px none #24292e; font: 16px / 19.2px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px;"><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">import</span> <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">React</span>, { useContext } <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">'react'</span><br><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">import</span> { <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">BandsContext</span> } <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">'../context/bands'</span><br><br><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">default</span> <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">function</span> <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">DeeplyNestedComponent</span>() {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">const</span> bandsData = <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">useContext</span>(<span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">BandsContext</span>)<br>&nbsp;&nbsp;<span style="border: 0px none #6a737d; color: #6a737d; text-decoration: none solid #6a737d;">// the rest of the component...</span><br>}</code></pre>
+            <p>If you console.log the <code>bandsData</code>, you will find it maps exactly to the data we made available from our bands Context. Here is the finished code, using <strong>destructuring</strong> to access a particular property of the object shared via the bands context:</p>
+            <pre style="background: none 0% 0% / auto repeat scroll padding-box border-box #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font: 12px / 14.4px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none solid #24292e; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px;" data-hljs-language="javascript"><code style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px none #24292e; font: 16px / 19.2px Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px;"><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">import</span> <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">React</span>, { useContext } <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">'react'</span><br><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">import</span> { <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">BandsContext</span> } <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62; text-decoration: none solid #032f62;">'../context/bands'</span><br><br><span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">default</span> <span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">function</span> <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">DeeplyNestedComponent</span>() {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">const</span> { metal } = <span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">useContext</span>(<span style="border: 0px none #6f42c1; color: #6f42c1; text-decoration: none solid #6f42c1;">BandsContext</span>)<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49; text-decoration: none solid #d73a49;">return</span> (<br>&nbsp;&nbsp;&nbsp;&nbsp;<span><span>&lt;<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">div</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&lt;<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">h2</span>&gt;</span>Hello, World!<span>&lt;/<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">h2</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&lt;<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">p</span>&gt;</span>Fav band: {metal[0] /* renders Metallica */}<span>&lt;/<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">p</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>&lt;<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">p</span>&gt;</span>Next fav band: {metal[1] /* renders Iron Maiden */}<span>&lt;/<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">p</span>&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span>&lt;/<span style="border: 0px none #22863a; color: #22863a; text-decoration: none solid #22863a;">div</span>&gt;</span></span><br>&nbsp;&nbsp;)<br>}</code></pre>
+            <p>And if "teleporting" music bands data deep down the component tree does not sound exciting enough, imagine we wished to share the entirety of application state using Context. These states can be quite large, so the Context API is the perfect mechanism for centralizing them and making them readily available. You will practice these moves in your Module Project!</p>
+        </div>
+
+        <div class="section-header">
+            <h3><strong>Video Walkthrough</strong></h3>
+        </div>
+        <div class="section-content">
+            <div class="video-container">
+                <iframe class="wistia_embed" title="consuming context data" src="https://fast.wistia.net/embed/iframe/kxlu6pdwxy?seo=false&videoFoam=false" name="wistia_embed" allow="autoplay; fullscreen" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

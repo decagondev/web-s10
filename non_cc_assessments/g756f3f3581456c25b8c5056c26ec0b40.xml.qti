@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
+  <objectbank ident="g756f3f3581456c25b8c5056c26ec0b40">
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>bank_title</fieldlabel>
+        <fieldentry>Module 3 - Async Redux</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>bank_context_uuid</fieldlabel>
+        <fieldentry>JnGCrA9aE59ACyj3nS0KChH1g00ZZDi7AUAqu6G1</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    <item ident="g018bd25948e91f0774a32ed8dc918367" title="3c399f7d-d10f-467b-a55e-3c66b3210e61">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>658,2541,7296,2250</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;A finite state machine has a(n) &lt;strong&gt;&lt;em&gt;&lt;em&gt;_ number of possible states, and can be in _&lt;/em&gt;&lt;/em&gt;&lt;/strong&gt; state(s) at any given time.&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="658">
+              <material>
+                <mattext texttype="text/plain">finite, one</mattext>
+              </material>
+            </response_label>
+            <response_label ident="2541">
+              <material>
+                <mattext texttype="text/plain">infinite, all</mattext>
+              </material>
+            </response_label>
+            <response_label ident="7296">
+              <material>
+                <mattext texttype="text/plain">infinite, one</mattext>
+              </material>
+            </response_label>
+            <response_label ident="2250">
+              <material>
+                <mattext texttype="text/plain">finite, all</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">2541</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="2541_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">7296</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="7296_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">2250</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="2250_fb"/>
+        </respcondition>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">658</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">This is a mathematical model that we're applying to our React/Redux apps. OOur apps can only be in one state at a time, and only have a finite number of states.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="2541_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">The states in a "finite state machine" are not infinite, and a fsm can only be in one state att a time.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="7296_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">You're correct that it can only be in one state at a time. However, there are only a finite number of states, not infinite.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="2250_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">You're correct that the number of states are finite, it can only be in one state at any given time.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="g5171689bc7e43d57f4fcedf1bbdc3dfb" title="3dec7198-9a01-4dc4-a4d9-5d704d97dcfd">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>9720,4887,4733,8857</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What is something that redux-thunk does NOT allow you to do in action creators?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="9720">
+              <material>
+                <mattext texttype="text/plain">Update state</mattext>
+              </material>
+            </response_label>
+            <response_label ident="4887">
+              <material>
+                <mattext texttype="text/plain">Run asynchronous operations</mattext>
+              </material>
+            </response_label>
+            <response_label ident="4733">
+              <material>
+                <mattext texttype="text/plain">dispatch actions to the reducer</mattext>
+              </material>
+            </response_label>
+            <response_label ident="8857">
+              <material>
+                <mattext texttype="text/plain">Fetch data from an API</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">4887</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="4887_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">4733</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="4733_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">8857</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="8857_fb"/>
+        </respcondition>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">9720</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">Only reducer functions can update the state in a redux app.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="4887_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">redux-thunk DOES allow us to run async actions</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="4733_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">redux-thunk DOES allow us to dispatch actions to the reducer</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="8857_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">redux-thunk DOES allow us to run async actions like fetching data from an API</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="g64e45dd6cffdb05281111c9899f77ab2" title="502bc31e-4170-4cfc-a83e-89e35a0bbcdd">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>4499,2588,2368</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;&lt;span&gt;Based on your project today, how confident are you that you could &lt;/span&gt;&lt;em&gt;&lt;span&gt;&lt;span style="color: #e03e2d;"&gt;implement Redux Middleware libraries into a Redux Store using `applyMiddleware`&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;&lt;span&gt; in a project or interview tomorrow? &lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Answer on a scale of 1 to 3 where 1 = not yet, 2 = confident, and 3 = I could go above and beyond.&lt;/span&gt;&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="4499">
+              <material>
+                <mattext texttype="text/plain">1</mattext>
+              </material>
+            </response_label>
+            <response_label ident="2588">
+              <material>
+                <mattext texttype="text/plain">2</mattext>
+              </material>
+            </response_label>
+            <response_label ident="2368">
+              <material>
+                <mattext texttype="text/plain">3</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">2588</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="g3ba05113962ecab7bf92632d5bfa83f4" title="7abf75ef-c478-4deb-8a49-b09e73a4a039">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>9725,6923,3969,307</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;All of the following should be managed in a single state object in the Redux store except &lt;strong&gt;&lt;em&gt;&lt;em&gt;__&lt;/em&gt;&lt;/em&gt;&lt;/strong&gt;. &lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="9725">
+              <material>
+                <mattext texttype="text/plain">application state</mattext>
+              </material>
+            </response_label>
+            <response_label ident="6923">
+              <material>
+                <mattext texttype="text/plain">global state</mattext>
+              </material>
+            </response_label>
+            <response_label ident="3969">
+              <material>
+                <mattext texttype="text/plain">form state</mattext>
+              </material>
+            </response_label>
+            <response_label ident="307">
+              <material>
+                <mattext texttype="text/plain">api data</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">9725</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="g64610331b2f5119ccec0086aff7f6d57" title="93d1148f-03f4-4d85-b224-cc043ad2dbf9">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>7726,2371,6066,6053</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What can a middleware function NOT do?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="7726">
+              <material>
+                <mattext texttype="text/plain">Update state based on the dispatched action</mattext>
+              </material>
+            </response_label>
+            <response_label ident="2371">
+              <material>
+                <mattext texttype="text/plain">Stop actions from being dispatched</mattext>
+              </material>
+            </response_label>
+            <response_label ident="6066">
+              <material>
+                <mattext texttype="text/plain">Dispatch multiple actions</mattext>
+              </material>
+            </response_label>
+            <response_label ident="6053">
+              <material>
+                <mattext texttype="text/plain">Forward an action untouched</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">2371</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="2371_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">6066</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="6066_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">6053</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="6053_fb"/>
+        </respcondition>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">7726</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">Middleware functions intercept actions before they are dispatched to a reducer. That means that a middleware function is not going to update the state. Only the reducer can do that.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="2371_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">A middleware function CAN do this. Just like redux-thunk will stop a function that's returned from an action creator so it doesn't break the reducer.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="6066_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">Middleware functions are given access to the dispatch function which means the CAN dispatch as many actions as you'd like!</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="6053_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">Middleware functions CAN forward actions untouched, like redux-logger does after it logs the action and resulting state.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="g6bceaaa8f4395f23f4ed0b085932138e" title="994eaa10-ca44-4595-9302-34b038dd25c5">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>8224,6368,9139</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;&lt;span&gt;Based on your project today, how confident are you that you could &lt;/span&gt;&lt;em&gt;&lt;span&gt;&lt;span style="color: #e03e2d;"&gt;describe the Finite State Machine pattern and it's relationship to building Redux applications&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;&lt;span&gt; in a project or interview tomorrow? &lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Answer on a scale of 1 to 3 where 1 = not yet, 2 = confident, and 3 = I could go above and beyond.&lt;/span&gt;&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="8224">
+              <material>
+                <mattext texttype="text/plain">1</mattext>
+              </material>
+            </response_label>
+            <response_label ident="6368">
+              <material>
+                <mattext texttype="text/plain">2</mattext>
+              </material>
+            </response_label>
+            <response_label ident="9139">
+              <material>
+                <mattext texttype="text/plain">3</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">6368</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="gaa5d730b038038da236706d96be1fab8" title="Module 3 - Async Redux - rubric question 3">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>5202,9534,6991</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;Based on your sprint challenge, choose the description that most closely aligns with how well you can use Redux thunks, define Redux middleware, and make stateful API requests&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="5202">
+              <material>
+                <mattext texttype="text/plain">I did not use-redux thunk or did not use it correctly to make action creators asynchronous.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="9534">
+              <material>
+                <mattext texttype="text/plain">Any component that is fetching data uses redux-thunk as a middleware package to make the action creators asynchronous.</mattext>
+              </material>
+            </response_label>
+            <response_label ident="6991">
+              <material>
+                <mattext texttype="text/plain">One or more of the following apply: (1) I set up a modular action creator that makes multiple calls for different components or different data; (2) I used Redux hooks, and set up my API calls in the component instead of action creators.</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">9534</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="g48e1fb3ff9caf0a3c2cada1ce7bfd0fe" title="aa668bf8-2e8c-4a4d-abae-9ecc5a2dc1ba">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>7411,6414,8276,1765</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;Which of the following best describes the term "thunk"?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="7411">
+              <material>
+                <mattext texttype="text/plain">A function that is returned from another function</mattext>
+              </material>
+            </response_label>
+            <response_label ident="6414">
+              <material>
+                <mattext texttype="text/plain">A middleware function</mattext>
+              </material>
+            </response_label>
+            <response_label ident="8276">
+              <material>
+                <mattext texttype="text/plain">A callback function</mattext>
+              </material>
+            </response_label>
+            <response_label ident="1765">
+              <material>
+                <mattext texttype="text/plain">An action creator function</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">6414</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="6414_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">8276</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="8276_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">1765</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="1765_fb"/>
+        </respcondition>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">7411</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">This is the actual definition of the term "thunk", and it's why redux-thunk is named that. It uses this principle to give access to the dispatch function in our action creators.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="6414_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">redux-thunk can be considered a middleware function, but a thunk is just a function returned by another function</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="8276_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">Almost. A callback function is a function passed into another function, not the one returned by a function.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="1765_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">This is the function that returns a thunk, not a thunk itself.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="gb5ff74e6cfc0d079fb75f32b14ad09e3" title="e55af6de-84af-48aa-8d1e-cec8f4e9a033">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>243,9188,5049</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;&lt;span&gt;Based on your project today, how confident are you that you could &lt;/span&gt;&lt;em&gt;&lt;span&gt;&lt;span style="color: #e03e2d;"&gt;effectively use `redux-thunk` and asynchronous action creators to consume data from external API's&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;&lt;span&gt; in a project or interview tomorrow? &lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Answer on a scale of 1 to 3 where 1 = not yet, 2 = confident, and 3 = I could go above and beyond.&lt;/span&gt;&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="243">
+              <material>
+                <mattext texttype="text/plain">1</mattext>
+              </material>
+            </response_label>
+            <response_label ident="9188">
+              <material>
+                <mattext texttype="text/plain">2</mattext>
+              </material>
+            </response_label>
+            <response_label ident="5049">
+              <material>
+                <mattext texttype="text/plain">3</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">9188</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+    <item ident="gec81d30210a1c99ebcd361fe6524092f" title="f5680f9c-1e8e-44a0-830b-dfd7fe183a48">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>7665,7232,1242,4363</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;What function do you import from redux to be able to use middleware functions in your react/redux apps?&lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="7665">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;applyMiddleware&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+            <response_label ident="7232">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;updateMiddleware&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+            <response_label ident="1242">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;useMiddleware&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+            <response_label ident="4363">
+              <material>
+                <mattext texttype="text/html">&lt;code&gt;combineReducers&lt;/code&gt;</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <other/>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">7232</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="7232_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">1242</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="1242_fb"/>
+        </respcondition>
+        <respcondition continue="Yes">
+          <conditionvar>
+            <varequal respident="response1">4363</varequal>
+          </conditionvar>
+          <displayfeedback feedbacktype="Response" linkrefid="4363_fb"/>
+        </respcondition>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">7665</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="general_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">We want to "apply" a middleware function to our redux apps, so we use the "applyMiddleware" function.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="7232_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">Almost! Butt we're not trying to update middleware functions, just apply them.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="1242_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">This one is tricky since it mimics React hooks. But we want to apply our middleware functions to our apps.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+      <itemfeedback ident="4363_fb">
+        <flow_mat>
+          <material>
+            <mattext texttype="text/plain">This function is actually used when you want to have multiple reducers in your app.</mattext>
+          </material>
+        </flow_mat>
+      </itemfeedback>
+    </item>
+    <item ident="g94ae58adee840fe419a6f7a158e9f51b" title="ffa07c98-7a88-404f-923c-bb1e8edefffc">
+      <itemmetadata>
+        <qtimetadata>
+          <qtimetadatafield>
+            <fieldlabel>question_type</fieldlabel>
+            <fieldentry>multiple_choice_question</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>points_possible</fieldlabel>
+            <fieldentry>1.0</fieldentry>
+          </qtimetadatafield>
+          <qtimetadatafield>
+            <fieldlabel>original_answer_ids</fieldlabel>
+            <fieldentry>151,9020,113,6207</fieldentry>
+          </qtimetadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <presentation>
+        <material>
+          <mattext texttype="text/html">&lt;div&gt;A 'thunk' is a a(n) &lt;strong&gt;&lt;em&gt;&lt;strong&gt;_&lt;/strong&gt;&lt;/em&gt;&lt;/strong&gt;. &lt;/div&gt;</mattext>
+        </material>
+        <response_lid ident="response1" rcardinality="Single">
+          <render_choice>
+            <response_label ident="151">
+              <material>
+                <mattext texttype="text/plain">inner function that is returned by an outer function</mattext>
+              </material>
+            </response_label>
+            <response_label ident="9020">
+              <material>
+                <mattext texttype="text/plain">outer function that returns an inner function</mattext>
+              </material>
+            </response_label>
+            <response_label ident="113">
+              <material>
+                <mattext texttype="text/plain">function that returns JSON data</mattext>
+              </material>
+            </response_label>
+            <response_label ident="6207">
+              <material>
+                <mattext texttype="text/plain">function that returns an action object</mattext>
+              </material>
+            </response_label>
+          </render_choice>
+        </response_lid>
+      </presentation>
+      <resprocessing>
+        <outcomes>
+          <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+        </outcomes>
+        <respcondition continue="No">
+          <conditionvar>
+            <varequal respident="response1">151</varequal>
+          </conditionvar>
+          <setvar action="Set" varname="SCORE">100</setvar>
+        </respcondition>
+      </resprocessing>
+    </item>
+  </objectbank>
+</questestinterop>

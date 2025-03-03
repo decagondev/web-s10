@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objective 2 - Describe Reducer Functions</title>
+    <meta name="identifier" content="g75a97eddcd45d581d5767037130ec90b"/>
+    <meta name="editing_roles" content="teachers"/>
+    <meta name="workflow_state" content="unpublished"/>
+    <style>
+        :root {
+            --primary-color: #93005a;
+            --secondary-color: #00808c;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #fff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --code-bg: #f8f9fa;
+            --code-color: #24292e;
+            --code-keyword: #d73a49;
+            --code-function: #6f42c1;
+            --code-string: #032f62;
+            --code-number: #005cc5;
+            --code-comment: #6a737d;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .content-section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        code {
+            background: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+            color: var(--code-color);
+        }
+
+        pre {
+            background: var(--code-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        pre code {
+            padding: 0;
+            background: none;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .keyword { color: var(--code-keyword); }
+        .function { color: var(--code-function); }
+        .string { color: var(--code-string); }
+        .number { color: var(--code-number); }
+        .comment { color: var(--code-comment); }
+
+        ol {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        ol li {
+            margin-bottom: 1rem;
+        }
+
+        .note {
+            background: var(--code-bg);
+            border-left: 4px solid var(--secondary-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .flow-diagram {
+            background: var(--code-bg);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            text-align: center;
+            font-family: monospace;
+            position: relative;
+        }
+
+        .flow-diagram::after {
+            content: "→";
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            pre {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html">← Back to Sprint Content</a>
+        <a href="../unit-videos.html">Unit Videos</a>
+    </nav>
+
+    <div class="content-section">
+        <div class="page-header">
+            <h1>Understanding Reducer Functions</h1>
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p><span>Reducer functions take two arguments – the current state and action – and return a new, updated state object based on both arguments.</span></p>
+        <p>In pseudocode, this idea looks like:</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="less"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"> (<span style="border: 0px none #22863a; color: #22863a;">state</span>, <span style="border: 0px none #22863a; color: #22863a;">action</span>) =&gt; <span style="border: 0px none #22863a; color: #22863a;">newState</span></code></pre>
+        <p><span>More specifically, consider a function in JavaScript that, when passed to an integer, would return that value + 1, without mutating the original integer's value. Notice we could pass our initialState value - 0 - and then return a new value - 1 - without overriding the initialState.</span></p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">const</span> initialState = <span style="border: 0px none #005cc5; color: #005cc5;">0</span><br><span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span> = (<span>state</span>) =&gt; {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">const</span> newState = state + <span style="border: 0px none #005cc5; color: #005cc5;">1</span><br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> newState;<br>}<br><br><span style="border: 0px none #d73a49; color: #d73a49;">const</span> newStateValue = <span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(initialState);<br><span style="border: 0px none #d73a49; color: #d73a49;">console</span>.<span style="border: 0px none #6f42c1; color: #6f42c1;">log</span>(initialState, newStateValue); <span style="border: 0px none #6a737d; color: #6a737d;">// 0, 1</span></code></pre>
+        <p>Often, returning something such as an integer or a string is not the best choice, especially as data grows more complex than previous examples.</p>
+        <p>Consider the previous example, where component's state utilizes an object as its data structure of choice:</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">const</span> initialState = { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: <span style="border: 0px none #005cc5; color: #005cc5;">0</span> }<br><span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span> = (<span>state</span>) =&gt; {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: state.<span>count</span> + <span style="border: 0px none #005cc5; color: #005cc5;">1</span> }<br>}</code></pre>
+        <p>Again, we are returning a <em>new</em> object and are not directly mutating or overriding the <code>initialState</code> object.</p>
+        <p><span>This reducer function is a pure function without any side effects. Therefore, reducer functions are the perfect fit for managing changes in state while maintaining the immutability we want in our components.</span></p>
+        <p>We've discussed the nature of the incoming state value, but what about the action?</p>
+        <p>The action, represented by an object, contains properties related to some action that happens in our apps. Every action object is required to have a <code>type</code> property, which will "inform" the reducer actions happening in the app. The <code>type</code> allows the reducer to know what part of the state needs to change.</p>
+        <p>Let's look at how we can use this to manage state in our apps.</p>
+        <h2 id="follow-along">Follow Along</h2>
+        <p>Looking at the reducer above, let's show that we want to increment our count state by passing in an <code>action</code> with <code>'increment'</code> as the type.</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">const</span> initialState = { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: <span style="border: 0px none #005cc5; color: #005cc5;">0</span> }<br><span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span> = (<span>state, action</span>) =&gt; {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">if</span> (action.<span>type</span> === <span style="border: 0px none #032f62; color: #032f62;">'increment'</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: state.<span>count</span> + <span style="border: 0px none #005cc5; color: #005cc5;">1</span> }<br>&nbsp;&nbsp;}<br>}<br><br><span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(initialState, { <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #032f62; color: #032f62;">'increment'</span> })</code></pre>
+        <p><span>This strategy is especially powerful when we want our reducer to be able to reduce the state. Take a look at our reducer now:</span></p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">const</span> initialState = { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: <span style="border: 0px none #005cc5; color: #005cc5;">0</span> }<br><span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span> = (<span>state, action</span>) =&gt; {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">if</span> (action.<span>type</span> === <span style="border: 0px none #032f62; color: #032f62;">'increment'</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: state.<span>count</span> + <span style="border: 0px none #005cc5; color: #005cc5;">1</span> }<br>&nbsp;&nbsp;} <span style="border: 0px none #d73a49; color: #d73a49;">else</span> <span style="border: 0px none #d73a49; color: #d73a49;">if</span> (action.<span>type</span> === <span style="border: 0px none #032f62; color: #032f62;">'decrement'</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: state.<span>count</span> - <span style="border: 0px none #005cc5; color: #005cc5;">1</span> }<br>&nbsp;&nbsp;}<br>}<br><br><span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(initialState, { <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #032f62; color: #032f62;">'increment'</span> });<br><span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(initialState, { <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #032f62; color: #032f62;">'decrement'</span> });</code></pre>
+        <p><span>Now our state management is very predictable. Our current state passes into the reducer, and action follows to tell how to update the state.</span></p>
+        <p>We can also add a <code>payload</code> property to our action objects (sometimes called <code>data</code>). Our reducer needs to have some data passed into it through the action to be able to update the state correctly, and this is where that data would live.</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">const</span> initialState = { <span style="border: 0px none #005cc5; color: #005cc5;">name</span>: <span style="border: 0px none #032f62; color: #032f62;">'Donald Duck'</span> }<br><span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span> = (<span>state, action</span>) =&gt; {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">if</span> (action.<span>type</span> === <span style="border: 0px none #032f62; color: #032f62;">'changeName'</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #6a737d; color: #6a737d;">// how do we know what to change the name to? The action payload!</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> { <span style="border: 0px none #005cc5; color: #005cc5;">name</span>: action.<span>payload</span> }<br>&nbsp;&nbsp;}<br>}<br><br><span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(initialState, { <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #032f62; color: #032f62;">'changeName'</span>, <span style="border: 0px none #005cc5; color: #005cc5;">payload</span>: <span style="border: 0px none #032f62; color: #032f62;">'Mickey Mouse'</span> });</code></pre>
+        <p>As you will see in the follow along, the action, and its associated property <code>type</code>, allow us to use the reducer to perform conditional state transformations.</p>
+        <p>There's one last edit we need to make to get to production quality. As you can imagine, or <code>if</code>, <code>if else</code>, <code>if else</code> … etc, statements are going to get very complex and long. We'll use JavaScript's <code>switch</code> statement to make that part of our reducer a lot more readable:</p>
+        <p>Back to the count example, look at the change here:</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">const</span> initialState = { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: <span style="border: 0px none #005cc5; color: #005cc5;">0</span> }<br><span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span> = (<span>state, action</span>) =&gt; {<br>&nbsp;&nbsp;<span style="border: 0px none #6a737d; color: #6a737d;">// if (action.type === 'increment') {</span><br>&nbsp;&nbsp;<span style="border: 0px none #6a737d; color: #6a737d;">//&nbsp;&nbsp;&nbsp;return { count: state.count + 1 }</span><br>&nbsp;&nbsp;<span style="border: 0px none #6a737d; color: #6a737d;">// } else if (action.type === 'decrement') {</span><br>&nbsp;&nbsp;<span style="border: 0px none #6a737d; color: #6a737d;">//&nbsp;&nbsp;&nbsp;return { count: state.count - 1 }</span><br>&nbsp;&nbsp;<span style="border: 0px none #6a737d; color: #6a737d;">// }</span><br>&nbsp;&nbsp;<span style="border: 0px none #6a737d; color: #6a737d;">// we pass in the value we want to look at (action.type):</span><br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">switch</span>(action.<span>type</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #6a737d; color: #6a737d;">// then we make a "case" for each possible value we expect:</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">case</span> <span style="border: 0px none #032f62; color: #032f62;">'increment'</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: state.<span>count</span> + <span style="border: 0px none #005cc5; color: #005cc5;">1</span> };<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">case</span> <span style="border: 0px none #032f62; color: #032f62;">'decrement'</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: state.<span>count</span> - <span style="border: 0px none #005cc5; color: #005cc5;">1</span> }<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #6a737d; color: #6a737d;">// finally, we give a "catch-all" which is just to return state untouched. Never leave this out. There should always be a default:</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">default</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> state;<br>&nbsp;&nbsp;}<br>}<br><br><span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(initialState, { <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #032f62; color: #032f62;">'increment'</span> });<br><span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(initialState, { <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #032f62; color: #032f62;">'decrement'</span> });<br></code></pre>
+        <p>Cleaned up, the reducer now looks like this:</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">const</span> initialState = { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: <span style="border: 0px none #005cc5; color: #005cc5;">0</span> }<br><span style="border: 0px none #d73a49; color: #d73a49;">const</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span> = (<span>state, action</span>) =&gt; {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">switch</span>(action.<span>type</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">case</span> <span style="border: 0px none #032f62; color: #032f62;">'increment'</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: state.<span>count</span> + <span style="border: 0px none #005cc5; color: #005cc5;">1</span> };<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">case</span> <span style="border: 0px none #032f62; color: #032f62;">'decrement'</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> { <span style="border: 0px none #005cc5; color: #005cc5;">count</span>: state.<span>count</span> - <span style="border: 0px none #005cc5; color: #005cc5;">1</span> }<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">default</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> state;<br>&nbsp;&nbsp;}<br>}<br><br><span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(initialState, { <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #032f62; color: #032f62;">'increment'</span> });<br><span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(initialState, { <span style="border: 0px none #005cc5; color: #005cc5;">type</span>: <span style="border: 0px none #032f62; color: #032f62;">'decrement'</span> });</code></pre>
+        <p>(Read more about <code>switch</code> statements <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch">here</a>)</p>
+        <h2 id="challenge">Challenge</h2>
+        <p>Create a reducer function that can do&nbsp;the following:</p>
+        <ol>
+            <li>
+                <p>Take in an <code>initialState</code> value of an array of objects. Each object should represent a to-do item, and should contain only one property, <code>description</code>, which should be a string, a short description of the to-do item.</p>
+            </li>
+            <li>
+                <p>Take in an action object with a <code>type</code> property and a <code>payload</code> property. The <code>payload</code> property should have a description key and a value equal to a new description entered by a user. (Don't worry about making inputs now, just write the reducer.)</p>
+            </li>
+            <li aria-level="1"><span>If the type is equal to 'ADD,' then return a new array with a shallow copy of the previous state, and spread in a new object that contains the new description key and its corresponding value.</span></li>
+            <li>
+                <p>Return the previous state as a default case.</p>
+            </li>
+        </ol>
+        <p><span>For additional practice and challenge, how might you implement logic that would contain a type of 'DELETE' or 'EDIT'?</span></p>
+    </div>
+</body>
+</html>

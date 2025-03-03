@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objective 1 - Explain What Immutability is in Programming and Demonstrate its Benefits</title>
+    <meta name="identifier" content="ged65c43b3ad38a84729962548e8fde7a"/>
+    <meta name="editing_roles" content="teachers"/>
+    <meta name="workflow_state" content="unpublished"/>
+    <style>
+        :root {
+            --primary-color: #93005a;
+            --secondary-color: #00808c;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #fff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --code-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .content-section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px var(--shadow-color);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        h4 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        code {
+            background: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .challenge-section {
+            background: var(--code-bg);
+            border: 2px solid var(--secondary-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .challenge-section h2 {
+            color: var(--secondary-color);
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html">← Back to Sprint Content</a>
+        <a href="../unit-videos.html">Unit Videos</a>
+    </nav>
+
+    <div class="content-section">
+        <div class="page-header">
+            <h1>Understanding Immutability in Programming</h1>
+        </div>
+
+        <div class="video-container">
+            <iframe class="wistia_embed" title="Immutability Video" src="https://fast.wistia.net/embed/iframe/gqnw6eynzi" allow="autoplay; fullscreen" loading="lazy"></iframe>
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p>Mutable objects are objects whose state is allowed to change over time. An immutable value is an exact opposite – after it has been created, it can never change. There are some real benefits from making your state immutable. We won't go over all the benefits here, but we will talk about predictability and mutation tracking.</p>
+
+        <h4 id="predictability">Predictability</h4>
+        <p>Mutation hides change, which can create (unexpected) side effects. This can lead to some nasty bugs in our code. When we enforce immutability, we can keep our application architecture and mental model simple, making it easier to reason about the application. Simply put, it is very easy to predict how the state object will change based on certain actions/events. Without immutability, our state object can be changed or updated in unpredictable ways, causing weird behavior or bugs.</p>
+
+        <h4 id="mutation-tracking">Mutation Tracking</h4>
+        <p>Immutability makes it really easy to see if anything has changed. For example when we change the state in Redux, our components props will update. We can check our previous props against our new props to know what change occurred, and know how to handle those changes. If a user adds a task to the todo list, the <code>TodoList</code> component will update since it is receiving new props. But what if we want to run an animation on the new todo? We can't just run it on every render because it would run when the user toggles a task to complete, or deletes a task. Since Redux state management is immutable, we can track the changes that happen on the state, and only run our animation when a new task is added.</p>
+
+        <h4 id="redux-and-immutability">Redux and Immutability</h4>
+        <p>Redux has a single immutable state tree (referred to as the store) where all state changes are explicitly handled by dispatching actions. Dispatched actions are processed by a reducer that accepts the previous state and the action and returns the next state of your application. Thus, it is easy to predict how the state tree will change based on actions that are dispatched. Likewise, it is easy to predict which action will be dispatched based on some event or interaction. This all leads to very predictable state management.</p>
+
+        <p>Writing immutable code can be challenging - your JavaScript skills will really be tested here - and it may seem pretty tedious, especially since we will be building very small apps with small state trees during this sprint. Because of that, it may be pretty hard to see the real benefits of immutable code in class. However, when you start working with a large application with a huge state tree, you will quickly grow to appreciate the benefits of writing immutable code, and the extra effort it takes will seem much more worth it.</p>
+
+        <h2 id="follow-along">Follow Along</h2>
+        <p>Here is a replit that will help you understand mutable code. In the next objective below, we will learn how to write immutable code.</p>
+        <p>Follow along with the exercises <a href="https://repl.it/@snowkid314/understandingMutations" target="_blank">here</a></p>
+
+        <div class="challenge-section">
+            <h2 id="challenge">Challenge</h2>
+            <p>Read <a href="https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0" target="_blank">this article</a> about value vs reference in JavaScript.</p>
+        </div>
+    </div>
+</body>
+</html>

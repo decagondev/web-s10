@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 10 Study Guide</title>
+    <style>
+        :root {
+            --primary-color: #93005a;
+            --secondary-color: #00808c;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #fff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --link-color: #0066cc;
+            --link-hover: #004999;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .content-section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .section-header {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .section-header:first-child {
+            margin-top: 0;
+        }
+
+        .resource-section {
+            margin: 1.5rem 0;
+        }
+
+        .resource-section span {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .resource-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 1rem 0;
+        }
+
+        .resource-list ul {
+            padding-left: 2rem;
+            list-style: none;
+        }
+
+        .resource-list li {
+            margin: 0.8rem 0;
+        }
+
+        .resource-list p {
+            margin: 1rem 0 0.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+
+        .resource-list a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .resource-list a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        .resource-list em {
+            color: var(--primary-color);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .disclaimer {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--background-color);
+            border-radius: 5px;
+            font-style: italic;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .emoji-bullet {
+            margin-right: 0.5rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            .section-header {
+                font-size: 1.5rem;
+            }
+
+            .resource-list ul {
+                padding-left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html">← Back to Sprint Content</a>
+        <a href="../unit-videos.html">Unit Videos</a>
+    </nav>
+
+    <div class="content-section">
+        <h4 class="section-header"><strong>The Reducer Pattern</strong></h4>
+        <div class="resource-section">
+            <span>Resources:</span>
+            <ul class="resource-list">
+                <li>
+                    <p>Key Terminology</p>
+                    <ul>
+                        <li><span class="emoji-bullet">📝</span><em>switch</em> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch">a javascript keyword used to streamline complex if else logic</a></li>
+                        <li><span class="emoji-bullet">📝</span><em>action</em> - <a href="https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow">a single piece of data manipulation in a reducer pattern</a></li>
+                        <li><span class="emoji-bullet">📝</span><em>reducer</em> - <a href="https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow">a pure, predictable immutable function that executes action on state data</a></li>
+                        <li><span class="emoji-bullet">📝</span><em>immutablity</em> - <a href="https://www.youtube.com/watch?v=5qQQ3yzbKp8">an object or variable that can not be modified (and thus should only be copied)</a></li>
+                        <li><span class="emoji-bullet">📝</span><em>pure functions</em> - <a href="https://www.youtube.com/watch?v=dZ41D6LDSBg">a pure, predictible immutable function that executes action on state data</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Key Concepts</p>
+                    <ul>
+                        <li><span class="emoji-bullet">📝</span><em>Business Logic</em> - <a href="https://simplicable.com/new/business-logic">9 examples of business logic</a></li>
+                        <li><span class="emoji-bullet">📝</span><em>Application State</em> - <a href="https://www.youtube.com/watch?v=7ilYJAG-_Ug">Data that is used across all of our application's components.</a></li>
+                        <li><span class="emoji-bullet">📝</span><em>The Reducer Pattern</em> - <a href="https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow">A design pattern for managing and modularizing out application state.</a></li>
+                        <li><span class="emoji-bullet">📝</span><em>useReducer Hook</em> - <a href="https://www.geeksforgeeks.org/reactjs-usereducer-hook/">A hook used to connect reducers and state to a React component</a></li>
+                        <li><span class="emoji-bullet">📝</span><em>What does dispatch do?</em> - <a href="https://dev.to/dustinmyers/what-even-is-a-dispatch-function-27ma">Awesome article by Bloomtech Alum</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h4 class="section-header"><strong>Context API</strong></h4>
+        <div class="resource-section">
+            <ul class="resource-list">
+                <li>
+                    <span>Resources:</span>
+                    <ul>
+                        <li>
+                            <p>Key Terminology</p>
+                            <ul>
+                                <li><span class="emoji-bullet">📝</span><em>context api</em> - <a href="https://reactjs.org/docs/context.html">A React Library that allows easy sharing of data across a component hierarchy</a></li>
+                                <li><span class="emoji-bullet">📝</span><em>the provider pattern</em> - <a href="https://blog.flexiple.com/provider-pattern-with-react-context-api/">A design pattern where in all items contained within an element have access to an elements functionality.</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Key Concepts</p>
+                            <ul>
+                                <li><span class="emoji-bullet">📝</span><em>application state</em> - <a href="https://stackoverflow.com/questions/22883759/what-is-the-difference-between-application-state-and-component-local-state-in-cl">The globally accessible data needed with a wide range of components.</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Stretch Tutorial</p>
+                            <ul>
+                                <li><span class="emoji-bullet">📝</span><a href="https://www.taniarascia.com/using-context-api-in-react/">Context Api In Classes and Hooks</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h4 class="section-header"><strong>Redux</strong></h4>
+        <div class="resource-section">
+            <ul class="resource-list">
+                <li>
+                    <span>Resources:</span>
+                    <ul>
+                        <li>
+                            <p>Key Terminology:</p>
+                            <ul>
+                                <li><span class="emoji-bullet">📝</span><em>default arguments</em> - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">A means to set what value a javascript function argument should be when it is not defined.</a></li>
+                                <li><span class="emoji-bullet">📝</span><em>function currying</em> - <a href="https://www.youtube.com/watch?v=oU3LzOO0OGA">Functions that return other functions</a></li>
+                                <li><span class="emoji-bullet">📝</span><em>the connect function</em> - <a href="https://react-redux.js.org/api/connect">A react-redux method that allows for components to be connect to state and dispatch through props.</a></li>
+                                <li><span class="emoji-bullet">📝</span><em>combine reducers</em> - <a href="https://redux.js.org/api/combinereducers/">A redux method that allows several different reducers used in one application</a></li>
+                                <li><span class="emoji-bullet">📝</span><em>mapStateToProps</em> - <a href="https://react-redux.js.org/7.1/using-react-redux/connect-mapstate#mapstatetoprops-will-not-run-if-the-store-state-is-the-same">A programmer generated function that gets the application state and connects it to a components props</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Key Concepts:</p>
+                            <ul>
+                                <li><span class="emoji-bullet">📝</span><em>Redux</em> - <a href="https://react-redux.js.org/introduction/why-use-react-redux">A framework used to create and mantain a reducer pattern</a></li>
+                                <li><span class="emoji-bullet">📝</span>Redux Toolkit - <a href="https://redux-toolkit.js.org/introduction/why-rtk-is-redux-today" target="_blank">Why Redux Toolkit is How To Use Redux Today</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Stretch Tutorial:</p>
+                            <ul>
+                                <li><span class="emoji-bullet">📝</span><a href="https://daveceddia.com/redux-tutorial/">Redux Deep Dive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h4 class="section-header"><strong>Asynchronous Redux</strong></h4>
+        <div class="resource-section">
+            <ul class="resource-list">
+                <li>
+                    <span>Resources:</span>
+                    <ul>
+                        <li>
+                            <p>Key Terminology:</p>
+                            <ul>
+                                <li><span class="emoji-bullet">📝</span><em>redux middleware</em> - <a href="https://designingforscale.com/understanding-redux-middleware-and-writing-custom-ones/">Code that can be injected into specifically into the redux flow.</a></li>
+                                <li><span class="emoji-bullet">📝</span><em>redux-thunk</em> - <a href="https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60">A redux middleware package that allows for functional action creators and mulitple calls to dispatch</a></li>
+                                <li><span class="emoji-bullet">📝</span>RTK Query - <a href="https://redux-toolkit.js.org/rtk-query/overview" target="_blank">RTK Query Overview</a></li>
+                                <li><span class="emoji-bullet">📝</span><em>Alan Turing</em> - <a href="https://www.youtube.com/watch?v=dNRDvLACg5Q">English Mathematcian, computer scientist and cryptanalyst that is credited with creating the mathamatical basis of computer science.</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Key Concepts:</p>
+                            <ul>
+                                <li><span class="emoji-bullet">📝</span><em>Finite State Machine</em> - <a href="https://www.youtube.com/watch?v=I0HBrcE_HOI">A mathematical model used to map the states and transitions between states in a given system.</a></li>
+                                <li><span class="emoji-bullet">📝</span><em>middleware</em> - <a href="https://redux.js.org/understanding/history-and-design/middleware">Code that can be injected into a larger applications process.</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="disclaimer">
+            <strong><em>The resources listed here are for general informational purposes only and optional, they do not constitute an endorsement or solicitation to purchase or sell any products or services. These resources are provided to you as an additional point of reference and are not owned by BloomTech. Copyrights for any listed resources remain in full effect.</em></strong>
+        </div>
+    </div>
+</body>
+</html>

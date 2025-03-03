@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objective 5 - [SUPPLEMENTAL] Write Reducers to Respond to Actions and Update State</title>
+    <meta name="identifier" content="gf9b848434aa0c0ff876eeca7eb04f6c0"/>
+    <meta name="editing_roles" content="teachers"/>
+    <meta name="workflow_state" content="active"/>
+    <style>
+        :root {
+            --primary-color: #93005a;
+            --secondary-color: #00808c;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #fff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --code-bg: #f8f9fa;
+            --code-color: #24292e;
+            --code-block-bg: #f6f8fa;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .content-section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px var(--shadow-color);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        h2, h3, h4 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        code {
+            background-color: var(--code-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+            color: var(--code-color);
+        }
+
+        pre {
+            background-color: var(--code-block-bg);
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            margin: 1rem 0;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            font-size: 0.9em;
+            color: var(--code-color);
+        }
+
+        ul {
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .challenge-section {
+            background-color: var(--code-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .challenge-section h2 {
+            color: var(--primary-color);
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                text-align: center;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            pre {
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../index.html">← Back to Sprint Content</a>
+        <a href="../unit-videos.html">Unit Videos</a>
+    </nav>
+
+    <div class="content-section">
+        <div class="page-header">
+            <h1>Writing Reducers in Redux</h1>
+        </div>
+
+        <div class="video-container">
+            <iframe class="wistia_embed" title="Redux Reducers Video" src="https://fast.wistia.net/embed/iframe/itcmzugt62" allow="autoplay; fullscreen" loading="lazy"></iframe>
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p><span>When an action is dispatched, it flows through every reducer in a script. Redux was built on this fundamental principle, among others.</span></p>
+        <p><span>Reducers are pure functions, meaning they don't produce any side effects. A reducer follows the key principles that come from the <code>Array.reduce()</code> function in that they behave similarly to the callback that you would pass to <code>reduce</code>. They aren't the same thing, but they act and do similar things, so that is an appropriate comparison to keep in mind.</span>&nbsp;</p>
+        <p><span>Reducers take in two arguments: the Redux store's <code>current state</code> and the <code>action</code> object, sent via action creator functions. Remember that action gives us a packet of information as an object with a <code>type</code> and <code>payload</code> field that we can use. The <code>type</code> <em>tells the reducer what to do</em>, and the payload tells the reducer what to update on state.</span></p>
+        <p><span><strong>Reducers will NEVER update state directly; they only return a new object. </strong>Remember this as you craft your reducers - that they are not only functional and pure, but they lend themselves to the pattern of immutability well.</span></p>
+        <p>Inside reducers, we use <code>switch</code> statements to look at the action type, then return the updated state. <code>switch</code> statements are like long <code>if / else if / else if / ... / else</code> statement. If you haven't encountered a <code>switch</code> statement yet, read <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch">this</a> before continuing.</p>
+        <h2 id="follow-along">Follow Along</h2>
+        <p>Back in our title app, let's create another folder inside <code>src</code> called <code>reducers</code>, and inside that, a <code>reducer.js</code> file. To start, we will create an <code>initialState</code> object that looks a lot like the one returned in the <code>reducer</code> function in <code>index.js</code>. (You can start <a href="https://codesandbox.io/s/w2n0o4qwmw">here</a> if you need to).</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">const</span> initialState = {<br>&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">title</span>: <span style="border: 0px none #032f62; color: #032f62;">'Title from Redux store'</span><br>};</code></pre>
+        <p>Then we'll create the reducer function. Remember, it takes two arguments - state (with the initial state as a default - <em>watch the syntax there</em>), and action. Then it will contain a <code>switch</code> statement that looks at <code>action.type</code> and return <code>state</code> as the default.</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">function</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(<span>state = initialState, action</span>) {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">switch</span>(action.<span>type</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">default</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> state;<br>&nbsp;&nbsp;}<br>}<br><br><span style="border: 0px none #d73a49; color: #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49;">default</span> reducer;</code></pre>
+        <p>Next, we need to build a <code>case</code> for our action. The dispatched action is the <code>UPDATE_TITLE</code> action. So, we'll want to import the action type from the <code>actions.js</code> file first. It is a named export, so you need to use brackets to import it.</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">import</span> { <span style="border: 0px none #005cc5; color: #005cc5;">UPDATE_TITLE</span> } <span style="border: 0px none #d73a49; color: #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62;">'../actions/actions'</span>;<br>&nbsp;<br></code></pre>
+        <p>Then, in the <code>case</code> for <code>UPDATE_TITLE</code>, we will return a new state object. We do this by returning an object with <code>state</code> spread into it, and updating the <code>title</code> property with <code>action.payload</code>.</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">function</span> <span style="border: 0px none #6f42c1; color: #6f42c1;">reducer</span>(<span>state = initialState, action</span>) {<br>&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">switch</span>(action.<span>type</span>) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">case</span> <span style="border: 0px none #005cc5; color: #005cc5;">UPDATE_TITLE</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...state,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">title</span>: action.<span>payload</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #005cc5; color: #005cc5;">default</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="border: 0px none #d73a49; color: #d73a49;">return</span> state;<br>&nbsp;&nbsp;}<br>}<br><br><span style="border: 0px none #d73a49; color: #d73a49;">export</span> <span style="border: 0px none #d73a49; color: #d73a49;">default</span> reducer;</code></pre>
+        <p><span>Take a minute to study that syntax. Here are a couple of essential details:</span></p>
+        <ul>
+            <li aria-level="1"><span>We are returning a brand new object. We do NOT update the state object and return that</span></li>
+            <li aria-level="1"><span>We are using the spread operator to "spread" in our old state</span></li>
+            <li aria-level="1"><span>We then update the one piece of data we want to update - title</span></li>
+            <li aria-level="1"><span>We then update the one piece of data we want to update - title</span></li>
+        </ul>
+        <p><span>This syntax is the convention when building reducers. Unfortunately, this is something that takes some good repetition to get used to!</span></p>
+        <p>Now that we have built our reducer, we need to import it into the <code>index.js</code> file and pass it into the <code>createStore</code> function in place of the fake one we built earlier. The convention for the import is to call it <code>rootReducer</code> inside <code>index.js</code>.</p>
+        <pre style="background-image: none; background-attachment: scroll; background-color: #ffffff; border: 1px solid #c7cdd1; clear: none; color: #24292e; cursor: auto; direction: ltr; font-style: normal; font-stretch: normal; font-size: 12px; line-height: 14.4px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px 0px 12px; padding: 9px; text-align: start; text-decoration: none; text-indent: 0px; white-space: pre-wrap; border-collapse: separate; border-spacing: 0px; background-position: 0% 0%; background-repeat: repeat repeat;" data-hljs-language="javascript"><code style="background-image: none; background-attachment: scroll; background-color: rgba(0, 0, 0, 0); border: 0px none #24292e; font-style: normal; font-stretch: normal; font-size: 16px; line-height: 19.200001px; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; margin: 0px; padding: 0px; background-position: 0% 0%; background-repeat: repeat repeat;"><span style="border: 0px none #d73a49; color: #d73a49;">import</span> rootReducer <span style="border: 0px none #d73a49; color: #d73a49;">from</span> <span style="border: 0px none #032f62; color: #032f62;">'./reducers/reducer'</span>;<br><br><span style="border: 0px none #d73a49; color: #d73a49;">const</span> store = <span style="border: 0px none #6f42c1; color: #6f42c1;">createStore</span>(rootReducer);</code></pre>
+        <p><span>Now we have come full circle! Go ahead and test out your app to make sure it is working. Great job creating your first ever React/Redux application! Here is a working </span><a href="https://codesandbox.io/s/j357oqxwov"><span>CodeSandbox (Links to an external site)</span></a><span> with everything we have implemented for this app.</span></p>
+        <h2 id="challenge">Challenge</h2>
+        <p>In your app that you were working on earlier, create a reducer that will handle state changes for whatever action you are dispatching from your action creator. Pass the reducer into your <code>createStore</code> function and test out your app.</p>
+    </div>
+</body>
+</html>
